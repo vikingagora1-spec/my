@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Варианты проверки полномочий МЧД</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Center</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="9">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ОК</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="10"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаИнформация" id="3">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка информация</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Информация32</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="КартинкаИнформацияКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="КартинкаИнформацияРасширеннаяПодсказка" id="5"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаПоясняющаяНадпись" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа поясняющая надпись</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПоясняющаяНадписьРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьИнформация" id="6">
+							<Width>60</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В 1С-ЭДО доступно два варианта проверки полномочий МЧД:
+ - блокировать работу с документами, не прошедшими проверку;
+ - не блокировать, оставлять на усмотрение ответственного.
+
+Сейчас выбран вариант "Блокировать работу с документами".
+Изменить вариант может ответственный за ЭДО или Администратор в настройках программы.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьИнформацияКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="НадписьИнформацияРасширеннаяПодсказка" id="8"/>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьПерейтиВНастройки" id="11">
+							<Visible>false</Visible>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;link ПерейтиВНастройкиЭДО&gt;Перейти&lt;/&gt;&lt;link ПерейтиВНастройкиЭДО&gt; &lt;/&gt;&lt;link ПерейтиВНастройкиЭДО&gt;в&lt;/&gt;&lt;link ПерейтиВНастройкиЭДО&gt; &lt;/&gt;&lt;link ПерейтиВНастройкиЭДО&gt;настройки&lt;/&gt;
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПерейтиВНастройкиКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="НадписьПерейтиВНастройкиРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="URLProcessing">НадписьПерейтиВНастройкиОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="Закрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+	</Commands>
+</Form>

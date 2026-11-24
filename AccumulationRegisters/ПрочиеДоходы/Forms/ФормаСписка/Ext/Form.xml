@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список движений по регистру</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="BeforeLoadUserSettingsAtServer">СписокПередЗагрузкойПользовательскихНастроекНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Период" id="16">
+					<DataPath>Список.Период</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Регистратор" id="19">
+					<DataPath>Список.Регистратор</DataPath>
+					<ContextMenu name="РегистраторКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="РегистраторРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="НомерСтроки" id="22">
+					<DataPath>Список.НомерСтроки</DataPath>
+					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Организация" id="25">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Подразделение" id="28">
+					<DataPath>Список.Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="НаправлениеДеятельности" id="31">
+					<DataPath>Список.НаправлениеДеятельности</DataPath>
+					<ContextMenu name="НаправлениеДеятельностиКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="НаправлениеДеятельностиРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="СтатьяДоходов" id="34">
+					<DataPath>Список.СтатьяДоходов</DataPath>
+					<ContextMenu name="СтатьяДоходовКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СтатьяДоходовРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="АналитикаДоходов" id="37">
+					<DataPath>Список.АналитикаДоходов</DataPath>
+					<ContextMenu name="АналитикаДоходовКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="АналитикаДоходовРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="Сумма" id="40">
+					<DataPath>Список.Сумма</DataPath>
+					<ContextMenu name="СуммаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="СуммаРегл" id="43">
+					<DataPath>Список.СуммаРегл</DataPath>
+					<ContextMenu name="СуммаРеглКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="СуммаРеглРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="ПостояннаяРазница" id="46">
+					<DataPath>Список.ПостояннаяРазница</DataPath>
+					<ContextMenu name="ПостояннаяРазницаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ПостояннаяРазницаРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="ВременнаяРазница" id="49">
+					<DataPath>Список.ВременнаяРазница</DataPath>
+					<ContextMenu name="ВременнаяРазницаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ВременнаяРазницаРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="СуммаНУ" id="85">
+					<DataPath>Список.СуммаНУ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма (НУ)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СуммаНУКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="СуммаНУРасширеннаяПодсказка" id="87"/>
+				</LabelField>
+				<LabelField name="СуммаУпр" id="52">
+					<DataPath>Список.СуммаУпр</DataPath>
+					<ContextMenu name="СуммаУпрКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СуммаУпрРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="ХозяйственнаяОперация" id="55">
+					<DataPath>Список.ХозяйственнаяОперация</DataPath>
+					<ContextMenu name="ХозяйственнаяОперацияКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ХозяйственнаяОперацияРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<CheckBoxField name="РасчетПартий" id="88">
+					<DataPath>Список.РасчетПартий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РасчетПартийКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="РасчетПартийРасширеннаяПодсказка" id="90"/>
+				</CheckBoxField>
+				<CheckBoxField name="РасчетСебестоимости" id="58">
+					<DataPath>Список.РасчетСебестоимости</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РасчетСебестоимостиКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="РасчетСебестоимостиРасширеннаяПодсказка" id="60"/>
+				</CheckBoxField>
+				<LabelField name="КорНаправлениеДеятельности" id="61">
+					<DataPath>Список.КорНаправлениеДеятельности</DataPath>
+					<ContextMenu name="КорНаправлениеДеятельностиКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="КорНаправлениеДеятельностиРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="НастройкаХозяйственнойОперации" id="64">
+					<DataPath>Список.НастройкаХозяйственнойОперации</DataPath>
+					<ContextMenu name="НастройкаХозяйственнойОперацииКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="НастройкаХозяйственнойОперацииРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="ИдентификаторФинЗаписи" id="67">
+					<DataPath>Список.ИдентификаторФинЗаписи</DataPath>
+					<ContextMenu name="ИдентификаторФинЗаписиКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ИдентификаторФинЗаписиРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="ИдентификаторСтроки" id="91">
+					<DataPath>Список.ИдентификаторСтроки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИдентификаторСтрокиКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ИдентификаторСтрокиРасширеннаяПодсказка" id="93"/>
+				</LabelField>
+				<CheckBoxField name="Сторно" id="70">
+					<DataPath>Список.Сторно</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СторноКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="СторноРасширеннаяПодсказка" id="72"/>
+				</CheckBoxField>
+				<LabelField name="ДокументРасчета" id="73">
+					<DataPath>Список.ДокументРасчета</DataPath>
+					<ContextMenu name="ДокументРасчетаКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ДокументРасчетаРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="РежимЗакрытияМесяца" id="76">
+					<DataPath>Список.РежимЗакрытияМесяца</DataPath>
+					<ContextMenu name="РежимЗакрытияМесяцаКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="РежимЗакрытияМесяцаРасширеннаяПодсказка" id="78"/>
+				</LabelField>
+				<LabelField name="ВидИсточника" id="79">
+					<DataPath>Список.ВидИсточника</DataPath>
+					<ContextMenu name="ВидИсточникаКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ВидИсточникаРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+				<LabelField name="ПериодКорректировки" id="82">
+					<DataPath>Список.ПериодКорректировки</DataPath>
+					<ContextMenu name="ПериодКорректировкиКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ПериодКорректировкиРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрНакопленияПрочиеДоходы.Период КАК Период,
+	РегистрНакопленияПрочиеДоходы.Регистратор КАК Регистратор,
+	РегистрНакопленияПрочиеДоходы.НомерСтроки КАК НомерСтроки,
+	РегистрНакопленияПрочиеДоходы.Активность КАК Активность,
+	РегистрНакопленияПрочиеДоходы.Организация КАК Организация,
+	РегистрНакопленияПрочиеДоходы.Подразделение КАК Подразделение,
+	РегистрНакопленияПрочиеДоходы.НаправлениеДеятельности КАК НаправлениеДеятельности,
+	РегистрНакопленияПрочиеДоходы.СтатьяДоходов КАК СтатьяДоходов,
+	РегистрНакопленияПрочиеДоходы.АналитикаДоходов КАК АналитикаДоходов,
+	РегистрНакопленияПрочиеДоходы.Сумма КАК Сумма,
+	РегистрНакопленияПрочиеДоходы.СуммаРегл КАК СуммаРегл,
+	РегистрНакопленияПрочиеДоходы.ПостояннаяРазница КАК ПостояннаяРазница,
+	РегистрНакопленияПрочиеДоходы.ВременнаяРазница КАК ВременнаяРазница,
+	РегистрНакопленияПрочиеДоходы.СуммаУпр КАК СуммаУпр,
+	РегистрНакопленияПрочиеДоходы.СуммаРегл - РегистрНакопленияПрочиеДоходы.ПостояннаяРазница - РегистрНакопленияПрочиеДоходы.ВременнаяРазница КАК СуммаНУ,
+	РегистрНакопленияПрочиеДоходы.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
+	РегистрНакопленияПрочиеДоходы.РасчетСебестоимости КАК РасчетСебестоимости,
+	РегистрНакопленияПрочиеДоходы.РасчетПартий КАК РасчетПартий,
+	РегистрНакопленияПрочиеДоходы.КорНаправлениеДеятельности КАК КорНаправлениеДеятельности,
+	РегистрНакопленияПрочиеДоходы.НастройкаХозяйственнойОперации КАК НастройкаХозяйственнойОперации,
+	РегистрНакопленияПрочиеДоходы.ИдентификаторФинЗаписи КАК ИдентификаторФинЗаписи,
+	РегистрНакопленияПрочиеДоходы.ИдентификаторСтроки КАК ИдентификаторСтроки,
+	РегистрНакопленияПрочиеДоходы.Сторно КАК Сторно,
+	РегистрНакопленияПрочиеДоходы.ДокументРасчета КАК ДокументРасчета,
+	РегистрНакопленияПрочиеДоходы.РежимЗакрытияМесяца КАК РежимЗакрытияМесяца,
+	РегистрНакопленияПрочиеДоходы.ВидИсточника КАК ВидИсточника,
+	РегистрНакопленияПрочиеДоходы.ПериодКорректировки КАК ПериодКорректировки,
+	РегистрНакопленияПрочиеДоходы.МоментВремени КАК МоментВремени
+ИЗ
+	РегистрНакопления.ПрочиеДоходы КАК РегистрНакопленияПрочиеДоходы</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВременнаяРазница</dcssch:dataPath>
+					<dcssch:field>ВременнаяРазница</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделение</dcssch:dataPath>
+					<dcssch:field>Подразделение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Период</dcssch:dataPath>
+					<dcssch:field>Период</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Регистратор</dcssch:dataPath>
+					<dcssch:field>Регистратор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСтроки</dcssch:dataPath>
+					<dcssch:field>НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПостояннаяРазница</dcssch:dataPath>
+					<dcssch:field>ПостояннаяРазница</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаправлениеДеятельности</dcssch:dataPath>
+					<dcssch:field>НаправлениеДеятельности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сумма</dcssch:dataPath>
+					<dcssch:field>Сумма</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Активность</dcssch:dataPath>
+					<dcssch:field>Активность</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АналитикаДоходов</dcssch:dataPath>
+					<dcssch:field>АналитикаДоходов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатьяДоходов</dcssch:dataPath>
+					<dcssch:field>СтатьяДоходов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаРегл</dcssch:dataPath>
+					<dcssch:field>СуммаРегл</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаУпр</dcssch:dataPath>
+					<dcssch:field>СуммаУпр</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ХозяйственнаяОперация</dcssch:dataPath>
+					<dcssch:field>ХозяйственнаяОперация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасчетСебестоимости</dcssch:dataPath>
+					<dcssch:field>РасчетСебестоимости</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КорНаправлениеДеятельности</dcssch:dataPath>
+					<dcssch:field>КорНаправлениеДеятельности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкаХозяйственнойОперации</dcssch:dataPath>
+					<dcssch:field>НастройкаХозяйственнойОперации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторФинЗаписи</dcssch:dataPath>
+					<dcssch:field>ИдентификаторФинЗаписи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сторно</dcssch:dataPath>
+					<dcssch:field>Сторно</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДокументРасчета</dcssch:dataPath>
+					<dcssch:field>ДокументРасчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РежимЗакрытияМесяца</dcssch:dataPath>
+					<dcssch:field>РежимЗакрытияМесяца</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидИсточника</dcssch:dataPath>
+					<dcssch:field>ВидИсточника</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПериодКорректировки</dcssch:dataPath>
+					<dcssch:field>ПериодКорректировки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
+					<dcssch:field>МоментВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаНУ</dcssch:dataPath>
+					<dcssch:field>СуммаНУ</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма НУ</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасчетПартий</dcssch:dataPath>
+					<dcssch:field>РасчетПартий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторСтроки</dcssch:dataPath>
+					<dcssch:field>ИдентификаторСтроки</dcssch:field>
+				</Field>
+				<MainTable>AccumulationRegister.ПрочиеДоходы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

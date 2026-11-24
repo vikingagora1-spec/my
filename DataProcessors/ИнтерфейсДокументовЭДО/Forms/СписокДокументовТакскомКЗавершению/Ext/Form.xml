@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="НадписьПредупреждение" id="1">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В связи с переходом оператора Такском на платформу 1С:Хаб необходимо до 31 декабря 2026 г. завершить документооборот для электронных документов из списка ниже. После этой даты завершение документооборота для них будет невозможно.
+Остальные документы обрабатываются в штатном режиме.
+
+Контакты технической поддержки:
+8 800 333-93-13, email: edo@1c.ru</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьПредупреждениеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НадписьПредупреждениеРасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<Table name="СписокДокументовКЗакрытию" id="111">
+			<ReadOnly>true</ReadOnly>
+			<DataPath>СписокДокументовКЗакрытию</DataPath>
+			<RowPictureDataPath>СписокДокументовКЗакрытию.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокДокументовКЗакрытиюКонтекстноеМеню" id="113"/>
+			<AutoCommandBar name="СписокДокументовКЗакрытиюКоманднаяПанель" id="112">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокДокументовКЗакрытиюРасширеннаяПодсказка" id="114"/>
+			<SearchStringAddition name="СписокДокументовКЗакрытиюСтрокаПоиска" id="115">
+				<AdditionSource>
+					<Item>СписокДокументовКЗакрытию</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДокументовКЗакрытиюСтрокаПоискаКонтекстноеМеню" id="116"/>
+				<ExtendedTooltip name="СписокДокументовКЗакрытиюСтрокаПоискаРасширеннаяПодсказка" id="117"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокДокументовКЗакрытиюСостояниеПросмотра" id="121">
+				<AdditionSource>
+					<Item>СписокДокументовКЗакрытию</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДокументовКЗакрытиюСостояниеПросмотраКонтекстноеМеню" id="122"/>
+				<ExtendedTooltip name="СписокДокументовКЗакрытиюСостояниеПросмотраРасширеннаяПодсказка" id="123"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокДокументовКЗакрытиюУправлениеПоиском" id="118">
+				<AdditionSource>
+					<Item>СписокДокументовКЗакрытию</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДокументовКЗакрытиюУправлениеПоискомКонтекстноеМеню" id="119"/>
+				<ExtendedTooltip name="СписокДокументовКЗакрытиюУправлениеПоискомРасширеннаяПодсказка" id="120"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокДокументовКЗакрытиюВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокДокументовКЗакрытиюЭлектронныйДокумент" id="145">
+					<DataPath>СписокДокументовКЗакрытию.ЭлектронныйДокумент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДокументовКЗакрытиюЭлектронныйДокументКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="СписокДокументовКЗакрытиюЭлектронныйДокументРасширеннаяПодсказка" id="147"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКЗакрытиюДата" id="124">
+					<DataPath>СписокДокументовКЗакрытию.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДокументовКЗакрытиюДатаКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="СписокДокументовКЗакрытиюДатаРасширеннаяПодсказка" id="126"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКЗакрытиюНомер" id="133">
+					<DataPath>СписокДокументовКЗакрытию.Номер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДокументовКЗакрытиюНомерКонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="СписокДокументовКЗакрытиюНомерРасширеннаяПодсказка" id="135"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКЗакрытиюСумма" id="142">
+					<DataPath>СписокДокументовКЗакрытию.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДокументовКЗакрытиюСуммаКонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="СписокДокументовКЗакрытиюСуммаРасширеннаяПодсказка" id="144"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКЗакрытиюКонтрагент" id="127">
+					<DataPath>СписокДокументовКЗакрытию.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДокументовКЗакрытиюКонтрагентКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="СписокДокументовКЗакрытиюКонтрагентРасширеннаяПодсказка" id="129"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКЗакрытиюОрганизация" id="136">
+					<DataPath>СписокДокументовКЗакрытию.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДокументовКЗакрытиюОрганизацияКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="СписокДокументовКЗакрытиюОрганизацияРасширеннаяПодсказка" id="138"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКЗакрытиюНаправление" id="130">
+					<DataPath>СписокДокументовКЗакрытию.Направление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДокументовКЗакрытиюНаправлениеКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="СписокДокументовКЗакрытиюНаправлениеРасширеннаяПодсказка" id="132"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКЗакрытиюСостояние" id="139">
+					<DataPath>СписокДокументовКЗакрытию.Состояние</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДокументовКЗакрытиюСостояниеКонтекстноеМеню" id="140"/>
+					<ExtendedTooltip name="СписокДокументовКЗакрытиюСостояниеРасширеннаяПодсказка" id="141"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокДокументовКЗакрытию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов к закрытию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокДокументовКЗакрытию.ЭлектронныйДокумент</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СостоянияДокументовЭДО.ЭлектронныйДокумент КАК ЭлектронныйДокумент,
+	ЭлектронныйДокументВходящийЭДО.НомерДокумента КАК Номер,
+	ЭлектронныйДокументВходящийЭДО.Дата КАК Дата,
+	ЭлектронныйДокументВходящийЭДО.СуммаДокумента КАК Сумма,
+	ЭлектронныйДокументВходящийЭДО.Контрагент КАК Контрагент,
+	ЭлектронныйДокументВходящийЭДО.Организация КАК Организация,
+	"Входящий" КАК Направление,
+	СостоянияДокументовЭДО.Состояние КАК Состояние
+ИЗ
+	РегистрСведений.СостоянияДокументовЭДО КАК СостоянияДокументовЭДО
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭлектронныйДокументВходящийЭДО КАК ЭлектронныйДокументВходящийЭДО
+		ПО СостоянияДокументовЭДО.ЭлектронныйДокумент = ЭлектронныйДокументВходящийЭДО.Ссылка
+ГДЕ
+	НЕ СостоянияДокументовЭДО.Состояние В (&amp;СостоянияЗавершенногоЭДО)
+	И ЭлектронныйДокументВходящийЭДО.СпособОбмена = &amp;ЧерезОператораЭДОТакском
+	И ЭлектронныйДокументВходящийЭДО.ПометкаУдаления = ЛОЖЬ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СостоянияДокументовЭДО.ЭлектронныйДокумент,
+	ЭлектронныйДокументИсходящийЭДО.НомерДокумента,
+	ЭлектронныйДокументИсходящийЭДО.Дата,
+	ЭлектронныйДокументИсходящийЭДО.СуммаДокумента,
+	ЭлектронныйДокументИсходящийЭДО.Контрагент,
+	ЭлектронныйДокументИсходящийЭДО.Организация,
+	"Исходящий",
+	СостоянияДокументовЭДО.Состояние
+ИЗ
+	РегистрСведений.СостоянияДокументовЭДО КАК СостоянияДокументовЭДО
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭлектронныйДокументИсходящийЭДО КАК ЭлектронныйДокументИсходящийЭДО
+		ПО СостоянияДокументовЭДО.ЭлектронныйДокумент = ЭлектронныйДокументИсходящийЭДО.Ссылка
+ГДЕ
+	НЕ СостоянияДокументовЭДО.Состояние В (&amp;СостоянияЗавершенногоЭДО)
+	И ЭлектронныйДокументИсходящийЭДО.СпособОбмена = &amp;ЧерезОператораЭДОТакском
+	И ЭлектронныйДокументИсходящийЭДО.ПометкаУдаления = ЛОЖЬ</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Состояние</dcssch:dataPath>
+					<dcssch:field>Состояние</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сумма</dcssch:dataPath>
+					<dcssch:field>Сумма</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Контрагент</dcssch:dataPath>
+					<dcssch:field>Контрагент</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Направление</dcssch:dataPath>
+					<dcssch:field>Направление</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЭлектронныйДокумент</dcssch:dataPath>
+					<dcssch:field>ЭлектронныйДокумент</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеДополнение</dcssch:dataPath>
+					<dcssch:field>СостояниеДополнение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаИзменения</dcssch:dataPath>
+					<dcssch:field>ДатаИзменения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>СостоянияЗавершенногоЭДО</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояния завершенного ЭДО</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:EnumRef.СостоянияДокументовЭДО</v8:Type>
+					</dcssch:valueType>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ЧерезОператораЭДОТакском</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Через оператора ЭДОТакском</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:EnumRef.СпособыОбменаЭД</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<MainTable>InformationRegister.СостоянияДокументовЭДО</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>d47e5344-e9b4-493e-91e0-e76c8b8c224c</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

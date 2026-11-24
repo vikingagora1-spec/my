@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСохранить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="11">
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="84"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРеквизиты" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="13"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаблицы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<Pages name="СтраницыТаблиц" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблицы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблицы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыТаблицРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<Page name="СтраницаТитулЭкспедитораОписаниеГрузаСвОпаснГруз" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об опасном грузе</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об опасном грузе</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаТитулЭкспедитораОписаниеГрузаСвОпаснГрузРасширеннаяПодсказка" id="19"/>
+							<ChildItems>
+								<Table name="ТитулЭкспедитораОписаниеГрузаСвОпаснГруз" id="20">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузКонтекстноеМеню" id="21"/>
+									<AutoCommandBar name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузКоманднаяПанель" id="22"/>
+									<ExtendedTooltip name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузРасширеннаяПодсказка" id="23"/>
+									<SearchStringAddition name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузСтрокаПоиска" id="24">
+										<AdditionSource>
+											<Item>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузСтрокаПоискаКонтекстноеМеню" id="25"/>
+										<ExtendedTooltip name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузСостояниеПросмотра" id="27">
+										<AdditionSource>
+											<Item>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузСостояниеПросмотраКонтекстноеМеню" id="28"/>
+										<ExtendedTooltip name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузУправлениеПоиском" id="30">
+										<AdditionSource>
+											<Item>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузУправлениеПоискомКонтекстноеМеню" id="31"/>
+										<ExtendedTooltip name="ТитулЭкспедитораОписаниеГрузаСвОпаснГрузУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeDeleteRow">ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузПередУдалением</Event>
+										<Event name="OnStartEdit">ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="СсылкаДОПОГ" id="151">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.СсылкаДОПОГ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СсылкаДОПОГКонтекстноеМеню" id="152"/>
+											<ExtendedTooltip name="СсылкаДОПОГРасширеннаяПодсказка" id="153"/>
+											<Events>
+												<Event name="OnChange">СсылкаДОПОГПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузДокументРегламентирующийПеревозку" id="91">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ДокументРегламентирующийПеревозку</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузДокументРегламентирующийПеревозкуКонтекстноеМеню" id="92"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузДокументРегламентирующийПеревозкуРасширеннаяПодсказка" id="93"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНомерООН" id="94">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.НомерООН</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНомерООНКонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНомерООНРасширеннаяПодсказка" id="96"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНадлежащееОтгрузочноеНаименование" id="97">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.НадлежащееОтгрузочноеНаименование</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНадлежащееОтгрузочноеНаименованиеКонтекстноеМеню" id="98"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНадлежащееОтгрузочноеНаименованиеРасширеннаяПодсказка" id="99"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКласс" id="100">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.Класс</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКлассКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКлассРасширеннаяПодсказка" id="102"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузТехническоеНаименование" id="103">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ТехническоеНаименование</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузТехническоеНаименованиеКонтекстноеМеню" id="104"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузТехническоеНаименованиеРасширеннаяПодсказка" id="105"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОписание" id="106">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.Описание</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОписаниеКонтекстноеМеню" id="107"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОписаниеРасширеннаяПодсказка" id="108"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКлассификационныйКод" id="109">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.КлассификационныйКод</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКлассификационныйКодКонтекстноеМеню" id="110"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКлассификационныйКодРасширеннаяПодсказка" id="111"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузГруппаУпаковки" id="112">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ГруппаУпаковки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузГруппаУпаковкиКонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузГруппаУпаковкиРасширеннаяПодсказка" id="114"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузЗнакОпасности" id="115">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ЗнакОпасности</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузЗнакОпасностиКонтекстноеМеню" id="116"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузЗнакОпасностиРасширеннаяПодсказка" id="117"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКодОграниченияПроездаЧерезТуннели" id="118">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.КодОграниченияПроездаЧерезТуннели</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКодОграниченияПроездаЧерезТуннелиКонтекстноеМеню" id="119"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКодОграниченияПроездаЧерезТуннелиРасширеннаяПодсказка" id="120"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНазваниеИлиСимволКаждогоРадионуклида" id="121">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.НазваниеИлиСимволКаждогоРадионуклида</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНазваниеИлиСимволКаждогоРадионуклидаКонтекстноеМеню" id="122"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузНазваниеИлиСимволКаждогоРадионуклидаРасширеннаяПодсказка" id="123"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОписаниеФизическойИХимическойФормы" id="124">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ОписаниеФизическойИХимическойФормы</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОписаниеФизическойИХимическойФормыКонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОписаниеФизическойИХимическойФормыРасширеннаяПодсказка" id="126"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузМаксимальнаяАктивностьРадиоактивногоСодержимого" id="127">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.МаксимальнаяАктивностьРадиоактивногоСодержимого</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Максимальная активность радиоактивного содержимого во время перевозки, выраженная в беккерелях (Бк), или масса делящегося материала, выраженная в граммах (г) или соответствующих </v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузМаксимальнаяАктивностьРадиоактивногоСодержимогоКонтекстноеМеню" id="128"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузМаксимальнаяАктивностьРадиоактивногоСодержимогоРасширеннаяПодсказка" id="129"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКатегорияУпаковкиТранспортногоПакетаИлиКонтейнера" id="130">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.КатегорияУпаковкиТранспортногоПакетаИлиКонтейнера</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКатегорияУпаковкиТранспортногоПакетаИлиКонтейнераКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКатегорияУпаковкиТранспортногоПакетаИлиКонтейнераРасширеннаяПодсказка" id="132"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузТранспортныйИндекс" id="133">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ТранспортныйИндекс</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузТранспортныйИндексКонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузТранспортныйИндексРасширеннаяПодсказка" id="135"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузИндексБезопасностиПоКритичностиДляГрузовСодержащихДелящийсяМатериал" id="136">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ИндексБезопасностиПоКритичностиДляГрузовСодержащихДелящийсяМатериал</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузИндексБезопасностиПоКритичностиДляГрузовСодержащихДелящийсяМатериалКонтекстноеМеню" id="137"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузИндексБезопасностиПоКритичностиДляГрузовСодержащихДелящийсяМатериалРасширеннаяПодсказка" id="138"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОпознавательныйЗнакДляКаждогоСертификата" id="139">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ОпознавательныйЗнакДляКаждогоСертификата</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Опознавательный знак для каждого сертификата об утверждении компетентного органа, применимый для данного груза</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОпознавательныйЗнакДляКаждогоСертификатаКонтекстноеМеню" id="140"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузОпознавательныйЗнакДляКаждогоСертификатаРасширеннаяПодсказка" id="141"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузПолнаяАктивностьГруза" id="142">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.ПолнаяАктивностьГруза</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузПолнаяАктивностьГрузаКонтекстноеМеню" id="143"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузПолнаяАктивностьГрузаРасширеннаяПодсказка" id="144"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКонтрольнаяТемператураВГрадусах" id="145">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.КонтрольнаяТемператураВГрадусах</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКонтрольнаяТемператураВГрадусахКонтекстноеМеню" id="146"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузКонтрольнаяТемператураВГрадусахРасширеннаяПодсказка" id="147"/>
+										</InputField>
+										<InputField name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузАварийнаяТемператураВГрадусах" id="148">
+											<DataPath>ТитулЭкспедитораОписаниеГрузаСвОпаснГруз.АварийнаяТемператураВГрадусах</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузАварийнаяТемператураВГрадусахКонтекстноеМеню" id="149"/>
+											<ExtendedTooltip name="ТитулТитулЭкспедитораОписаниеГрузаСвОпаснГрузАварийнаяТемператураВГрадусахРасширеннаяПодсказка" id="150"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТитулЭкспедитораОписаниеГрузаСвОпаснГруз" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения об опасном грузе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИдентификаторСтрокиРодителя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки родительской таблицы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДокументРегламентирующийПеревозку" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ, регламентирующий перевозку груза</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<FillCheck>ShowError</FillCheck>
+				</Column>
+				<Column name="НомерООН" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индикатор опасности вещества по классификации ООН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<FillCheck>ShowError</FillCheck>
+				</Column>
+				<Column name="НадлежащееОтгрузочноеНаименование" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Надлежащее отгрузочное наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<FillCheck>ShowError</FillCheck>
+				</Column>
+				<Column name="Класс" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код класса опасности груза</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>3</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<FillCheck>ShowError</FillCheck>
+				</Column>
+				<Column name="ТехническоеНаименование" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Техническое наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Описание" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлассификационныйКод" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Классификационный код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ГруппаУпаковки" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа упаковки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗнакОпасности" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Знак опасности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодОграниченияПроездаЧерезТуннели" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код ограничения проезда через туннели</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НазваниеИлиСимволКаждогоРадионуклида" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название или символ каждого радионуклида</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОписаниеФизическойИХимическойФормы" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание физической и химической формы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="МаксимальнаяАктивностьРадиоактивногоСодержимого" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Максимальная активность радиоактивного содержимого</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КатегорияУпаковкиТранспортногоПакетаИлиКонтейнера" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория упаковки, транспортного пакета или контейнера</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТранспортныйИндекс" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Транспортный индекс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексБезопасностиПоКритичностиДляГрузовСодержащихДелящийсяМатериал" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс безопасности по критичности для грузов, содержащих делящийся материал</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОпознавательныйЗнакДляКаждогоСертификата" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опознавательный знак</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПолнаяАктивностьГруза" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полная активность груза</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонтрольнаяТемператураВГрадусах" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрольная температура, в градусах Цельсия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АварийнаяТемператураВГрадусах" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аварийная температура, в градусах Цельсия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СсылкаДОПОГ" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДОПОГ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторДОПОГЭПД</v8:Type>
+						<v8:Type>cfg:CatalogRef.СтроковыеЗначенияЭПД</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПрзОпаснГруз" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прз опасн груз</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+		</Command>
+	</Commands>
+</Form>

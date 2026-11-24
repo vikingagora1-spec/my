@@ -1,0 +1,1106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Отгрузки FBS</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveWindowSettings>false</SaveWindowSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="217">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="218"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаОсновная" id="240">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка основная</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаОсновнаяРасширеннаяПодсказка" id="241"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУчетнаяЗапись" id="344">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа учетная запись</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУчетнаяЗаписьРасширеннаяПодсказка" id="345"/>
+							<ChildItems>
+								<PictureDecoration name="Логотип" id="346">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Логотип</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ПустаяКартинка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ЛоготипКонтекстноеМеню" id="347"/>
+									<ExtendedTooltip name="ЛоготипРасширеннаяПодсказка" id="348"/>
+								</PictureDecoration>
+								<LabelField name="УчетнаяЗаписьТорговойПлощадки" id="110">
+									<DataPath>УчетнаяЗапись</DataPath>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<MaxWidth>37</MaxWidth>
+									<Height>1</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Font ref="style:ВажнаяНадписьШрифт" kind="StyleItem"/>
+									<ContextMenu name="УчетнаяЗаписьТорговойПлощадкиКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="УчетнаяЗаписьТорговойПлощадкиРасширеннаяПодсказка" id="112"/>
+								</LabelField>
+								<LabelDecoration name="ДекорацияОтступ4" id="242">
+									<Width>2</Width>
+									<MaxWidth>2</MaxWidth>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<ContextMenu name="ДекорацияОтступ4КонтекстноеМеню" id="243"/>
+									<ExtendedTooltip name="ДекорацияОтступ4РасширеннаяПодсказка" id="244"/>
+								</LabelDecoration>
+								<PictureDecoration name="ДекорацияТестовыйРежим" id="355">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тестовый режим</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Picture>
+										<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияТестовыйРежимКонтекстноеМеню" id="356"/>
+									<ExtendedTooltip name="ДекорацияТестовыйРежимРасширеннаяПодсказка" id="357">
+										<Width>45</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<AutoMaxHeight>false</AutoMaxHeight>
+										<HorizontalStretch>false</HorizontalStretch>
+										<Font ref="style:SmallTextFont" kind="StyleItem"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Включен тестовый режим работы магазина. Операции с отгрузками не поддерживаются для тестовых заказов, текущие данные  отражают отгрузки по действительным  заказам покупателей.</v8:content>
+											</v8:item>
+										</Title>
+										<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+										<GroupVerticalAlign>Center</GroupVerticalAlign>
+									</ExtendedTooltip>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШапкаТаблицы" id="435">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаТаблицыРасширеннаяПодсказка" id="436"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОбщиеФильтры" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общие фильтры</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаОбщиеФильтрыРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПериод" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="2"/>
+							<ChildItems>
+								<InputField name="НачалоПериода" id="3">
+									<DataPath>НачалоПериода</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="5"/>
+									<Events>
+										<Event name="ChoiceProcessing">НачалоПериодаОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="КонецПериода" id="6">
+									<DataPath>КонецПериода</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>14</MaxWidth>
+									<ContextMenu name="КонецПериодаКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="КонецПериодаРасширеннаяПодсказка" id="8"/>
+									<Events>
+										<Event name="ChoiceProcessing">КонецПериодаОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<Button name="УстановитьПериод" id="118">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УстановитьПериод</CommandName>
+									<ExtendedTooltip name="УстановитьПериодРасширеннаяПодсказка" id="119"/>
+								</Button>
+								<Button name="ПолучитьОтправления" id="116">
+									<Type>UsualButton</Type>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<CommandName>Form.Command.ПроверитьПериодИПолучитьОтгрузки</CommandName>
+									<ExtendedTooltip name="ПолучитьОтправленияРасширеннаяПодсказка" id="117"/>
+								</Button>
+								<LabelDecoration name="ДекорацияОтступ1" id="14">
+									<Width>2</Width>
+									<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ДекорацияОтступ1РасширеннаяПодсказка" id="16"/>
+								</LabelDecoration>
+								<InputField name="ФильтрСтатуса" id="9">
+									<DataPath>ФильтрСтатуса</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<Width>27</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="ФильтрСтатусаКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ФильтрСтатусаРасширеннаяПодсказка" id="11"/>
+									<Events>
+										<Event name="OnChange">ФильтрСтатусаПриИзменении</Event>
+										<Event name="Clearing">ФильтрСтатусаОчистка</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<CommandBar name="КоманднаяПанельТаблицаОтгрузок" id="433">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель таблица отгрузок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель таблица отгрузок</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>40</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<CommandSource>Item.ТаблицаОтгрузок</CommandSource>
+					<ExtendedTooltip name="КоманднаяПанельТаблицаОтгрузокРасширеннаяПодсказка" id="434"/>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаОтгрузок" id="17">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаОтгрузок</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список отгрузок</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаОтгрузокКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="ТаблицаОтгрузокКоманднаяПанель" id="19">
+				<HorizontalAlign>Right</HorizontalAlign>
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаОтгрузокРасширеннаяПодсказка" id="20"/>
+			<SearchStringAddition name="ТаблицаОтгрузокСтрокаПоиска" id="21">
+				<AdditionSource>
+					<Item>ТаблицаОтгрузок</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаОтгрузокСтрокаПоискаКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="ТаблицаОтгрузокСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаОтгрузокСостояниеПросмотра" id="24">
+				<AdditionSource>
+					<Item>ТаблицаОтгрузок</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаОтгрузокСостояниеПросмотраКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="ТаблицаОтгрузокСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаОтгрузокУправлениеПоиском" id="27">
+				<AdditionSource>
+					<Item>ТаблицаОтгрузок</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаОтгрузокУправлениеПоискомКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ТаблицаОтгрузокУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаОтгрузокВыбор</Event>
+				<Event name="BeforeAddRow">ТаблицаОтгрузокПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТаблицаОтгрузокПередУдалением</Event>
+				<Event name="BeforeRowChange">ТаблицаОтгрузокПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаОтгрузокПоле1" id="430">
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаОтгрузокПоле1КонтекстноеМеню" id="431"/>
+					<ExtendedTooltip name="ТаблицаОтгрузокПоле1РасширеннаяПодсказка" id="432"/>
+				</InputField>
+				<InputField name="ТаблицаОтгрузокИдентификаторОтгрузки" id="358">
+					<DataPath>ТаблицаОтгрузок.ИдентификаторОтгрузки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер отгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаОтгрузокИдентификаторОтгрузкиКонтекстноеМеню" id="359"/>
+					<ExtendedTooltip name="ТаблицаОтгрузокИдентификаторОтгрузкиРасширеннаяПодсказка" id="360"/>
+				</InputField>
+				<ColumnGroup name="ТаблицаОтгрузокПлановоеВремя" id="418">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановая дата и время</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица отгрузок плановое время</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ТаблицаОтгрузокПлановоеВремяРасширеннаяПодсказка" id="419"/>
+					<ChildItems>
+						<InputField name="ТаблицаОтгрузокНачалоПлановогоИнтервала" id="364">
+							<DataPath>ТаблицаОтгрузок.НачалоПлановогоИнтервала</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокНачалоПлановогоИнтервалаКонтекстноеМеню" id="365"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокНачалоПлановогоИнтервалаРасширеннаяПодсказка" id="366"/>
+						</InputField>
+						<InputField name="ТаблицаОтгрузокКонецПлановогоИнтервала" id="367">
+							<DataPath>ТаблицаОтгрузок.КонецПлановогоИнтервала</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Конец интервала</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокКонецПлановогоИнтервалаКонтекстноеМеню" id="368"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокКонецПлановогоИнтервалаРасширеннаяПодсказка" id="369"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТаблицаОтгрузокСтатус" id="428">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица отгрузок статус</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица отгрузок статус</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТаблицаОтгрузокСтатусРасширеннаяПодсказка" id="429"/>
+					<ChildItems>
+						<InputField name="ТаблицаОтгрузокСтатусОтгрузки" id="415">
+							<DataPath>ТаблицаОтгрузок.СтатусОтгрузки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокСтатусОтгрузкиКонтекстноеМеню" id="416"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокСтатусОтгрузкиРасширеннаяПодсказка" id="417"/>
+						</InputField>
+						<InputField name="ТаблицаОтгрузокДатаУстановкиСтатусаОтгрузки" id="406">
+							<DataPath>ТаблицаОтгрузок.ДатаУстановкиСтатусаОтгрузки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата обновления статуса</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокДатаУстановкиСтатусаОтгрузкиКонтекстноеМеню" id="407"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокДатаУстановкиСтатусаОтгрузкиРасширеннаяПодсказка" id="408"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ТаблицаОтгрузокСпособОтгрузки" id="370">
+					<DataPath>ТаблицаОтгрузок.СпособОтгрузки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ отгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаОтгрузокСпособОтгрузкиКонтекстноеМеню" id="371"/>
+					<ExtendedTooltip name="ТаблицаОтгрузокСпособОтгрузкиРасширеннаяПодсказка" id="372"/>
+				</InputField>
+				<ColumnGroup name="ТаблицаОтгрузокКоличествоЗаказов" id="420">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество заказов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица отгрузок количество заказов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ТаблицаОтгрузокКоличествоЗаказовРасширеннаяПодсказка" id="421"/>
+					<ChildItems>
+						<InputField name="ТаблицаОтгрузокКоличествоЗаказовПлан" id="388">
+							<DataPath>ТаблицаОтгрузок.КоличествоЗаказовПлан</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Плановое</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокКоличествоЗаказовПланКонтекстноеМеню" id="389"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокКоличествоЗаказовПланРасширеннаяПодсказка" id="390"/>
+						</InputField>
+						<InputField name="ТаблицаОтгрузокКоличествоЗаказовПодтверждено" id="391">
+							<DataPath>ТаблицаОтгрузок.КоличествоЗаказовПодтверждено</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подтвержденное</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокКоличествоЗаказовПодтвержденоКонтекстноеМеню" id="392"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокКоличествоЗаказовПодтвержденоРасширеннаяПодсказка" id="393"/>
+						</InputField>
+						<InputField name="ТаблицаОтгрузокКоличествоЗаказовФакт" id="394">
+							<DataPath>ТаблицаОтгрузок.КоличествоЗаказовФакт</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Фактическое</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокКоличествоЗаказовФактКонтекстноеМеню" id="395"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокКоличествоЗаказовФактРасширеннаяПодсказка" id="396"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТаблицаОтгрузокКоличествоПалет" id="422">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество палет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица отгрузок количество палет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ТаблицаОтгрузокКоличествоПалетРасширеннаяПодсказка" id="423"/>
+					<ChildItems>
+						<InputField name="ТаблицаОтгрузокКоличествоПалетПлан" id="397">
+							<DataPath>ТаблицаОтгрузок.КоличествоПалетПлан</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Плановое</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокКоличествоПалетПланКонтекстноеМеню" id="398"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокКоличествоПалетПланРасширеннаяПодсказка" id="399"/>
+						</InputField>
+						<InputField name="ТаблицаОтгрузокКоличествоПалетФакт" id="400">
+							<DataPath>ТаблицаОтгрузок.КоличествоПалетФакт</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Фактическое</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокКоличествоПалетФактКонтекстноеМеню" id="401"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокКоличествоПалетФактРасширеннаяПодсказка" id="402"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТаблицаОтгрузокСкладОтправления" id="424">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица отгрузок склад отправления</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица отгрузок склад отправления</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТаблицаОтгрузокСкладОтправленияРасширеннаяПодсказка" id="425"/>
+					<ChildItems>
+						<InputField name="ТаблицаОтгрузокСкладОтправленияНаименование" id="373">
+							<DataPath>ТаблицаОтгрузок.СкладОтправленияНаименование</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Склад отправления</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокСкладОтправленияНаименованиеКонтекстноеМеню" id="374"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокСкладОтправленияНаименованиеРасширеннаяПодсказка" id="375"/>
+						</InputField>
+						<InputField name="ТаблицаОтгрузокСкладОтправленияАдрес" id="376">
+							<DataPath>ТаблицаОтгрузок.СкладОтправленияАдрес</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес склада отправления</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокСкладОтправленияАдресКонтекстноеМеню" id="377"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокСкладОтправленияАдресРасширеннаяПодсказка" id="378"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТаблицаОтгрузокСкладПолучения" id="426">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад получения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица отгрузок склад получения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТаблицаОтгрузокСкладПолученияРасширеннаяПодсказка" id="427"/>
+					<ChildItems>
+						<InputField name="ТаблицаОтгрузокСкладПолученияНаименование" id="379">
+							<DataPath>ТаблицаОтгрузок.СкладПолученияНаименование</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Склад получения</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокСкладПолученияНаименованиеКонтекстноеМеню" id="380"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокСкладПолученияНаименованиеРасширеннаяПодсказка" id="381"/>
+						</InputField>
+						<InputField name="ТаблицаОтгрузокСкладПолученияАдрес" id="382">
+							<DataPath>ТаблицаОтгрузок.СкладПолученияАдрес</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес склада получения</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаОтгрузокСкладПолученияАдресКонтекстноеМеню" id="383"/>
+							<ExtendedTooltip name="ТаблицаОтгрузокСкладПолученияАдресРасширеннаяПодсказка" id="384"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ТаблицаОтгрузокСлужбаДоставкиНаименование" id="385">
+					<DataPath>ТаблицаОтгрузок.СлужбаДоставкиНаименование</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служба доставки</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаОтгрузокСлужбаДоставкиНаименованиеКонтекстноеМеню" id="386"/>
+					<ExtendedTooltip name="ТаблицаОтгрузокСлужбаДоставкиНаименованиеРасширеннаяПодсказка" id="387"/>
+				</InputField>
+				<CheckBoxField name="ТаблицаОтгрузокПодписанАктПриемаПередачи" id="403">
+					<DataPath>ТаблицаОтгрузок.ПодписанАктПриемаПередачи</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписан акт</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаОтгрузокПодписанАктПриемаПередачиКонтекстноеМеню" id="404"/>
+					<ExtendedTooltip name="ТаблицаОтгрузокПодписанАктПриемаПередачиРасширеннаяПодсказка" id="405"/>
+				</CheckBoxField>
+				<InputField name="ТаблицаОтгрузокСписокДоступныхДействий" id="409">
+					<DataPath>ТаблицаОтгрузок.ДоступныеДействия</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаОтгрузокСписокДоступныхДействийКонтекстноеМеню" id="410"/>
+					<ExtendedTooltip name="ТаблицаОтгрузокСписокДоступныхДействийРасширеннаяПодсказка" id="411"/>
+				</InputField>
+				<InputField name="ТаблицаОтгрузокСписокЗаказовОтгрузки" id="412">
+					<DataPath>ТаблицаОтгрузок.ИдентификаторыЗаказов</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаОтгрузокСписокЗаказовОтгрузкиКонтекстноеМеню" id="413"/>
+					<ExtendedTooltip name="ТаблицаОтгрузокСписокЗаказовОтгрузкиРасширеннаяПодсказка" id="414"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НачалоПериода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За период с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонецПериода" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаОтгрузок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица отгрузок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИдентификаторОтгрузки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор отгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НачалоПлановогоИнтервала" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало интервала</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонецПлановогоИнтервала" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец планового интервала</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособОтгрузки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ отгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СкладОтправленияНаименование" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад отправления наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СкладОтправленияАдрес" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад отправления адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СкладПолученияНаименование" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад получения наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СкладПолученияАдрес" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад получения адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СлужбаДоставкиНаименование" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служба доставки наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоЗаказовПлан" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество заказов план</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоЗаказовПодтверждено" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество заказов подтверждено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоЗаказовФакт" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество заказов факт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоПалетПлан" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество палет план</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоПалетФакт" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество палет факт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПодписанАктПриемаПередачи" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписан акт приема передачи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаУстановкиСтатусаОтгрузки" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата установки статуса отгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДоступныеДействия" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные действия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторыЗаказов" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификаторы заказов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусОтгрузки" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус отгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ФильтрСтатуса" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УчетнаяЗапись" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Магазин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиМаркетплейсов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТорговаяПлощадка" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговая площадка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыМаркетплейсов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьПериодИПолучитьОтгрузки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить период и получить отгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить период и получить отгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроверитьПериодИПолучитьОтгрузки</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УстановитьПериод" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПериод</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="УчетнаяЗапись">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиМаркетплейсов</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ЗаголовокФормы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,1044 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Переход в центр ЭДО</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраниц" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="СтраницаПараметрыПерехода" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры перехода</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПараметрыПереходаРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаКоробкаОблако" id="1">
+							<Height>6</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Picture>
+								<xr:Abs>Picture.png</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаКоробкаОблакоКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КартинкаКоробкаОблакоРасширеннаяПодсказка" id="3"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаПараметрыПерехода" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа параметры перехода</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыПереходаРасширеннаяПодсказка" id="114"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПараметрыПереходаЛево" id="129">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа параметры перехода лево</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПараметрыПереходаЛевоРасширеннаяПодсказка" id="130"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьУчетнаяЗаписьЦентраЭДО" id="123">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Центр ЭДО</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьУчетнаяЗаписьЦентраЭДОКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="НадписьУчетнаяЗаписьЦентраЭДОРасширеннаяПодсказка" id="125"/>
+										</LabelDecoration>
+										<LabelDecoration name="НадписьИдентификаторЭДО" id="126">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Идентификатор</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьИдентификаторЭДОКонтекстноеМеню" id="127"/>
+											<ExtendedTooltip name="НадписьИдентификаторЭДОРасширеннаяПодсказка" id="128"/>
+										</LabelDecoration>
+										<LabelDecoration name="НадписьПустая" id="141">
+											<ContextMenu name="НадписьПустаяКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="НадписьПустаяРасширеннаяПодсказка" id="143"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПараметрыПереходаПраво" id="131">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа параметры перехода право</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПараметрыПереходаПравоРасширеннаяПодсказка" id="132"/>
+									<ChildItems>
+										<InputField name="УчетнаяЗаписьЦентраЭДО" id="7">
+											<DataPath>УчетнаяЗаписьЦентраЭДО</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Центр ЭДО</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Введите адрес сервиса или выберите из списка</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="УчетнаяЗаписьЦентраЭДОКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="УчетнаяЗаписьЦентраЭДОРасширеннаяПодсказка" id="9"/>
+											<Events>
+												<Event name="OnChange">УчетнаяЗаписьЦентраЭДОПриИзменении</Event>
+												<Event name="Creating">УчетнаяЗаписьЦентраЭДОСоздание</Event>
+											</Events>
+										</InputField>
+										<InputField name="ИдентификаторЭДО" id="4">
+											<DataPath>ИдентификаторЭДО</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Идентификатор</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<OpenButton>true</OpenButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Введите идентификатор участника ЭДО или выберите из списка</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ИдентификаторЭДОКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="ИдентификаторЭДОРасширеннаяПодсказка" id="6"/>
+											<Events>
+												<Event name="OnChange">ИдентификаторОрганизацииПриИзменении</Event>
+												<Event name="Opening">ИдентификаторОрганизацииОткрытие</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаПолучениеДанных" id="105">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получение данных</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучениеДанныхРасширеннаяПодсказка" id="106"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПолучениеДанных" id="107">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка получение данных</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПолучениеДанныхКонтекстноеМеню" id="108"/>
+													<ExtendedTooltip name="КартинкаПолучениеДанныхРасширеннаяПодсказка" id="109"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьПолучениеДанных" id="110">
+													<TextColor>style:ПоясняющийТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получение данных об  идентификаторах в центре ЭДО</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьПолучениеДанныхКонтекстноеМеню" id="111"/>
+													<ExtendedTooltip name="НадписьПолучениеДанныхРасширеннаяПодсказка" id="112"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаОшибкаПолученияДанных" id="152">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ошибка выбора</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОшибкаПолученияДанныхРасширеннаяПодсказка" id="153"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаОшибкаПолученияДанных" id="154">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка ошибка выбора</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Ref>StdPicture.AppearanceCross</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаОшибкаПолученияДанныхКонтекстноеМеню" id="155"/>
+													<ExtendedTooltip name="КартинкаОшибкаПолученияДанныхРасширеннаяПодсказка" id="156"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьОшибкаПолученияДанных" id="157">
+													<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ошибка получения данных</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="НадписьОшибкаПолученияДанныхКонтекстноеМеню" id="158"/>
+													<ExtendedTooltip name="НадписьОшибкаПолученияДанныхРасширеннаяПодсказка" id="159">
+														<Events>
+															<Event name="URLProcessing">НадписьОшибкаПолученияДанныхРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+														</Events>
+													</ExtendedTooltip>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаОшибкаВыбора" id="133">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ошибка выбора</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОшибкаВыбораРасширеннаяПодсказка" id="134"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаОшибкаВыбора" id="135">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка ошибка выбора</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Ref>CommonPicture.НекорректныйКонтрагент</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаОшибкаВыбораКонтекстноеМеню" id="136"/>
+													<ExtendedTooltip name="КартинкаОшибкаВыбораРасширеннаяПодсказка" id="137"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьОшибкаВыбора" id="138">
+													<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Данный идентификатор уже используется в центре ЭДО</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьОшибкаВыбораКонтекстноеМеню" id="139"/>
+													<ExtendedTooltip name="НадписьОшибкаВыбораРасширеннаяПодсказка" id="140"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="НадписьИнформация" id="102">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>После перехода получение новых электронных документов будет выполнятся из центра ЭДО. Действия ЭДО по незавершенным электронным документам до перехода выполняются из текущей информационной базы.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьИнформацияКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="НадписьИнформацияРасширеннаяПодсказка" id="104"/>
+						</LabelDecoration>
+						<CheckBoxField name="ВыгружатьДокументы" id="185">
+							<DataPath>ВыгружатьДокументы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгружать электронные документы в центр ЭДО</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыгружатьДокументыКонтекстноеМеню" id="186"/>
+							<ExtendedTooltip name="ВыгружатьДокументыРасширеннаяПодсказка" id="187"/>
+							<Events>
+								<Event name="OnChange">ВыгружатьДокументыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаПараметрыВыгрузкиДокументов" id="237">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа параметры выгрузки документов</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыВыгрузкиДокументовРасширеннаяПодсказка" id="238"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВыгружатьДокументыСДаты" id="188">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа выгружать документы с даты</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВыгружатьДокументыСДатыРасширеннаяПодсказка" id="189"/>
+									<ChildItems>
+										<CheckBoxField name="ВыгружатьДокументыСДаты" id="190">
+											<DataPath>ВыгружатьДокументыСДаты</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВыгружатьДокументыСДатыКонтекстноеМеню" id="191"/>
+											<ExtendedTooltip name="ВыгружатьДокументыСДатыРасширеннаяПодсказка" id="192"/>
+											<Events>
+												<Event name="OnChange">ВыгружатьДокументыСДатыПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ДатаВыгрузкиДокументов" id="193">
+											<DataPath>ДатаВыгрузкиДокументов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата выгрузки документов</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<TypeDomainEnabled>false</TypeDomainEnabled>
+											<ContextMenu name="ДатаВыгрузкиДокументовКонтекстноеМеню" id="194"/>
+											<ExtendedTooltip name="ДатаВыгрузкиДокументовРасширеннаяПодсказка" id="195"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<CheckBoxField name="ВыгружатьНезавершенные" id="234">
+									<DataPath>ВыгружатьНезавершенные</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружать документы с незавершенным ЭДО</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыгружатьНезавершенныеКонтекстноеМеню" id="235"/>
+									<ExtendedTooltip name="ВыгружатьНезавершенныеРасширеннаяПодсказка" id="236"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="ГруппаКнопкиПараметрыПерехода" id="21">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки параметры перехода</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ГруппаКнопкиПараметрыПереходаРасширеннаяПодсказка" id="22"/>
+							<ChildItems>
+								<Button name="ВыполнитьПереходВЦентрЭДО" id="23">
+									<Type>CommandBarButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.ВыполнитьПереходВЦентрЭДО</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполнить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ВыполнитьПереходВЦентрЭДОРасширеннаяПодсказка" id="24"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОжиданиеПерехода" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ожидание перехода</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОжиданиеПереходаРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСостояниеВыполнения" id="25">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа состояние выполнения</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСостояниеВыполненияРасширеннаяПодсказка" id="26"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРегистрацияАбонента" id="62">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа регистрация абонента</v8:content>
+										</v8:item>
+									</Title>
+									<Width>20</Width>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаРегистрацияАбонентаРасширеннаяПодсказка" id="63"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаРегистрацияАбонентаВыполнение" id="40">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка регистрация абонента выполнение</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация32БЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаРегистрацияАбонентаВыполнениеКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="КартинкаРегистрацияАбонентаВыполнениеРасширеннаяПодсказка" id="42"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаРегистрацияАбонентаВыполнено" id="48">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка регистрация абонента выполнено</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаРегистрацияАбонентаВыполненоКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="КартинкаРегистрацияАбонентаВыполненоРасширеннаяПодсказка" id="50"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаРегистрацияАбонентаОшибка" id="56">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка регистрация абонента ошибка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.КрасныйКрестБЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаРегистрацияАбонентаОшибкаКонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="КартинкаРегистрацияАбонентаОшибкаРасширеннаяПодсказка" id="58"/>
+										</PictureDecoration>
+										<LabelDecoration name="ТекстРегистрацияАбонента" id="43">
+											<Width>40</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Регистрация абонента в центре ЭДО</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ContextMenu name="ТекстРегистрацияАбонентаКонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="ТекстРегистрацияАбонентаРасширеннаяПодсказка" id="45">
+												<Events>
+													<Event name="URLProcessing">ТекстРегистрацияАбонентаРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+												</Events>
+											</ExtendedTooltip>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЗагрукаПриглашений" id="29">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа загрука приглашений</v8:content>
+										</v8:item>
+									</Title>
+									<Width>20</Width>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаЗагрукаПриглашенийРасширеннаяПодсказка" id="30"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаЗагрузкаПриглашенийОжидание" id="67">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка загрузка приглашений ожидание</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ОжиданиеВыполненияБЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЗагрузкаПриглашенийОжиданиеКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="КартинкаЗагрузкаПриглашенийОжиданиеРасширеннаяПодсказка" id="69"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаЗагрузкаПриглашенийВыполнение" id="84">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка загрузка приглашений выполнение</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация32БЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЗагрузкаПриглашенийВыполнениеКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="КартинкаЗагрузкаПриглашенийВыполнениеРасширеннаяПодсказка" id="86"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаЗагрузкаПриглашенийВыполнено" id="87">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка загрузка приглашений выполнено</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЗагрузкаПриглашенийВыполненоКонтекстноеМеню" id="88"/>
+											<ExtendedTooltip name="КартинкаЗагрузкаПриглашенийВыполненоРасширеннаяПодсказка" id="89"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаЗагрузкаПриглашенийОшибка" id="90">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка загрузка приглашений ошибка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.КрасныйКрестБЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЗагрузкаПриглашенийОшибкаКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="КартинкаЗагрузкаПриглашенийОшибкаРасширеннаяПодсказка" id="92"/>
+										</PictureDecoration>
+										<LabelDecoration name="ТекстЗагрузкаПриглашений" id="64">
+											<Width>40</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Загрузка приглашений в центре ЭДО</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ContextMenu name="ТекстЗагрузкаПриглашенийКонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="ТекстЗагрузкаПриглашенийРасширеннаяПодсказка" id="66">
+												<Events>
+													<Event name="URLProcessing">ТекстЗагрузкаПриглашенийРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+												</Events>
+											</ExtendedTooltip>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИзменениеРежимаОбмена" id="31">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа изменение режима обмена</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаИзменениеРежимаОбменаРасширеннаяПодсказка" id="32"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаИзменениеРежимаОбменаОжидание" id="73">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка загрука приглашений ожидание</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ОжиданиеВыполненияБЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаИзменениеРежимаОбменаОжиданиеКонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="КартинкаИзменениеРежимаОбменаОжиданиеРасширеннаяПодсказка" id="75"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаИзменениеРежимаОбменаВыполнение" id="93">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка изменение режима обмена выполнение</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация32БЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаИзменениеРежимаОбменаВыполнениеКонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="КартинкаИзменениеРежимаОбменаВыполнениеРасширеннаяПодсказка" id="95"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаИзменениеРежимаОбменаВыполнено" id="96">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка изменение режима обмена выполнено</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаИзменениеРежимаОбменаВыполненоКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="КартинкаИзменениеРежимаОбменаВыполненоРасширеннаяПодсказка" id="98"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаИзменениеРежимаОбменаОшибка" id="99">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка изменение режима обмена ошибка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.КрасныйКрестБЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаИзменениеРежимаОбменаОшибкаКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="КартинкаИзменениеРежимаОбменаОшибкаРасширеннаяПодсказка" id="101"/>
+										</PictureDecoration>
+										<LabelDecoration name="ТекстИзменениеРежимаОбмена" id="70">
+											<Width>40</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Переключение обмена на центр ЭДО</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ContextMenu name="ТекстИзменениеРежимаОбменаКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="ТекстИзменениеРежимаОбменаРасширеннаяПодсказка" id="72">
+												<Events>
+													<Event name="URLProcessing">ТекстИзменениеРежимаОбменаРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+												</Events>
+											</ExtendedTooltip>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаВыгрузкаДокументов" id="160">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа изменение режима обмена</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаВыгрузкаДокументовРасширеннаяПодсказка" id="161"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаВыгрузкаДокументовОжидание" id="162">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка выгрузка документов ожидание</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<Picture>
+												<xr:Ref>CommonPicture.ОжиданиеВыполненияБЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаВыгрузкаДокументовОжиданиеКонтекстноеМеню" id="163"/>
+											<ExtendedTooltip name="КартинкаВыгрузкаДокументовОжиданиеРасширеннаяПодсказка" id="164"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаВыгрузкаДокументовВыполнение" id="165">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка выгрузка документов обмена выполнение</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация32БЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаВыгрузкаДокументовВыполнениеКонтекстноеМеню" id="166"/>
+											<ExtendedTooltip name="КартинкаВыгрузкаДокументовВыполнениеРасширеннаяПодсказка" id="167"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаВыгрузкаДокументовВыполнено" id="168">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка выгрузка документов выполнено</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаВыгрузкаДокументовВыполненоКонтекстноеМеню" id="169"/>
+											<ExtendedTooltip name="КартинкаВыгрузкаДокументовВыполненоРасширеннаяПодсказка" id="170"/>
+										</PictureDecoration>
+										<PictureDecoration name="КартинкаВыгрузкаДокументовОшибка" id="171">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка выгрузка документов ошибка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.КрасныйКрестБЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаВыгрузкаДокументовОшибкаКонтекстноеМеню" id="172"/>
+											<ExtendedTooltip name="КартинкаВыгрузкаДокументовОшибкаРасширеннаяПодсказка" id="173"/>
+										</PictureDecoration>
+										<LabelDecoration name="ТекстВыгрузкаДокументов" id="174">
+											<Width>40</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Запуск выгрузки документов в центр ЭДО</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ContextMenu name="ТекстВыгрузкаДокументовКонтекстноеМеню" id="175"/>
+											<ExtendedTooltip name="ТекстВыгрузкаДокументовРасширеннаяПодсказка" id="176">
+												<Events>
+													<Event name="URLProcessing">ТекстВыгрузкаДокументовРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+												</Events>
+											</ExtendedTooltip>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИнформация" id="177">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа информация</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalSpacing>Half</HorizontalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="178"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияИнформация" id="179">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация информация</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.УдалитьИнформация</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияИнформацияКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="ДекорацияИнформацияРасширеннаяПодсказка" id="181"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияИнформацияТекст" id="182">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Операция выгрузки документов в центр ЭДО может занимать длительное время. Вы можете продолжить работу.
+Отслеживать состояние выгрузки можно в карточке учетной записи ЭДО.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияИнформацияТекстКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="ДекорацияИнформацияТекстРасширеннаяПодсказка" id="184"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="ГруппаКнопкиОжиданиеПерехода" id="78">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки параметры перехода</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ГруппаКнопкиОжиданиеПереходаРасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<Button name="Закрыть" id="82">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Close</CommandName>
+									<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="83"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИдентификаторЭДО" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="УчетнаяЗаписьЦентраЭДО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная запись центра ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЦентровЭДО</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ОперацияПолученияИдентификаторов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операция получения идентификаторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВыгружатьДокументы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТребуетсяЗавершитьПереход" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется завершить переход</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгрузкаДокументовЗапущена" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка документов запущена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаВыгрузкиДокументов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выгрузки документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгружатьДокументыСДаты" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать документы с даты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгружатьНезавершенные" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать незавершенные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьПереходВЦентрЭДО" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить переход в центр ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьПереходВЦентрЭДО</Action>
+		</Command>
+		<Command name="ОтменаПерехода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+		<Command name="ПродолжитьПереход" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+		<Command name="Назад" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ИдентификаторЭДО">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="УчетнаяЗаписьЦентраЭДО">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЦентровЭДО</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

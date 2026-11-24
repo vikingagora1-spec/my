@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Регистрация МОД в ГИС МТ</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗарегистрироватьВГИСМТ" id="50">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗарегистрироватьВГИСМТ</CommandName>
+				<ExtendedTooltip name="ФормаЗарегистрироватьВГИСМТРасширеннаяПодсказка" id="51"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОписание" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описание</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<PictureDecoration name="ВниманиеРегистрацияМОД" id="60">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внимание регистрация МОД</v8:content>
+						</v8:item>
+					</Title>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ВниманиеРегистрацияМОДКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ВниманиеРегистрацияМОДРасширеннаяПодсказка" id="62"/>
+				</PictureDecoration>
+				<LabelDecoration name="ОписаниеРегистрацииМОД" id="55">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ОписаниеРегистрацииМОДКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ОписаниеРегистрацииМОДРасширеннаяПодсказка" id="57"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОдиночнаяРегистрацияМОД" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа одиночная регистрация МОД</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОдиночнаяРегистрацияМОДРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаШапкаЛево" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шапка лево</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="4"/>
+							<ChildItems>
+								<InputField name="Организация" id="7">
+									<DataPath>Организация</DataPath>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">ОрганизацияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Подразделение" id="13">
+									<DataPath>Подразделение</DataPath>
+									<ContextMenu name="ПодразделениеКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="15"/>
+									<Events>
+										<Event name="OnChange">ПодразделениеПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаШапкаПраво" id="5">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шапка право</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="6"/>
+							<ChildItems>
+								<InputField name="АдресМОДСтрокой" id="43">
+									<DataPath>АдресМОДСтрокой</DataPath>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="АдресМОДСтрокойКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="АдресМОДСтрокойРасширеннаяПодсказка" id="45"/>
+									<Events>
+										<Event name="OnChange">АдресМОДСтрокойПриИзменении</Event>
+										<Event name="StartChoice">АдресМОДСтрокойНачалоВыбора</Event>
+										<Event name="Clearing">АдресМОДСтрокойОчистка</Event>
+										<Event name="ChoiceProcessing">АдресМОДСтрокойОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="КодФИАС" id="16">
+									<DataPath>КодФИАС</DataPath>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="КодФИАСКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="КодФИАСРасширеннаяПодсказка" id="18"/>
+								</InputField>
+								<InputField name="КПП" id="52">
+									<DataPath>КПП</DataPath>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="КППКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="КППРасширеннаяПодсказка" id="54"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="ТоварныеГруппы" id="22">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ТоварныеГруппы</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТоварныеГруппыКонтекстноеМеню" id="24"/>
+					<AutoCommandBar name="ТоварныеГруппыКоманднаяПанель" id="23">
+						<ChildItems>
+							<Button name="ТоварныеГруппыВыбратьВсе" id="46">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВыбратьВсе</CommandName>
+								<ExtendedTooltip name="ТоварныеГруппыВыбратьВсеРасширеннаяПодсказка" id="47"/>
+							</Button>
+							<Button name="ТоварныеГруппыИсключитьВсе" id="48">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ИсключитьВсе</CommandName>
+								<ExtendedTooltip name="ТоварныеГруппыИсключитьВсеРасширеннаяПодсказка" id="49"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТоварныеГруппыРасширеннаяПодсказка" id="25"/>
+					<SearchStringAddition name="ТоварныеГруппыСтрокаПоиска" id="26">
+						<AdditionSource>
+							<Item>ТоварныеГруппы</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТоварныеГруппыСтрокаПоискаКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="ТоварныеГруппыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТоварныеГруппыСостояниеПросмотра" id="32">
+						<AdditionSource>
+							<Item>ТоварныеГруппы</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТоварныеГруппыСостояниеПросмотраКонтекстноеМеню" id="33"/>
+						<ExtendedTooltip name="ТоварныеГруппыСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТоварныеГруппыУправлениеПоиском" id="29">
+						<AdditionSource>
+							<Item>ТоварныеГруппы</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТоварныеГруппыУправлениеПоискомКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="ТоварныеГруппыУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<ColumnGroup name="ГруппаВыбранаТоварныеГруппы" id="41">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выбрана товарные группы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаВыбранаТоварныеГруппыРасширеннаяПодсказка" id="42"/>
+							<ChildItems>
+								<CheckBoxField name="ТоварныеГруппыВыбрана" id="35">
+									<DataPath>ТоварныеГруппы.Выбрана</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТоварныеГруппыВыбранаКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ТоварныеГруппыВыбранаРасширеннаяПодсказка" id="37"/>
+								</CheckBoxField>
+								<InputField name="ТоварныеГруппыТоварнаяГруппа" id="38">
+									<DataPath>ТоварныеГруппы.ТоварнаяГруппа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТоварныеГруппыТоварнаяГруппаКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ТоварныеГруппыТоварнаяГруппаРасширеннаяПодсказка" id="40"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМножественнаяРегистрацияМОД" id="65">
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа множественная регистрация МОД</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМножественнаяРегистрацияМОДРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<Table name="СписокМОДКРегистрации" id="95">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>СписокМОДКРегистрации</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СписокМОДКРегистрацииКонтекстноеМеню" id="97"/>
+					<AutoCommandBar name="СписокМОДКРегистрацииКоманднаяПанель" id="96">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокМОДКРегистрацииРасширеннаяПодсказка" id="98"/>
+					<SearchStringAddition name="СписокМОДКРегистрацииСтрокаПоиска" id="99">
+						<AdditionSource>
+							<Item>СписокМОДКРегистрации</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокМОДКРегистрацииСтрокаПоискаКонтекстноеМеню" id="100"/>
+						<ExtendedTooltip name="СписокМОДКРегистрацииСтрокаПоискаРасширеннаяПодсказка" id="101"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокМОДКРегистрацииСостояниеПросмотра" id="105">
+						<AdditionSource>
+							<Item>СписокМОДКРегистрации</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокМОДКРегистрацииСостояниеПросмотраКонтекстноеМеню" id="106"/>
+						<ExtendedTooltip name="СписокМОДКРегистрацииСостояниеПросмотраРасширеннаяПодсказка" id="107"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокМОДКРегистрацииУправлениеПоиском" id="102">
+						<AdditionSource>
+							<Item>СписокМОДКРегистрации</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокМОДКРегистрацииУправлениеПоискомКонтекстноеМеню" id="103"/>
+						<ExtendedTooltip name="СписокМОДКРегистрацииУправлениеПоискомРасширеннаяПодсказка" id="104"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="СписокМОДКРегистрацииДокумент" id="108">
+							<DataPath>СписокМОДКРегистрации.Документ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокМОДКРегистрацииДокументКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="СписокМОДКРегистрацииДокументРасширеннаяПодсказка" id="110"/>
+						</InputField>
+						<InputField name="СписокМОДКРегистрацииТоварнаяГруппа" id="114">
+							<DataPath>СписокМОДКРегистрации.ТоварнаяГруппа</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокМОДКРегистрацииТоварнаяГруппаКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="СписокМОДКРегистрацииТоварнаяГруппаРасширеннаяПодсказка" id="116"/>
+						</InputField>
+						<InputField name="СписокМОДКРегистрацииДанныеАдресаСтрокой" id="126">
+							<DataPath>СписокМОДКРегистрации.ДанныеАдресаСтрокой</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокМОДКРегистрацииДанныеАдресаСтрокойКонтекстноеМеню" id="127"/>
+							<ExtendedTooltip name="СписокМОДКРегистрацииДанныеАдресаСтрокойРасширеннаяПодсказка" id="128"/>
+						</InputField>
+						<InputField name="СписокМОДКРегистрацииКПП" id="111">
+							<DataPath>СписокМОДКРегистрации.КПП</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокМОДКРегистрацииКППКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="СписокМОДКРегистрацииКППРасширеннаяПодсказка" id="113"/>
+						</InputField>
+						<InputField name="СписокМОДКРегистрацииКодФИАС" id="117">
+							<DataPath>СписокМОДКРегистрации.КодФИАС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокМОДКРегистрацииКодФИАСКонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="СписокМОДКРегистрацииКодФИАСРасширеннаяПодсказка" id="119"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресМОД" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Подразделение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ПроизводственныйОбъектИС</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="КодФИАС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код ФИАС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.УникальныйИдентификаторИС</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресМОДСтрокой" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТоварныеГруппы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарные группы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Выбрана" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрана</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТоварнаяГруппа" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товарная группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТоварныеГруппыГИСМТ</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВидКонтактнойИнформацииАдресаМОД" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид контактной информации адреса МОД</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="КомментарийАдресаМОД" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий адреса МОД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КПП" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КПП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>9</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИНН" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>12</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РегистрацияМОДВСтороннейФорме" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация МОД в сторонней форме</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокМОДКРегистрации" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список МОДКРегистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Документ" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ВыводИзОборотаИСМП</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КПП" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>КПП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>9</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТоварнаяГруппа" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товарная группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТоварныеГруппыГИСМТ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодФИАС" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код ФИАС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДанныеАдреса" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Организация" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ДанныеАдресаСтрокой" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИНН" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="МножественнаяРегистрацияМОД" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Множественная регистрация МОД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ИсключитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить все</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИсключитьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗарегистрироватьВГИСМТ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать МОД в ГИС МТ</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗарегистрироватьВГИСМТ</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НезависимаяРегистрацияМОД">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="МножественнаяРегистрацияМОД">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="СписокМОДКРегистрации">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

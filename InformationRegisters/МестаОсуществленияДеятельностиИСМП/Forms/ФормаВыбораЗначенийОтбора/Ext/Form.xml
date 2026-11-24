@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор товарных групп</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВыбрать" id="24">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Выбрать</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="25"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыВыбораЗначений" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы выбора значений</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыВыбораЗначенийРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="СтраницаТоварныеГруппы" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница товарные группы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаТоварныеГруппыРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="ТоварныеГруппы" id="1">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТоварныеГруппы</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТоварныеГруппыКонтекстноеМеню" id="3"/>
+							<AutoCommandBar name="ТоварныеГруппыКоманднаяПанель" id="2">
+								<ChildItems>
+									<Button name="ТоварныеГруппыВыбратьВсе" id="20">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВыбратьВсе</CommandName>
+										<ExtendedTooltip name="ТоварныеГруппыВыбратьВсеРасширеннаяПодсказка" id="21"/>
+									</Button>
+									<Button name="ТоварныеГруппыИсключитьВсе" id="22">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИсключитьВсе</CommandName>
+										<ExtendedTooltip name="ТоварныеГруппыИсключитьВсеРасширеннаяПодсказка" id="23"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТоварныеГруппыРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ТоварныеГруппыСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>ТоварныеГруппы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварныеГруппыСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="ТоварныеГруппыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТоварныеГруппыСостояниеПросмотра" id="11">
+								<AdditionSource>
+									<Item>ТоварныеГруппы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварныеГруппыСостояниеПросмотраКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ТоварныеГруппыСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТоварныеГруппыУправлениеПоиском" id="8">
+								<AdditionSource>
+									<Item>ТоварныеГруппы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварныеГруппыУправлениеПоискомКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ТоварныеГруппыУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="ТоварныеГруппыВыбранаТоварнаяГруппа" id="26">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товарные группы выбрана товарная группа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТоварныеГруппыВыбранаТоварнаяГруппаРасширеннаяПодсказка" id="27"/>
+									<ChildItems>
+										<CheckBoxField name="ТоварныеГруппыВыбрана" id="17">
+											<DataPath>ТоварныеГруппы.Выбрана</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ТоварныеГруппыВыбранаКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="ТоварныеГруппыВыбранаРасширеннаяПодсказка" id="19"/>
+										</CheckBoxField>
+										<InputField name="ТоварныеГруппыТоварнаяГруппа" id="14">
+											<DataPath>ТоварныеГруппы.ТоварнаяГруппа</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТоварныеГруппыТоварнаяГруппаКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="ТоварныеГруппыТоварнаяГруппаРасширеннаяПодсказка" id="16"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВладелецМОД" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница владелец МОД</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаВладелецМОДРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<Table name="ВладелецМОД" id="53">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ВладелецМОД</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВладелецМОДКонтекстноеМеню" id="55"/>
+							<AutoCommandBar name="ВладелецМОДКоманднаяПанель" id="54"/>
+							<ExtendedTooltip name="ВладелецМОДРасширеннаяПодсказка" id="56"/>
+							<SearchStringAddition name="ВладелецМОДСтрокаПоиска" id="57">
+								<AdditionSource>
+									<Item>ВладелецМОД</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВладелецМОДСтрокаПоискаКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="ВладелецМОДСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВладелецМОДСостояниеПросмотра" id="63">
+								<AdditionSource>
+									<Item>ВладелецМОД</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВладелецМОДСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ВладелецМОДСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВладелецМОДУправлениеПоиском" id="60">
+								<AdditionSource>
+									<Item>ВладелецМОД</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВладелецМОДУправлениеПоискомКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ВладелецМОДУправлениеПоискомРасширеннаяПодсказка" id="62"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ВладелецМОДОрганизацияКонтрагент" id="66">
+									<DataPath>ВладелецМОД.ОрганизацияКонтрагент</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВладелецМОДОрганизацияКонтрагентКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ВладелецМОДОрганизацияКонтрагентРасширеннаяПодсказка" id="68"/>
+								</InputField>
+								<InputField name="ВладелецМОДОрганизацияКонтрагентСтрокой" id="69">
+									<DataPath>ВладелецМОД.ОрганизацияКонтрагентСтрокой</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВладелецМОДОрганизацияКонтрагентСтрокойКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ВладелецМОДОрганизацияКонтрагентСтрокойРасширеннаяПодсказка" id="71"/>
+									<Events>
+										<Event name="OnChange">ВладелецМОДОрганизацияКонтрагентСтрокойПриИзменении</Event>
+										<Event name="AutoComplete">ВладелецМОДОрганизацияКонтрагентСтрокойАвтоПодбор</Event>
+										<Event name="StartChoice">ВладелецМОДОрганизацияКонтрагентСтрокойНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">ВладелецМОДОрганизацияКонтрагентСтрокойОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТоварныеГруппы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарные группы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТоварнаяГруппа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товарная группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТоварныеГруппыГИСМТ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Выбрана" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрана</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВладелецМОД" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Владелец МОД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ОрганизацияКонтрагент" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОрганизацияКонтрагентГосИС</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ОрганизацияКонтрагентСтрокой" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация/Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИмяЭлементаОтбора" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя элемента отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ИсключитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить все</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИсключитьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Выбрать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Выбрать</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТоварныеГруппы">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

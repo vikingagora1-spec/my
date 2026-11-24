@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСохранить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="11">
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="68"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРеквизиты" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="13"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаблицы" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<Pages name="СтраницыТаблиц" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблицы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблицы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыТаблицРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Page name="СтраницаТитулЗаказчикаОписаниеГрузаКодГрузГНГ" id="50">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реквизиты сторон</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаТитулЗаказчикаОписаниеГрузаКодГрузГНГРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<Table name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГ" id="52">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ТитулЗаказчикаОписаниеГрузаКодГрузГНГ</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГКонтекстноеМеню" id="53"/>
+									<AutoCommandBar name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГКоманднаяПанель" id="54"/>
+									<ExtendedTooltip name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГРасширеннаяПодсказка" id="55"/>
+									<SearchStringAddition name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГСтрокаПоиска" id="56">
+										<AdditionSource>
+											<Item>ТитулЗаказчикаОписаниеГрузаКодГрузГНГ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГСтрокаПоискаКонтекстноеМеню" id="57"/>
+										<ExtendedTooltip name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГСостояниеПросмотра" id="59">
+										<AdditionSource>
+											<Item>ТитулЗаказчикаОписаниеГрузаКодГрузГНГ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГСостояниеПросмотраКонтекстноеМеню" id="60"/>
+										<ExtendedTooltip name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГУправлениеПоиском" id="62">
+										<AdditionSource>
+											<Item>ТитулЗаказчикаОписаниеГрузаКодГрузГНГ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГУправлениеПоискомКонтекстноеМеню" id="63"/>
+										<ExtendedTooltip name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeDeleteRow">ТитулЗаказчикаОписаниеГрузаКодГрузГНГПередУдалением</Event>
+										<Event name="OnStartEdit">ТитулЗаказчикаОписаниеГрузаКодГрузГНГПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ТитулЗаказчикаИныеДанныеИОговоркиКлиенаКод" id="75">
+											<DataPath>ТитулЗаказчикаОписаниеГрузаКодГрузГНГ.Код</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТитулЗаказчикаИныеДанныеИОговоркиКлиенаКодКонтекстноеМеню" id="76"/>
+											<ExtendedTooltip name="ТитулЗаказчикаИныеДанныеИОговоркиКлиенаКодРасширеннаяПодсказка" id="77"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТитулЗаказчикаОписаниеГрузаКодГрузГНГ" id="1">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИдентификаторСтрокиРодителя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки родительской таблицы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСтроки" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Код" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>8</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+		</Command>
+	</Commands>
+</Form>

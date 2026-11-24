@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Идентификатор" id="7">
+			<DataPath>Объект.Идентификатор</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ЭлектронныйДокументИсточник" id="10">
+			<DataPath>Объект.ЭлектронныйДокументИсточник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЭлектронныйДокументИсточникКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ЭлектронныйДокументИсточникРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ВидЧерновика" id="13">
+			<DataPath>Объект.ВидЧерновика</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВидЧерновикаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВидЧерновикаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<LabelField name="ОтправительЧерновика" id="16">
+			<DataPath>Объект.ОтправительЧерновика</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтправительЧерновикаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОтправительЧерновикаРасширеннаяПодсказка" id="18"/>
+		</LabelField>
+		<LabelField name="ОтправительДляДокумента" id="19">
+			<DataPath>Объект.ОтправительДляДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтправительДляДокументаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОтправительДляДокументаРасширеннаяПодсказка" id="21"/>
+		</LabelField>
+		<LabelField name="ПолучательДляДокумента" id="22">
+			<DataPath>Объект.ПолучательДляДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПолучательДляДокументаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ПолучательДляДокументаРасширеннаяПодсказка" id="24"/>
+		</LabelField>
+		<CheckBoxField name="Отозван" id="25">
+			<DataPath>Объект.Отозван</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтозванКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОтозванРасширеннаяПодсказка" id="27"/>
+		</CheckBoxField>
+		<CheckBoxField name="Обработан" id="28">
+			<DataPath>Объект.Обработан</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбработанКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ОбработанРасширеннаяПодсказка" id="30"/>
+		</CheckBoxField>
+		<Pages name="Страницы" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Page name="ГруппаСозданныеДокументы" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Созданные документы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСозданныеДокументыРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<Table name="СозданныеДокументы" id="35">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СозданныеДокументы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СозданныеДокументыКонтекстноеМеню" id="36"/>
+							<AutoCommandBar name="СозданныеДокументыКоманднаяПанель" id="37"/>
+							<ExtendedTooltip name="СозданныеДокументыРасширеннаяПодсказка" id="38"/>
+							<SearchStringAddition name="СозданныеДокументыСтрокаПоиска" id="39">
+								<AdditionSource>
+									<Item>СозданныеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="СозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СозданныеДокументыСостояниеПросмотра" id="42">
+								<AdditionSource>
+									<Item>СозданныеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="СозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СозданныеДокументыУправлениеПоиском" id="45">
+								<AdditionSource>
+									<Item>СозданныеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="СозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СозданныеДокументыНомерСтроки" id="48">
+									<DataPath>Объект.СозданныеДокументы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СозданныеДокументыНомерСтрокиКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="СозданныеДокументыНомерСтрокиРасширеннаяПодсказка" id="50"/>
+								</LabelField>
+								<InputField name="СозданныеДокументыЭлектронныйДокумент" id="51">
+									<DataPath>Объект.СозданныеДокументы.ЭлектронныйДокумент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СозданныеДокументыЭлектронныйДокументКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="СозданныеДокументыЭлектронныйДокументРасширеннаяПодсказка" id="53"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРедактируемыеПоля" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Редактируемые поля</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРедактируемыеПоляРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="РедактируемыеПоля" id="56">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РедактируемыеПоля</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РедактируемыеПоляКонтекстноеМеню" id="57"/>
+							<AutoCommandBar name="РедактируемыеПоляКоманднаяПанель" id="58"/>
+							<ExtendedTooltip name="РедактируемыеПоляРасширеннаяПодсказка" id="59"/>
+							<SearchStringAddition name="РедактируемыеПоляСтрокаПоиска" id="60">
+								<AdditionSource>
+									<Item>РедактируемыеПоля</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РедактируемыеПоляСтрокаПоискаКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="РедактируемыеПоляСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РедактируемыеПоляСостояниеПросмотра" id="63">
+								<AdditionSource>
+									<Item>РедактируемыеПоля</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РедактируемыеПоляСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="РедактируемыеПоляСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РедактируемыеПоляУправлениеПоиском" id="66">
+								<AdditionSource>
+									<Item>РедактируемыеПоля</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РедактируемыеПоляУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="РедактируемыеПоляУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РедактируемыеПоляНомерСтроки" id="69">
+									<DataPath>Объект.РедактируемыеПоля.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РедактируемыеПоляНомерСтрокиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="РедактируемыеПоляНомерСтрокиРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<InputField name="РедактируемыеПоляПоле" id="72">
+									<DataPath>Объект.РедактируемыеПоля.Поле</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="РедактируемыеПоляПолеКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="РедактируемыеПоляПолеРасширеннаяПодсказка" id="74"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЧерновикЭлектронногоДокументаЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

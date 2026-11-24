@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AdditionalIndexes xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AdditionalIndex id="0047002f-006c-006f-6200-61006c002000">
+		<Name>ДанныеКонечногоПлеча</Name>
+		<Table>AccumulationRegister.Доставка</Table>
+		<IndexedFields>
+			<Field>Распоряжение</Field>
+			<Field>КодСтроки</Field>
+			<Field>ДокументПланирования</Field>
+		</IndexedFields>
+		<AdditionalFields>
+			<Field>ЭтоКонечноеПлечо</Field>
+			<Field>УровеньОперации</Field>
+		</AdditionalFields>
+	</AdditionalIndex>
+	<AdditionalIndex id="cc99ca34-e24e-44f5-bd0f-b14d0f95df48">
+		<Name>КонтрольСборкиОрдера</Name>
+		<Table>AccumulationRegister.Доставка</Table>
+		<IndexedFields>
+			<Field>Распоряжение</Field>
+			<Field>Номенклатура</Field>
+			<Field>Характеристика</Field>
+			<Field>Серия</Field>
+			<Field>Рейс</Field>
+		</IndexedFields>
+		<AdditionalFields/>
+	</AdditionalIndex>
+</AdditionalIndexes>

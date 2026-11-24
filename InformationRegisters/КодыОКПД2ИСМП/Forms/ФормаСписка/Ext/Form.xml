@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ТНВЭД" id="136">
+			<DataPath>ТНВЭД</DataPath>
+			<ContextMenu name="ТНВЭДКонтекстноеМеню" id="137"/>
+			<ExtendedTooltip name="ТНВЭДРасширеннаяПодсказка" id="138"/>
+			<Events>
+				<Event name="OnChange">ТНВЭДПриИзменении</Event>
+				<Event name="StartChoice">ТНВЭДНачалоВыбора</Event>
+				<Event name="ChoiceProcessing">ТНВЭДОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<Pages name="Страницы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="СтраницаЗагружено" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загруженные</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаЗагруженоРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="Список" id="3">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<DefaultItem>true</DefaultItem>
+							<ChangeRowSet>false</ChangeRowSet>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.Сопоставлено</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.НаличиеРеквизита</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="ValueChoice">СписокВыборЗначения</Event>
+								<Event name="Selection">СписокВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокКодОКПД2" id="16">
+									<DataPath>Список.КодОКПД2</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Код</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокКодОКПД2КонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="СписокКодОКПД2РасширеннаяПодсказка" id="18"/>
+								</LabelField>
+								<LabelField name="СписокНаименованиеПолное" id="25">
+									<DataPath>Список.НаименованиеПолное</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование полное</v8:content>
+										</v8:item>
+									</Title>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ContextMenu name="СписокНаименованиеПолноеКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="СписокНаименованиеПолноеРасширеннаяПодсказка" id="27"/>
+								</LabelField>
+								<LabelField name="СписокВидПродукции" id="22">
+									<DataPath>Список.ВидПродукции</DataPath>
+									<ContextMenu name="СписокВидПродукцииКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="СписокВидПродукцииРасширеннаяПодсказка" id="24"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКлассификатор" id="32">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Классификатор</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаКлассификаторРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<Table name="Классификатор" id="103">
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChoiceMode>true</ChoiceMode>
+							<DataPath>Классификатор</DataPath>
+							<RowPictureDataPath>Классификатор.Загружен</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.НаличиеРеквизита</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="КлассификаторКонтекстноеМеню" id="105"/>
+							<AutoCommandBar name="КлассификаторКоманднаяПанель" id="104">
+								<ChildItems>
+									<Button name="КлассификаторВыбрать" id="131">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Классификатор.StandardCommand.Choose</CommandName>
+										<ExtendedTooltip name="КлассификаторВыбратьРасширеннаяПодсказка" id="132"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КлассификаторРасширеннаяПодсказка" id="106"/>
+							<SearchStringAddition name="КлассификаторСтрокаПоиска" id="107">
+								<AdditionSource>
+									<Item>Классификатор</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КлассификаторСтрокаПоискаКонтекстноеМеню" id="108"/>
+								<ExtendedTooltip name="КлассификаторСтрокаПоискаРасширеннаяПодсказка" id="109"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КлассификаторСостояниеПросмотра" id="113">
+								<AdditionSource>
+									<Item>Классификатор</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КлассификаторСостояниеПросмотраКонтекстноеМеню" id="114"/>
+								<ExtendedTooltip name="КлассификаторСостояниеПросмотраРасширеннаяПодсказка" id="115"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КлассификаторУправлениеПоиском" id="110">
+								<AdditionSource>
+									<Item>Классификатор</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КлассификаторУправлениеПоискомКонтекстноеМеню" id="111"/>
+								<ExtendedTooltip name="КлассификаторУправлениеПоискомРасширеннаяПодсказка" id="112"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="ValueChoice">КлассификаторВыборЗначения</Event>
+								<Event name="Selection">КлассификаторВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="КлассификаторКод" id="116">
+									<DataPath>Классификатор.Код</DataPath>
+									<ContextMenu name="КлассификаторКодКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="КлассификаторКодРасширеннаяПодсказка" id="118"/>
+								</InputField>
+								<InputField name="КлассификаторНаименованиеПолное" id="125">
+									<DataPath>Классификатор.НаименованиеПолное</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ContextMenu name="КлассификаторНаименованиеПолноеКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="КлассификаторНаименованиеПолноеРасширеннаяПодсказка" id="127"/>
+								</InputField>
+								<InputField name="КлассификаторВидПродукции" id="122">
+									<DataPath>Классификатор.ВидПродукции</DataPath>
+									<ContextMenu name="КлассификаторВидПродукцииКонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="КлассификаторВидПродукцииРасширеннаяПодсказка" id="124"/>
+								</InputField>
+								<InputField name="КлассификаторКодЧЗ" id="133">
+									<DataPath>Классификатор.КодЧЗ</DataPath>
+									<ContextMenu name="КлассификаторКодЧЗКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="КлассификаторКодЧЗРасширеннаяПодсказка" id="135"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ВидПродукции</Field>
+				<Field>Список.КодОКПД2</Field>
+				<Field>Список.НаименованиеПолное</Field>
+				<Field>Список.Сопоставлено</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	КодыОКПД2ИСМП.КодОКПД2 КАК КодОКПД2,
+	КодыОКПД2ИСМП.ВидПродукции КАК ВидПродукции,
+	КодыОКПД2ИСМП.НаименованиеПолное Как НаименованиеПолное,
+	Неопределено Как КодОКПД2Ссылка,
+	0 КАК Сопоставлено
+ИЗ
+	РегистрСведений.КодыОКПД2ИСМП КАК КодыОКПД2ИСМП</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидПродукции</dcssch:dataPath>
+					<dcssch:field>ВидПродукции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеПолное</dcssch:dataPath>
+					<dcssch:field>НаименованиеПолное</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КодОКПД2</dcssch:dataPath>
+					<dcssch:field>КодОКПД2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КодОКПД2Ссылка</dcssch:dataPath>
+					<dcssch:field>КодОКПД2Ссылка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код ОКПД2 ссылка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сопоставлено</dcssch:dataPath>
+					<dcssch:field>Сопоставлено</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопоставлено</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<KeyField>ВидПродукции</KeyField>
+				<KeyField>КодОКПД2</KeyField>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВозвращатьСсылкуНаЭлементКлассификатора" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возвращать ссылку на элемент классификатора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Классификатор" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Классификатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Классификатор.ВидПродукции</Field>
+				<Field>Классификатор.Загружен</Field>
+				<Field>Классификатор.Код</Field>
+				<Field>Классификатор.НаименованиеПолное</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ОКПД2ПоВидамПродукцииИС.Код,
+	ОКПД2ПоВидамПродукцииИС.КодЧЗ,
+	ОКПД2ПоВидамПродукцииИС.Ссылка,
+	ОКПД2ПоВидамПродукцииИС.ПометкаУдаления,
+	ОКПД2ПоВидамПродукцииИС.ВидПродукции,
+	ОКПД2ПоВидамПродукцииИС.НаименованиеПолное,
+	ВЫБОР
+		КОГДА КодыОКПД2ИСМП.КодОКПД2 ЕСТЬ NULL
+			ТОГДА 0
+		ИНАЧЕ 1
+	КОНЕЦ КАК Загружен
+ИЗ
+	Справочник.ОКПД2ПоВидамПродукцииИС КАК ОКПД2ПоВидамПродукцииИС
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КодыОКПД2ИСМП КАК КодыОКПД2ИСМП
+		ПО ОКПД2ПоВидамПродукцииИС.Код = КодыОКПД2ИСМП.КодОКПД2
+		И ОКПД2ПоВидамПродукцииИС.ВидПродукции = КодыОКПД2ИСМП.ВидПродукции
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СоответствиеТНВЭДиОКПД2ИС КАК СоответствиеТНВЭДиОКПД2
+		ПО ВЫБОР
+				КОГДА &amp;ТНВЭД = ЗНАЧЕНИЕ(Справочник.ТНВЭДПоВидамПродукцииИС.ПустаяСсылка)
+				ТОГДА ЛОЖЬ
+				ИНАЧЕ ОКПД2ПоВидамПродукцииИС.Ссылка = СоответствиеТНВЭДиОКПД2.ОКПД2
+			КОНЕЦ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ
+			(ВЫБРАТЬ РАЗЛИЧНЫЕ ЗначенияЭлементовКонструктора.ВидПродукции КАК ВидПродукции
+			ИЗ РегистрСведений.ЗначенияЭлементовКонструктораВидовПродукцииИС КАК ЗначенияЭлементовКонструктора
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+				ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора
+				И ЗначенияЭлементовКонструктора.ВидПродукции = ЗначенияПользователяЭлементовКонструктора.ВидПродукции
+			ГДЕ ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЗНАЧЕНИЕ(Справочник.ЭлементыКонструктораВидовПродукцииИС.ВидыПродукцииГИСМТ)
+				И ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+			ОБЪЕДИНИТЬ
+			ВЫБРАТЬ ЗначенияПользователяЭлементовКонструктора.ВидПродукции
+			ИЗ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+			ГДЕ ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора = ЗНАЧЕНИЕ(Справочник.ЭлементыКонструктораВидовПродукцииИС.ВидыПродукцииГИСМТ)
+				И НЕ ЗначенияПользователяЭлементовКонструктора.ПометкаУдаления
+			) КАК ЗначенияВидыПродукции
+		ПО ОКПД2ПоВидамПродукцииИС.ВидПродукции = ЗначенияВидыПродукции.ВидПродукции
+ГДЕ
+	ДЛИНАСТРОКИ(ОКПД2ПоВидамПродукцииИС.Код) = 12
+	И ОКПД2ПоВидамПродукцииИС.Статус &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыКлассификаторовВидовПродукцииИС.Архивный)
+	И (&amp;ТНВЭД = ЗНАЧЕНИЕ(Справочник.ТНВЭДПоВидамПродукцииИС.ПустаяСсылка)
+		ИЛИ СоответствиеТНВЭДиОКПД2.ТНВЭД = &amp;ТНВЭД)</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидПродукции</dcssch:dataPath>
+					<dcssch:field>ВидПродукции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеПолное</dcssch:dataPath>
+					<dcssch:field>НаименованиеПолное</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Загружен</dcssch:dataPath>
+					<dcssch:field>Загружен</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загружен</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КодЧЗ</dcssch:dataPath>
+					<dcssch:field>КодЧЗ</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Идентификатор</dcssch:dataPath>
+					<dcssch:field>Идентификатор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Статус</dcssch:dataPath>
+					<dcssch:field>Статус</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаИзменения</dcssch:dataPath>
+					<dcssch:field>ДатаИзменения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ХешСумма</dcssch:dataPath>
+					<dcssch:field>ХешСумма</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ХешСуммаПоставляемыхДанных</dcssch:dataPath>
+					<dcssch:field>ХешСуммаПоставляемыхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>ТНВЭД</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ТНВЭД</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.ТНВЭДПоВидамПродукцииИС</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<MainTable>Catalog.ОКПД2ПоВидамПродукцииИС</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТНВЭД" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТН ВЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТНВЭДПоВидамПродукцииИС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидыПродукции" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды продукции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ВидПродукцииТоварнаяГруппа">
+			<Type/>
+		</Parameter>
+		<Parameter name="ВозвращатьСсылкуНаЭлементКлассификатора">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ТНВЭД">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТНВЭДПоВидамПродукцииИС</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

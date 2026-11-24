@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор параметров доставки</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПодобратьСтроку" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПодобратьСтроку</CommandName>
+				<ExtendedTooltip name="ФормаПодобратьСтрокуРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтмена" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="НадписьШапка" id="5">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В рейс уже добавлены данные по текущей строке с измененными параметрами доставки. Необходимо выбрать параметры, с которыми новые данные будут перенесены в документ: можно выбрать параметры доставки из рейса или оставить согласно плановым (по умолчанию выделена строка с плановыми параметрами)</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьШапкаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НадписьШапкаРасширеннаяПодсказка" id="7"/>
+		</LabelDecoration>
+		<Table name="ВариантыПараметров" id="8">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ВариантыПараметров</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ВариантыПараметровКонтекстноеМеню" id="9"/>
+			<AutoCommandBar name="ВариантыПараметровКоманднаяПанель" id="10"/>
+			<ExtendedTooltip name="ВариантыПараметровРасширеннаяПодсказка" id="11"/>
+			<SearchStringAddition name="ВариантыПараметровСтрокаПоиска" id="12">
+				<AdditionSource>
+					<Item>ВариантыПараметров</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыПараметровСтрокаПоискаКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="ВариантыПараметровСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВариантыПараметровСостояниеПросмотра" id="15">
+				<AdditionSource>
+					<Item>ВариантыПараметров</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыПараметровСостояниеПросмотраКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="ВариантыПараметровСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВариантыПараметровУправлениеПоиском" id="18">
+				<AdditionSource>
+					<Item>ВариантыПараметров</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыПараметровУправлениеПоискомКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ВариантыПараметровУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ВариантыПараметровВыбор</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="ВариантыПараметровКартинка" id="45">
+					<DataPath>ВариантыПараметров.ПлановыеПараметры</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInHeader>false</ShowInHeader>
+					<Width>1</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>1</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.КалендарьСборкаИДоставка</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="ВариантыПараметровКартинкаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ВариантыПараметровКартинкаРасширеннаяПодсказка" id="47"/>
+				</PictureField>
+				<ColumnGroup name="ВариантыПараметровГруппаТовар" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа товар</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ВариантыПараметровГруппаТоварРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<InputField name="ВариантыПараметровНоменклатура" id="27">
+							<DataPath>ВариантыПараметров.Номенклатура</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ВариантыПараметровНоменклатураКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ВариантыПараметровНоменклатураРасширеннаяПодсказка" id="29"/>
+						</InputField>
+						<InputField name="ВариантыПараметровХарактеристика" id="21">
+							<DataPath>ВариантыПараметров.Характеристика</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ВариантыПараметровХарактеристикаКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ВариантыПараметровХарактеристикаРасширеннаяПодсказка" id="23"/>
+						</InputField>
+						<InputField name="ВариантыПараметровСерия" id="24">
+							<DataPath>ВариантыПараметров.Серия</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ВариантыПараметровСерияКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ВариантыПараметровСерияРасширеннаяПодсказка" id="26"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ВариантыПараметровРаспоряжение" id="39">
+					<DataPath>ВариантыПараметров.Распоряжение</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВариантыПараметровРаспоряжениеКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ВариантыПараметровРаспоряжениеРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="ВариантыПараметровДоставкаДо" id="30">
+					<DataPath>ВариантыПараметров.ДоставкаДо</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВариантыПараметровДоставкаДоКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ВариантыПараметровДоставкаДоРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<InputField name="ВариантыПараметровТочкаДоставки" id="33">
+					<DataPath>ВариантыПараметров.ТочкаДоставки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВариантыПараметровТочкаДоставкиКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ВариантыПараметровТочкаДоставкиРасширеннаяПодсказка" id="35"/>
+				</InputField>
+				<InputField name="ВариантыПараметровЗонаДоставки" id="36">
+					<DataPath>ВариантыПараметров.ЗонаДоставки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВариантыПараметровЗонаДоставкиКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ВариантыПараметровЗонаДоставкиРасширеннаяПодсказка" id="38"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаЛегенда" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Легенда</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаЛегендаРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПлановыеЗначения" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановые значения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПлановыеЗначенияРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаПлановыеЗначения" id="54">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка плановые значения</v8:content>
+								</v8:item>
+							</Title>
+							<PictureSize>Proportionally</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.КалендарьСборкаИДоставка</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаПлановыеЗначенияКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="КартинкаПлановыеЗначенияРасширеннаяПодсказка" id="56"/>
+						</PictureDecoration>
+						<LabelDecoration name="ТекстПлановыеЗначения" id="57">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Плановые параметры доставки из распоряжения</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекстПлановыеЗначенияКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ТекстПлановыеЗначенияРасширеннаяПодсказка" id="59"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВариантыПараметров" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Варианты параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Характеристика" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Серия" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоставкаДо" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доставка до</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТочкаДоставки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Точка доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТочкиДоставки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗонаДоставки" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зона доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЗоныДоставки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Распоряжение" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распоряжение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.РаспоряжениеНаДоставку25</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ПлановыеПараметры" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановые параметры</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВыбраннаяСтрока" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодобратьСтроку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать строку</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодобратьСтроку</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="АдресТаблицыВариантов">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ВыбраннаяСтрока">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДляСпискаПоТоварам">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

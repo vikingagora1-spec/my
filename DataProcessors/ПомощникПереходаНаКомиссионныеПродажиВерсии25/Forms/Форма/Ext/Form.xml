@@ -1,0 +1,1072 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Помощник перехода на "Комиссионные продажи версии 2.5"</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>true</VerticalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ГруппаШаг1" id="203">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг 1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаШаг1РасширеннаяПодсказка" id="204"/>
+					<ChildItems>
+						<LabelDecoration name="Шаг1ДекорацияИнформацияЗаголовок" id="205">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="style:ВажнаяНадписьШрифт" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Шаг 1. Для перехода на «Комиссионные продажи версии 2.5» выполните подготовительные работы вручную:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Шаг1ДекорацияИнформацияЗаголовокКонтекстноеМеню" id="206"/>
+							<ExtendedTooltip name="Шаг1ДекорацияИнформацияЗаголовокРасширеннаяПодсказка" id="207"/>
+						</LabelDecoration>
+						<LabelDecoration name="Шаг1ДекорацияИнформация1" id="208">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>1. Проверьте, что сформированы все учетные документы:
+  - передачи товаров комиссионеру (&lt;link ОткрытьСписокПередачКОформлению&gt;посмотреть&lt;/&gt;);
+  - отчеты комиссионеров о продажах или списании (&lt;link ОткрытьСписокОтчетовКОформлению&gt;посмотреть&lt;/&gt;); </v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>На следующих шагах нереализованные остатки переданных на комиссию товаров будут возвращены и переданы заново.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="Шаг1ДекорацияИнформация1КонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="Шаг1ДекорацияИнформация1РасширеннаяПодсказка" id="210">
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Шаг1ДекорацияИнформация2" id="211">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>2. Отмените незавершенные заказы комиссионеров (&lt;link ОткрытьСписокНезавершенныхЗаказов&gt;посмотреть&lt;/&gt;).</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>На следующих шагах не предусмотрено автоматическое закрытие заказов. Вы можете пропустить этот пункт и вернуться к нему позже через стандартный интерфейс.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="Шаг1ДекорацияИнформация2КонтекстноеМеню" id="212"/>
+							<ExtendedTooltip name="Шаг1ДекорацияИнформация2РасширеннаяПодсказка" id="213">
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Шаг1ДекорацияИнформация3" id="214">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>3. Закройте устаревшие &lt;link ОткрытьСписокДоговоров&gt;договоры&lt;/&gt; и &lt;link ОткрытьСписокСоглашений&gt;соглашения&lt;/&gt; с клиентами, которые не требуют автоматического переноса.</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>На следующих шагах действующие договоры и соглашения будут автоматически скопированы для "Комиссионных продаж версии 2.5".</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="Шаг1ДекорацияИнформация3КонтекстноеМеню" id="215"/>
+							<ExtendedTooltip name="Шаг1ДекорацияИнформация3РасширеннаяПодсказка" id="216">
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Шаг1ДекорацияИнформация4" id="217">
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>4. Отразите в учете все недостающие счета-фактуры, выставленные комиссионерам (&lt;link ОткрытьСписокСчетовФактур&gt;посмотреть&lt;/&gt;).</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вы можете пропустить этот пункт и вернуться к нему позже через стандартный интерфейс.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="Шаг1ДекорацияИнформация4КонтекстноеМеню" id="218"/>
+							<ExtendedTooltip name="Шаг1ДекорацияИнформация4РасширеннаяПодсказка" id="219">
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаВажно" id="220">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа важно</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВажноРасширеннаяПодсказка" id="221"/>
+							<ChildItems>
+								<PictureDecoration name="Шаг1ДекорацияВажноКартинка" id="222">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка информация1</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="Шаг1ДекорацияВажноКартинкаКонтекстноеМеню" id="223"/>
+									<ExtendedTooltip name="Шаг1ДекорацияВажноКартинкаРасширеннаяПодсказка" id="224"/>
+								</PictureDecoration>
+								<LabelDecoration name="Шаг1ДекорацияВажноИнформация" id="225">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;fontsize 10&gt;&lt;b&gt;Важно&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;: сделайте резервную копию данных. После начала перехода его нельзя будет отменить.&lt;/&gt;&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ContextMenu name="Шаг1ДекорацияВажноИнформацияКонтекстноеМеню" id="226"/>
+									<ExtendedTooltip name="Шаг1ДекорацияВажноИнформацияРасширеннаяПодсказка" id="227">
+										<AutoMaxWidth>false</AutoMaxWidth>
+									</ExtendedTooltip>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаШаг2" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг 2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаШаг2РасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<LabelDecoration name="Шаг2ДекорацияИнформацияЗаголовок" id="51">
+							<Font ref="style:ВажнаяНадписьШрифт" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Шаг 2. Автоматический перенос данных</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<ContextMenu name="Шаг2ДекорацияИнформацияЗаголовокКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="Шаг2ДекорацияИнформацияЗаголовокРасширеннаяПодсказка" id="53"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПереносДанныхЗаголовок" id="241">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа завершение заголовок</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПереносДанныхЗаголовокРасширеннаяПодсказка" id="242"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияСтатусПереносаДанных" id="243">
+									<Picture>
+										<xr:Ref>CommonPicture.Внимание48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияСтатусПереносаДанныхКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="ДекорацияСтатусПереносаДанныхРасширеннаяПодсказка" id="245"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияЗаголовокПереносаДанных" id="246">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перенос данных не завершен</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<ContextMenu name="ДекорацияЗаголовокПереносаДанныхКонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="ДекорацияЗаголовокПереносаДанныхРасширеннаяПодсказка" id="248"/>
+									<Events>
+										<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаШаг2Пункт1" id="54">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выгрузка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг2Пункт1РасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаШаг2Пункт1Заголовок" id="165">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт1 заголовок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт1 заголовок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаг2Пункт1ЗаголовокРасширеннаяПодсказка" id="166"/>
+									<ChildItems>
+										<PictureDecoration name="ГруппаШаг2Пункт1Картинка" id="60">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа шаг2 пункт1 картинка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполнениеНеНачалось32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ГруппаШаг2Пункт1КартинкаКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт1КартинкаРасширеннаяПодсказка" id="62"/>
+										</PictureDecoration>
+										<LabelDecoration name="ГруппаШаг2Пункт1ДекорацияИнформация" id="66">
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1. Перенос соглашений с клиентами.</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="ГруппаШаг2Пункт1ДекорацияИнформацияКонтекстноеМеню" id="67"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт1ДекорацияИнформацияРасширеннаяПодсказка" id="68"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаШаг2Пункт1Информация" id="88">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт1 информация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаг2Пункт1ИнформацияРасширеннаяПодсказка" id="89"/>
+									<ChildItems>
+										<LabelDecoration name="ГруппаШаг2Пункт1ДекорацияИнформацияПодсказка" id="90">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>    Система скопирует все незакрытые общие и индивидуальные соглашения с клиентами с операцией "Передача на комиссию" версии 2.0.
+    Для предотвращения дублирования перед созданием каждого соглашения выполнится поиск уже существующего по наименованию, дате, номеру, валюте и контрагенту (для индивидуальных).
+    Исходные соглашения "Комиссионных продаж версии 2.0" будут закрыты.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ГруппаШаг2Пункт1ДекорацияИнформацияПодсказкаКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт1ДекорацияИнформацияПодсказкаРасширеннаяПодсказка" id="92"/>
+											<Events>
+												<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="ГруппаШаг2Пункт1ДекорацияИнформацияПосмотретьПодсказка" id="249">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>    Вы можете &lt;link ОткрытьСписокСоглашений&gt;посмотреть&lt;/&gt; список соглашений, которые будут перенесены.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ГруппаШаг2Пункт1ДекорацияИнформацияПосмотретьПодсказкаКонтекстноеМеню" id="250"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт1ДекорацияИнформацияПосмотретьПодсказкаРасширеннаяПодсказка" id="251"/>
+											<Events>
+												<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаШаг2Пункт2" id="93">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выгрузка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг2Пункт2РасширеннаяПодсказка" id="94"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаШаг2Пункт2Заголовок" id="167">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт2 заголовок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт2 заголовок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаг2Пункт2ЗаголовокРасширеннаяПодсказка" id="168"/>
+									<ChildItems>
+										<PictureDecoration name="ГруппаШаг2Пункт2Картинка" id="99">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа шаг2 пункт2 картинка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполнениеНеНачалось32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ГруппаШаг2Пункт2КартинкаКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт2КартинкаРасширеннаяПодсказка" id="101"/>
+										</PictureDecoration>
+										<LabelDecoration name="ГруппаШаг2Пункт2ДекорацияИнформация" id="105">
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>2. Перенос договоров с клиентами.</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="ГруппаШаг2Пункт2ДекорацияИнформацияКонтекстноеМеню" id="106"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт2ДекорацияИнформацияРасширеннаяПодсказка" id="107"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаШаг2Пункт2Информация" id="124">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт2 информация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт2 информация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаг2Пункт2ИнформацияРасширеннаяПодсказка" id="125"/>
+									<ChildItems>
+										<LabelDecoration name="ГруппаШаг2Пункт2ДекорацияИнформацияПодсказка" id="126">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>    Система скопирует все незакрытые договоры с клиентами с операцией "Передача на комиссию" версии 2.0.
+    Для предотвращения дублирования перед созданием каждого договора выполнится поиск уже существующего по наименованию, дате, номеру, контрагенту и валюте.
+    Исходные договоры "Комиссионных продаж версии 2.0" будут закрыты.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ГруппаШаг2Пункт2ДекорацияИнформацияПодсказкаКонтекстноеМеню" id="127"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт2ДекорацияИнформацияПодсказкаРасширеннаяПодсказка" id="128"/>
+											<Events>
+												<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="ГруппаШаг2Пункт2ДекорацияИнформацияПосмотретьПодсказка" id="252">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>    Вы можете &lt;link ОткрытьСписокДоговоров&gt;посмотреть&lt;/&gt; список договоров с клиентами, которые будут перенесены.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ГруппаШаг2Пункт2ДекорацияИнформацияПосмотретьПодсказкаКонтекстноеМеню" id="253"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт2ДекорацияИнформацияПосмотретьПодсказкаРасширеннаяПодсказка" id="254"/>
+											<Events>
+												<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаШаг2Пункт3" id="129">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выгрузка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг2Пункт3РасширеннаяПодсказка" id="130"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаШаг2Пункт3Заголовок" id="169">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт3 заголовок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт3 заголовок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаг2Пункт3ЗаголовокРасширеннаяПодсказка" id="170"/>
+									<ChildItems>
+										<PictureDecoration name="ГруппаШаг2Пункт3Картинка" id="135">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа шаг2 пункт3 картинка</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполнениеНеНачалось32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ГруппаШаг2Пункт3КартинкаКонтекстноеМеню" id="136"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт3КартинкаРасширеннаяПодсказка" id="137"/>
+										</PictureDecoration>
+										<LabelDecoration name="ГруппаШаг2Пункт3ДекорацияИнформация" id="141">
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>3. Перенос остатков товаров, переданных на комиссию.</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="ГруппаШаг2Пункт3ДекорацияИнформацияКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт3ДекорацияИнформацияРасширеннаяПодсказка" id="143"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаШаг2Пункт3Информация" id="160">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт3 информация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 пункт3 информация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаг2Пункт3ИнформацияРасширеннаяПодсказка" id="161"/>
+									<ChildItems>
+										<LabelDecoration name="ГруппаШаг2Пункт3ДекорацияИнформацияПодсказка" id="162">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>    Система автоматически перенесет остатки товаров, переданных на комиссию.
+
+    Для этого по каждому документу передачи товаров (с нереализованным остатком) будут созданы:
+    - Документ возврата товаров от комиссионера "Комиссионных продаж версии 2.0"
+    - Документ передачи товаров комиссионеру "Комиссионных продаж версии 2.5"
+
+    Обратите внимание:
+    - Заказы клиентов автоматически не переносятся, не отменяются и не закрываются
+    - Новые документы передачи не привязываются к распоряжениям
+    - Если в процессе проведения возникнут ошибки, то такие документы будут записаны, но не проведены. Пользователям необходимо вручную исправить  ошибки и провести документы.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ГруппаШаг2Пункт3ДекорацияИнформацияПодсказкаКонтекстноеМеню" id="163"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт3ДекорацияИнформацияПодсказкаРасширеннаяПодсказка" id="164"/>
+											<Events>
+												<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="ГруппаШаг2Пункт3ДекорацияИнформацияПосмотретьПодсказка" id="255">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>    &lt;link ОткрытьСписокОтчетовКОформлению&gt;&lt;u&gt;П&lt;/&gt;осмотреть&lt;/&gt; список комиссионеров, у которых есть нереализованные остатки к переносу.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ГруппаШаг2Пункт3ДекорацияИнформацияПосмотретьПодсказкаКонтекстноеМеню" id="256"/>
+											<ExtendedTooltip name="ГруппаШаг2Пункт3ДекорацияИнформацияПосмотретьПодсказкаРасширеннаяПодсказка" id="257"/>
+											<Events>
+												<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаШаг2ИнформацияОбщая" id="171">
+							<TitleTextColor>style:FormTextColor</TitleTextColor>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаг2 информация общая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг2ИнформацияОбщаяРасширеннаяПодсказка" id="172"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаШаг2ИнформацияОбщая1" id="173">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 информация общая1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаг2ИнформацияОбщая1РасширеннаяПодсказка" id="174"/>
+									<ChildItems>
+										<PictureDecoration name="ГруппаШаг2ИнформацияОбщая1Картинка" id="175">
+											<Picture>
+												<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ГруппаШаг2ИнформацияОбщая1КартинкаКонтекстноеМеню" id="176"/>
+											<ExtendedTooltip name="ГруппаШаг2ИнформацияОбщая1КартинкаРасширеннаяПодсказка" id="177"/>
+										</PictureDecoration>
+										<LabelDecoration name="ГруппаШаг2ИнформацияОбщая1Информация" id="178">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:FormTextColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Система не контролирует и не блокирует изменение объектов комиссионных продаж пользователями во время переноса данных.
+Не рекомендуется изменять настройки соглашений и договоров, а также создавать и изменять документы.
+</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ГруппаШаг2ИнформацияОбщая1ИнформацияКонтекстноеМеню" id="179"/>
+											<ExtendedTooltip name="ГруппаШаг2ИнформацияОбщая1ИнформацияРасширеннаяПодсказка" id="180"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаШаг2ИнформацияОбщая2" id="181">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаг2 информация общая2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаг2ИнформацияОбщая2РасширеннаяПодсказка" id="182"/>
+									<ChildItems>
+										<PictureDecoration name="ГруппаШаг2ИнформацияОбщая2Картинка" id="183">
+											<Picture>
+												<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ГруппаШаг2ИнформацияОбщая2КартинкаКонтекстноеМеню" id="184"/>
+											<ExtendedTooltip name="ГруппаШаг2ИнформацияОбщая2КартинкаРасширеннаяПодсказка" id="185"/>
+										</PictureDecoration>
+										<LabelDecoration name="ГруппаШаг2ИнформацияОбщая2Информация" id="186">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:FormTextColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При закрытии помощника переход продолжится в автоматическом режиме. Возникшие ошибки можно будет посмотреть в журнале регистрации.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ГруппаШаг2ИнформацияОбщая2ИнформацияКонтекстноеМеню" id="187"/>
+											<ExtendedTooltip name="ГруппаШаг2ИнформацияОбщая2ИнформацияРасширеннаяПодсказка" id="188"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаШаг3" id="189">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг3</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаШаг3РасширеннаяПодсказка" id="190"/>
+					<ChildItems>
+						<LabelDecoration name="Шаг3ДекорацияИнформацияЗаголовок" id="191">
+							<Font ref="style:ВажнаяНадписьШрифт" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Шаг 3. Результат работы помощника перехода</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Шаг3ДекорацияИнформацияЗаголовокКонтекстноеМеню" id="192"/>
+							<ExtendedTooltip name="Шаг3ДекорацияИнформацияЗаголовокРасширеннаяПодсказка" id="193"/>
+						</LabelDecoration>
+						<LabelDecoration name="Шаг3Декорация1" id="194">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проведены подготовительные действия для перехода на "Комиссионные продажи версии 2.5".</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Шаг3Декорация1КонтекстноеМеню" id="195"/>
+							<ExtendedTooltip name="Шаг3Декорация1РасширеннаяПодсказка" id="196"/>
+						</LabelDecoration>
+						<LabelDecoration name="Шаг3Декорация2" id="197">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Были выполнены следующие операции:
+1. Созданы договоры и соглашения с клиентами
+2. Сформированы возвраты товаров от комиссионеров
+3. Сформированы передачи товаров комиссионерам
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Шаг3Декорация2КонтекстноеМеню" id="198"/>
+							<ExtendedTooltip name="Шаг3Декорация2РасширеннаяПодсказка" id="199"/>
+						</LabelDecoration>
+						<LabelDecoration name="Шаг3Декорация3" id="200">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В процессе перевода не возникло ошибок, все операции были выполнены.
+Для завершения перехода необходимо &lt;link ЗавершитьПереход&gt;отключить режим "Комиссионных продаж версии 2.0"&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Шаг3Декорация3КонтекстноеМеню" id="201"/>
+							<ExtendedTooltip name="Шаг3Декорация3РасширеннаяПодсказка" id="202"/>
+							<Events>
+								<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаКнопки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<CommandBar name="КоманднаяПанельНазад" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель назад</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КоманднаяПанельНазадРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Button name="Назад" id="5">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Назад</CommandName>
+							<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="6"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="КоманднаяПанельВперед" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель вперед</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="КоманднаяПанельВпередРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Button name="ЗапуститьПереход" id="231">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ЗапуститьПереход</CommandName>
+							<ExtendedTooltip name="ЗапуститьПереходРасширеннаяПодсказка" id="232"/>
+						</Button>
+						<Button name="ОбновитьСтатусПерехода" id="239">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОбновитьСтатусПерехода</CommandName>
+							<ExtendedTooltip name="ОбновитьСтатусПереходаРасширеннаяПодсказка" id="240"/>
+						</Button>
+						<Button name="Далее" id="9">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.Далее</CommandName>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+							<ExtendedTooltip name="ДалееРасширеннаяПодсказка" id="10"/>
+						</Button>
+						<Button name="ЗакрытьПомощник" id="11">
+							<Type>CommandBarButton</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>9</MaxWidth>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.ЗакрытьПомощник</CommandName>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+							<ExtendedTooltip name="ЗакрытьПомощникРасширеннаяПодсказка" id="12"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПереходаНаКомиссионныеПродажиВерсии25</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДанныеОбработаны" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные обработаны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапускПерехода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск перехода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПереходЗавершен" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переход завершен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СоглашенияОбработаны" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соглашения обработаны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоговорыОбработаны" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договоры обработаны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОстаткиОбработаны" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки обработаны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьОшибки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресРезультата" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес результата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийИнтервалПроверкиРезультата" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий интервал проверки результата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>1</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СобытиеЖурналаРегистрации" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Событие журнала регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстПроверкиАктивныхСеансов" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст проверки активных сеансов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Далее" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Далее</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Назад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьПомощник" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть помощник</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть помощник</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьПомощник</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапуститьПереход" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить переход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить переход</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьПереход</Action>
+		</Command>
+		<Command name="ОбновитьСтатусПерехода" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статус перехода</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статус перехода</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновлениеСтатусаПерехода</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЗапускПерехода">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

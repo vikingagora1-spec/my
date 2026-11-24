@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ИдентификаторЭДО" id="1">
+			<DataPath>Запись.ИдентификаторЭДО</DataPath>
+			<ContextMenu name="ИдентификаторЭДОКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИдентификаторЭДОРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ТипДанных" id="4">
+			<DataPath>Запись.ТипДанных</DataPath>
+			<ContextMenu name="ТипДанныхКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ТипДанныхРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ИдентификаторОбъекта" id="7">
+			<DataPath>Запись.ИдентификаторОбъекта</DataPath>
+			<ContextMenu name="ИдентификаторОбъектаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИдентификаторОбъектаРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="МеткаВремениВЦентреЭДО" id="28">
+			<DataPath>МеткаВремениВЦентреЭДО</DataPath>
+			<Enabled>false</Enabled>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метка времени в центре ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Width>16</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Mask>99.99.9999 99:99:99.999</Mask>
+			<ContextMenu name="МеткаВремениВЦентреЭДОКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="МеткаВремениВЦентреЭДОРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="МеткаВремениПредставление" id="25">
+			<DataPath>МеткаВремениПредставление</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метка времени</v8:content>
+				</v8:item>
+			</Title>
+			<Width>16</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Mask>99.99.9999 99:99:99.999</Mask>
+			<ContextMenu name="МеткаВремениПредставлениеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="МеткаВремениПредставлениеРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ДатаСинхронизации" id="13">
+			<DataPath>Запись.ДатаСинхронизации</DataPath>
+			<ContextMenu name="ДатаСинхронизацииКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДатаСинхронизацииРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="КоличествоПопыток" id="16">
+			<DataPath>Запись.КоличествоПопыток</DataPath>
+			<ContextMenu name="КоличествоПопытокКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="КоличествоПопытокРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<CheckBoxField name="Ошибка" id="19">
+			<DataPath>Запись.Ошибка</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОшибкаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОшибкаРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<InputField name="ОписаниеОшибки" id="22">
+			<DataPath>Запись.ОписаниеОшибки</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ОписаниеОшибкиКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ОписаниеОшибкиРасширеннаяПодсказка" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СостоянияСинхронизацииОбъектовСЦентромЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="МеткаВремениПредставление" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метка времени представление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>23</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МеткаВремениВЦентреЭДО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метка времени в центре ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>23</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ТолькоИзменение">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="МеткаВремениВЦентреЭДО">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

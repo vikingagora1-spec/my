@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ошибки замены дубля</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВертикальная" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вертикальная</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВертикальнаяРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<LabelField name="ФорматированныйЗаголовок" id="6">
+					<DataPath>ФорматированныйЗаголовок</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ФорматированныйЗаголовокКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ФорматированныйЗаголовокРасширеннаяПодсказка" id="8"/>
+				</LabelField>
+				<Table name="МестаИспользованияНеобработанных" id="9">
+					<Representation>Tree</Representation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Header>false</Header>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>МестаИспользованияНеобработанных</DataPath>
+					<SearchStringLocation>Top</SearchStringLocation>
+					<ContextMenu name="МестаИспользованияНеобработанныхКонтекстноеМеню" id="11"/>
+					<AutoCommandBar name="МестаИспользованияНеобработанныхКоманднаяПанель" id="10">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="МестаИспользованияНеобработанныхРасширеннаяПодсказка" id="12"/>
+					<SearchStringAddition name="МестаИспользованияНеобработанныхСтрокаПоиска" id="13">
+						<AdditionSource>
+							<Item>МестаИспользованияНеобработанных</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МестаИспользованияНеобработанныхСтрокаПоискаКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="МестаИспользованияНеобработанныхСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="МестаИспользованияНеобработанныхСостояниеПросмотра" id="19">
+						<AdditionSource>
+							<Item>МестаИспользованияНеобработанных</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МестаИспользованияНеобработанныхСостояниеПросмотраКонтекстноеМеню" id="20"/>
+						<ExtendedTooltip name="МестаИспользованияНеобработанныхСостояниеПросмотраРасширеннаяПодсказка" id="21"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="МестаИспользованияНеобработанныхУправлениеПоиском" id="16">
+						<AdditionSource>
+							<Item>МестаИспользованияНеобработанных</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="МестаИспользованияНеобработанныхУправлениеПоискомКонтекстноеМеню" id="17"/>
+						<ExtendedTooltip name="МестаИспользованияНеобработанныхУправлениеПоискомРасширеннаяПодсказка" id="18"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">МестаИспользованияНеобработанныхВыбор</Event>
+						<Event name="OnActivateRow">МестаИспользованияНеобработанныхПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<ColumnGroup name="МестаИспользованияНеобработанныхГруппа" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Места использования необработанных группа</v8:content>
+								</v8:item>
+							</Title>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="МестаИспользованияНеобработанныхГруппаРасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<InputField name="МестаИспользованияНеобработанныхОбъектОшибки" id="22">
+									<DataPath>МестаИспользованияНеобработанных.ОбъектОшибки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<TypeDomainEnabled>false</TypeDomainEnabled>
+									<ContextMenu name="МестаИспользованияНеобработанныхОбъектОшибкиКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="МестаИспользованияНеобработанныхОбъектОшибкиРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="МестаИспользованияНеобработанныхТипМетаданных" id="28">
+									<DataPath>МестаИспользованияНеобработанных.ТипМетаданных</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МестаИспользованияНеобработанныхТипМетаданныхКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="МестаИспользованияНеобработанныхТипМетаданныхРасширеннаяПодсказка" id="30"/>
+								</InputField>
+								<InputField name="МестаИспользованияНеобработанныхТекстОшибки" id="25">
+									<DataPath>МестаИспользованияНеобработанных.ТекстОшибки</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МестаИспользованияНеобработанныхТекстОшибкиКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="МестаИспользованияНеобработанныхТекстОшибкиРасширеннаяПодсказка" id="27"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+				<InputField name="ПодробностиОшибки" id="31">
+					<DataPath>ПодробностиОшибки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MaxHeight>5</MaxHeight>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ПодробностиОшибкиКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ПодробностиОшибкиРасширеннаяПодсказка" id="33"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ФорматированныйЗаголовок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматированный заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МестаИспользованияНеобработанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Места использования необработанных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ОбъектОшибки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекстОшибки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипМетаданных" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип метаданных</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДанныеОбъектаОшибки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные объекта ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПодробностиОшибки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробности ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Дубль">
+			<Type>
+				<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Parameter>
+		<Parameter name="Оригинал">
+			<Type>
+				<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Parameter>
+		<Parameter name="Ошибки">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

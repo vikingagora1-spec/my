@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор действия по товару</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВыбрать" id="94">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Выбрать</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="95"/>
+			</Button>
+			<Button name="ФормаОтмена" id="90">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="91"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ПоПринятымТоварам" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По принятым товарам:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:ШрифтЗаголовкаГруппы" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ПоПринятымТоварамРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<RadioButtonField name="ВыбратьЗначениеРазблокировать" id="19">
+					<DataPath>ВыбранноеЗначение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДействияПоТоварамВАктеКонтроляКачества.EnumValue.Разблокировать</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыбратьЗначениеРазблокироватьКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ВыбратьЗначениеРазблокироватьРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">ВыбратьЗначениеРазблокироватьПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelDecoration name="ПодсказкаРазблокировать" id="68">
+					<Width>60</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принято решение использовать поступивший товар для продажи и потребления.
+Уместно выбирать, если качество товара подтверждено.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаРазблокироватьКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ПодсказкаРазблокироватьРасширеннаяПодсказка" id="70"/>
+				</LabelDecoration>
+				<RadioButtonField name="ВыбратьЗначениеОформитьПорчу" id="31">
+					<DataPath>ВыбранноеЗначение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДействияПоТоварамВАктеКонтроляКачества.EnumValue.ОформитьПорчу</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыбратьЗначениеОформитьПорчуКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ВыбратьЗначениеОформитьПорчуРасширеннаяПодсказка" id="33"/>
+					<Events>
+						<Event name="OnChange">ВыбратьЗначениеОформитьПорчуПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelDecoration name="ПодсказкаОформитьПорчу" id="56">
+					<Width>60</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принято решение использовать товар как номенклатуру другого качества.
+Уместно выбирать, если при контроле выявлены отклонения по качеству, дефекты.
+На основании акта необходимо оформить документ "Порча товаров".</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаОформитьПорчуКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ПодсказкаОформитьПорчуРасширеннаяПодсказка" id="58"/>
+				</LabelDecoration>
+				<RadioButtonField name="ВыбратьЗначениеОформитьВозврат" id="34">
+					<DataPath>ВыбранноеЗначение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДействияПоТоварамВАктеКонтроляКачества.EnumValue.ОформитьВозврат</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыбратьЗначениеОформитьВозвратКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ВыбратьЗначениеОформитьВозвратРасширеннаяПодсказка" id="36"/>
+					<Events>
+						<Event name="OnChange">ВыбратьЗначениеОформитьВозвратПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelDecoration name="ПодсказкаОформитьВозврат" id="59">
+					<Width>60</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принято решение о возврате товара поставщику с оформлением документов возврата.
+Уместно выбирать, для некачественных товаров, по результатам согласования с поставщиком.
+Далее штатно оформляется документ "Возврат товаров поставщику".
+Снимаются ограничения на использование товара, отдельное складирование возвращаемых товаров необходимо организовать вне системы.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаОформитьВозвратКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ПодсказкаОформитьВозвратРасширеннаяПодсказка" id="61"/>
+				</LabelDecoration>
+				<RadioButtonField name="ВыбратьЗначениеОформитьПеремещение" id="37">
+					<DataPath>ВыбранноеЗначение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДействияПоТоварамВАктеКонтроляКачества.EnumValue.ОформитьПеремещение</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыбратьЗначениеОформитьПеремещениеКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ВыбратьЗначениеОформитьПеремещениеРасширеннаяПодсказка" id="39"/>
+					<Events>
+						<Event name="OnChange">ВыбратьЗначениеОформитьПеремещениеПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelDecoration name="ПодсказкаОформитьПеремещение" id="62">
+					<Width>60</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принято решение о перемещении поступившего товара на изолированный склад.
+Уместно выбирать, для некачественных товаров, решения по которым будут приняты позже.
+На основании акта необходимо оформить документ "Перемещение товаров".
+Снимаются ограничения на использование товара, отдельное складирование возвращаемых товаров необходимо организовать вне системы.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаОформитьПеремещениеКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ПодсказкаОформитьПеремещениеРасширеннаяПодсказка" id="64"/>
+				</LabelDecoration>
+				<RadioButtonField name="ВыбратьЗначениеОформитьСписание" id="40">
+					<DataPath>ВыбранноеЗначение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДействияПоТоварамВАктеКонтроляКачества.EnumValue.ОформитьСписание</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыбратьЗначениеОформитьСписаниеКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ВыбратьЗначениеОформитьСписаниеРасширеннаяПодсказка" id="42"/>
+					<Events>
+						<Event name="OnChange">ВыбратьЗначениеОформитьСписаниеПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelDecoration name="ПодсказкаОформитьСписание" id="65">
+					<Width>60</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принято решение списать поступивший товар на складе.
+Уместно выбирать, для некачественных товаров, а также разрушенных образцов.
+Далее штатно оформляется документ "Списание недостач товаров".
+При не ордерном отражении излишков/недостач в документе необходимо указать контролируемую партию.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаОформитьСписаниеКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ПодсказкаОформитьСписаниеРасширеннаяПодсказка" id="67"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СкорректироватьПриемкуТоваров" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скорректировать приемку товаров:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:ШрифтЗаголовкаГруппы" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="СкорректироватьПриемкуТоваровРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<RadioButtonField name="ВыбратьЗначениеИзменитьКачество" id="22">
+					<DataPath>ВыбранноеЗначение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДействияПоТоварамВАктеКонтроляКачества.EnumValue.ИзменитьКачество</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыбратьЗначениеИзменитьКачествоКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВыбратьЗначениеИзменитьКачествоРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">ВыбратьЗначениеИзменитьКачествоПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelDecoration name="ПодсказкаИзменитьКачество" id="47">
+					<Width>60</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товар принимается на склад как номенклатура другого качества.
+Уместно выбирать, если при контроле выявлены отклонения по качеству, дефекты.
+Далее штатно оформляется "Акт о расхождениях", если это не предусмотрено, необходимо исправить первичные документы поступления товара (доступно, при ордерной схеме приемки).</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаИзменитьКачествоКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПодсказкаИзменитьКачествоРасширеннаяПодсказка" id="49"/>
+				</LabelDecoration>
+				<RadioButtonField name="ВыбратьЗначениеВернутьПоставщику" id="25">
+					<DataPath>ВыбранноеЗначение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДействияПоТоварамВАктеКонтроляКачества.EnumValue.ВернутьПоставщику</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыбратьЗначениеВернутьПоставщикуКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ВыбратьЗначениеВернутьПоставщикуРасширеннаяПодсказка" id="27"/>
+					<Events>
+						<Event name="OnChange">ВыбратьЗначениеВернутьПоставщикуПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelDecoration name="ПодсказкаВернутьПоставщику" id="50">
+					<Width>60</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товар не принимается на склад и немедленно возвращается поставщику.
+Уместно выбирать для некачественных товаров, либо с отклонениями по качеству, когда порядок отбраковки при приемке и возврата согласован с поставщиком.
+Далее штатно оформляется "Акт о расхождениях", если это не предусмотрено, необходимо исправить первичные документы поступления товара.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаВернутьПоставщикуКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПодсказкаВернутьПоставщикуРасширеннаяПодсказка" id="52"/>
+				</LabelDecoration>
+				<RadioButtonField name="ВыбратьЗначениеНеПриходовать" id="28">
+					<DataPath>ВыбранноеЗначение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ДействияПоТоварамВАктеКонтроляКачества.EnumValue.НеПриходовать</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыбратьЗначениеНеПриходоватьКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВыбратьЗначениеНеПриходоватьРасширеннаяПодсказка" id="30"/>
+					<Events>
+						<Event name="OnChange">ВыбратьЗначениеНеПриходоватьПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<LabelDecoration name="ПодсказкаНеПриходовать" id="53">
+					<Width>60</Width>
+					<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товар не принимается на склад, уничтожается и считается недопоставленным.
+Уместно выбирать для некачественных товаров, либо с отклонениями по качеству, когда такой порядок отбраковки при приемке согласован с поставщиком.
+Далее штатно оформляется "Акт о расхождениях", если это не предусмотрено, необходимо исправить первичные документы поступления товара.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаНеПриходоватьКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПодсказкаНеПриходоватьРасширеннаяПодсказка" id="55"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПояснение" id="71">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пояснение</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПояснениеРасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаПояснения" id="73">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка пояснения</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Информация32</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="КартинкаПоясненияКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="КартинкаПоясненияРасширеннаяПодсказка" id="75"/>
+				</PictureDecoration>
+				<LabelField name="Пояснение" id="79">
+					<DataPath>Пояснение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>55</Width>
+					<Height>2</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветТекстаПроблема</TextColor>
+					<ContextMenu name="ПояснениеКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ПояснениеРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВыбранноеЗначение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранное значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ДействияПоТоварамВАктеКонтроляКачества</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Пояснение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пояснение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Действия" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Выбрать</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="РезультатПроверкиКачества">
+			<Type>
+				<v8:Type>cfg:EnumRef.РезультатыПроверкиКачестваТоваров</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="КонтролируемаяПартия">
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтролируемыеПартии</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ТекущаяСтрока">
+			<Type>
+				<v8:Type>cfg:EnumRef.ДействияПоТоварамВАктеКонтроляКачества</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Склад">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Дата">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

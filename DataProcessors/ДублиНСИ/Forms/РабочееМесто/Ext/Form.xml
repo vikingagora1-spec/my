@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Дубли НСИ</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ТипСправочника" id="1">
+			<DataPath>ТипСправочника</DataPath>
+			<OpenButton>false</OpenButton>
+			<CreateButton>false</CreateButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дублей к подтверждению не выявлено</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ТипСправочникаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ТипСправочникаРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ТипСправочникаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="ГруппаСтраницы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Page name="СтраницаКПодтверждению" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К подтверждению</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаКПодтверждениюРасширеннаяПодсказка" id="7"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКнопок" id="10">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопок</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="11"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКнопкаСлева" id="65">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопка слева</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКнопкаСлеваРасширеннаяПодсказка" id="66"/>
+									<ChildItems>
+										<Button name="СравнитьИПодтвердить" id="14">
+											<Type>UsualButton</Type>
+											<DefaultButton>true</DefaultButton>
+											<CommandName>Form.Command.СравнитьИПодтвердить</CommandName>
+											<ExtendedTooltip name="СравнитьИПодтвердитьРасширеннаяПодсказка" id="15"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ДекорацияПравилаПоискаДублейСсылка" id="16">
+									<TextColor>style:ГиперссылкаЦвет</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Правила поиска дублей</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияПравилаПоискаДублейСсылкаКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ДекорацияПравилаПоискаДублейСсылкаРасширеннаяПодсказка" id="18"/>
+									<Events>
+										<Event name="Click">ДекорацияПравилаПоискаДублейСсылкаНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ДеревоКПодтверждению" id="19">
+							<Representation>Tree</Representation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоКПодтверждению</DataPath>
+							<RowPictureDataPath>ДеревоКПодтверждению.ИндексКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.КоллекцияЭлементовДублиНСИ</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<ContextMenu name="ДеревоКПодтверждениюКонтекстноеМеню" id="21">
+								<ChildItems>
+									<Button name="ДеревоКПодтверждениюКонтекстноеМенюПересчитатьМестаИспользования" id="72">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьМестаИспользования</CommandName>
+										<ExtendedTooltip name="ДеревоКПодтверждениюКонтекстноеМенюПересчитатьМестаИспользованияРасширеннаяПодсказка" id="73"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ДеревоКПодтверждениюКоманднаяПанель" id="20">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоКПодтверждениюРасширеннаяПодсказка" id="22"/>
+							<SearchStringAddition name="ДеревоКПодтверждениюСтрокаПоиска" id="23">
+								<AdditionSource>
+									<Item>ДеревоКПодтверждению</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоКПодтверждениюСтрокаПоискаКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ДеревоКПодтверждениюСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоКПодтверждениюСостояниеПросмотра" id="29">
+								<AdditionSource>
+									<Item>ДеревоКПодтверждению</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоКПодтверждениюСостояниеПросмотраКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="ДеревоКПодтверждениюСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоКПодтверждениюУправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>ДеревоКПодтверждению</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоКПодтверждениюУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ДеревоКПодтверждениюУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДеревоКПодтверждениюВыбор</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ДеревоКПодтверждениюГруппаДублейДубль" id="67">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево к подтверждению группа дублей дубль</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ДеревоКПодтверждениюГруппаДублейДубльРасширеннаяПодсказка" id="68"/>
+									<ChildItems>
+										<InputField name="ДеревоКПодтверждениюГруппаДублей" id="32">
+											<DataPath>ДеревоКПодтверждению.ГруппаДублей</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоКПодтверждениюГруппаДублейКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ДеревоКПодтверждениюГруппаДублейРасширеннаяПодсказка" id="34"/>
+										</InputField>
+										<InputField name="ДеревоКПодтверждениюДубль" id="35">
+											<DataPath>ДеревоКПодтверждению.Дубль</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоКПодтверждениюДубльКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ДеревоКПодтверждениюДубльРасширеннаяПодсказка" id="37"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДеревоКПодтверждениюМестИспользования" id="41">
+									<DataPath>ДеревоКПодтверждению.МестИспользования</DataPath>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>15</Width>
+									<ContextMenu name="ДеревоКПодтверждениюМестИспользованияКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ДеревоКПодтверждениюМестИспользованияРасширеннаяПодсказка" id="43"/>
+								</InputField>
+								<InputField name="ДеревоКПодтверждениюПравилоОтветственный" id="56">
+									<DataPath>ДеревоКПодтверждению.ПравилоОтветственный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоКПодтверждениюПравилоОтветственныйКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ДеревоКПодтверждениюПравилоОтветственныйРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<InputField name="ДеревоКПодтверждениюДатаДобавления" id="59">
+									<DataPath>ДеревоКПодтверждению.ДатаДобавления</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>9</Width>
+									<ContextMenu name="ДеревоКПодтверждениюДатаДобавленияКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ДеревоКПодтверждениюДатаДобавленияРасширеннаяПодсказка" id="61"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаОжидание" id="162">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ожидание</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОжиданиеРасширеннаяПодсказка" id="163"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаОжидание" id="164">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка ожидание</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаОжиданиеКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="КартинкаОжиданиеРасширеннаяПодсказка" id="166"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияОжидание" id="167">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполняется расчет групп дублей.
+Пожалуйста, подождите..</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОжиданиеКонтекстноеМеню" id="168"/>
+									<ExtendedTooltip name="ДекорацияОжиданиеРасширеннаяПодсказка" id="169"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСписокДублей" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список дублей</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСписокДублейРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКомандыСпискаДублиНСИ" id="129">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды списка дубли НСИ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыСпискаДублиНСИРасширеннаяПодсказка" id="130"/>
+							<ChildItems>
+								<CommandBar name="ГруппаКоманднаяПанельСписокДублиНСИ" id="114">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа командная панель список дубли НСИ</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalLocation>Auto</HorizontalLocation>
+									<ExtendedTooltip name="ГруппаКоманднаяПанельСписокДублиНСИРасширеннаяПодсказка" id="115"/>
+									<ChildItems>
+										<Popup name="ГруппаДействияСДублем" id="116">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действия с дублем</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ГруппаДействияСДублемРасширеннаяПодсказка" id="117"/>
+											<ChildItems>
+												<Button name="ЗапланироватьЗаменуСсылокИУдаление" id="118">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ЗапланироватьЗаменуСсылокИУдаление</CommandName>
+													<ExtendedTooltip name="ЗапланироватьЗаменуСсылокИУдалениеРасширеннаяПодсказка" id="119"/>
+												</Button>
+												<Button name="ИсключитьИзСпискаДублей" id="120">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ИсключитьИзСпискаДублей</CommandName>
+													<ExtendedTooltip name="ИсключитьИзСпискаДублейРасширеннаяПодсказка" id="121"/>
+												</Button>
+												<Button name="НеУдалять" id="122">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.НеУдалять</CommandName>
+													<ExtendedTooltip name="НеУдалятьРасширеннаяПодсказка" id="123"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+										<Button name="ПоказатьМестаИспользования" id="124">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПоказатьМестаИспользования</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.Report</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ПоказатьМестаИспользованияРасширеннаяПодсказка" id="125"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<InputField name="ОтборПоСостоянию" id="126">
+									<DataPath>ОтборПоСостоянию</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="ОтборПоСостояниюКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ОтборПоСостояниюРасширеннаяПодсказка" id="128"/>
+									<Events>
+										<Event name="OnChange">ОтборПоСостояниюПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CommandBar name="ГруппаКоманднаяПанельТаблицыДублиНСИ" id="131">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа командная панель таблицы дубли НСИ</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSource>Item.СписокДублиНСИ</CommandSource>
+									<ExtendedTooltip name="ГруппаКоманднаяПанельТаблицыДублиНСИРасширеннаяПодсказка" id="132"/>
+									<ChildItems>
+										<Button name="Создать" id="137">
+											<Type>CommandBarButton</Type>
+											<Visible>false</Visible>
+											<CommandName>Form.Item.СписокДублиНСИ.StandardCommand.Create</CommandName>
+											<ExtendedTooltip name="СоздатьРасширеннаяПодсказка" id="138"/>
+										</Button>
+										<Button name="Скопировать" id="139">
+											<Type>CommandBarButton</Type>
+											<Visible>false</Visible>
+											<CommandName>Form.Item.СписокДублиНСИ.StandardCommand.Copy</CommandName>
+											<ExtendedTooltip name="СкопироватьРасширеннаяПодсказка" id="140"/>
+										</Button>
+										<Button name="РасписаниеЗаменыДублей" id="141">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.РасписаниеЗаменыДублей</CommandName>
+											<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="РасписаниеЗаменыДублейРасширеннаяПодсказка" id="142"/>
+										</Button>
+										<Button name="ПересчитатьМестаИспользования" id="154">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПересчитатьМестаИспользования</CommandName>
+											<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ПересчитатьМестаИспользованияРасширеннаяПодсказка" id="155"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СписокДублиНСИ" id="74">
+							<ReadOnly>true</ReadOnly>
+							<DataPath>СписокДублиНСИ</DataPath>
+							<RowPictureDataPath>СписокДублиНСИ.ИндексКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.КоллекцияЭлементовДублиНСИ</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокДублиНСИКонтекстноеМеню" id="76">
+								<ChildItems>
+									<Button name="СписокДублиНСИКонтекстноеМенюПересчитатьМестаИспользования" id="150">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьМестаИспользования</CommandName>
+										<ExtendedTooltip name="СписокДублиНСИКонтекстноеМенюПересчитатьМестаИспользованияРасширеннаяПодсказка" id="151"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СписокДублиНСИКоманднаяПанель" id="75">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокДублиНСИРасширеннаяПодсказка" id="77"/>
+							<SearchStringAddition name="СписокДублиНСИСтрокаПоиска" id="78">
+								<AdditionSource>
+									<Item>СписокДублиНСИ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДублиНСИСтрокаПоискаКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="СписокДублиНСИСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДублиНСИСостояниеПросмотра" id="84">
+								<AdditionSource>
+									<Item>СписокДублиНСИ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДублиНСИСостояниеПросмотраКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="СписокДублиНСИСостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДублиНСИУправлениеПоиском" id="81">
+								<AdditionSource>
+									<Item>СписокДублиНСИ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДублиНСИУправлениеПоискомКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="СписокДублиНСИУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокДублиНСИВыбор</Event>
+								<Event name="OnGetDataAtServer">СписокДублиНСИПриПолученииДанныхНаСервере</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокДублиНСИДубль" id="90">
+									<DataPath>СписокДублиНСИ.Дубль</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокДублиНСИДубльКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СписокДублиНСИДубльРасширеннаяПодсказка" id="92"/>
+								</LabelField>
+								<LabelField name="СписокДублиНСИОригинал" id="93">
+									<DataPath>СписокДублиНСИ.Оригинал</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокДублиНСИОригиналКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="СписокДублиНСИОригиналРасширеннаяПодсказка" id="95"/>
+								</LabelField>
+								<LabelField name="СписокДублиНСИОтветственный" id="96">
+									<DataPath>СписокДублиНСИ.Ответственный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокДублиНСИОтветственныйКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="СписокДублиНСИОтветственныйРасширеннаяПодсказка" id="98"/>
+								</LabelField>
+								<LabelField name="СписокДублиНСИДатаДобавления" id="99">
+									<DataPath>СписокДублиНСИ.ДатаДобавления</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>9</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДЛФ=D</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СписокДублиНСИДатаДобавленияКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="СписокДублиНСИДатаДобавленияРасширеннаяПодсказка" id="101"/>
+								</LabelField>
+								<LabelField name="СписокДублиНСИМестИспользования" id="147">
+									<DataPath>СписокДублиНСИ.МестИспользования</DataPath>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>15</Width>
+									<ContextMenu name="СписокДублиНСИМестИспользованияКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="СписокДублиНСИМестИспользованияРасширеннаяПодсказка" id="149"/>
+								</LabelField>
+								<LabelField name="СписокДублиНСИСостояниеУдаленияДубля" id="108">
+									<DataPath>СписокДублиНСИ.СостояниеУдаленияДубля</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокДублиНСИСостояниеУдаленияДубляКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="СписокДублиНСИСостояниеУдаленияДубляРасширеннаяПодсказка" id="110"/>
+								</LabelField>
+								<LabelField name="СписокДублиНСИОшибкиЗамены" id="156">
+									<DataPath>СписокДублиНСИ.ОшибкиЗамены</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
+									<Hiperlink>true</Hiperlink>
+									<TextColor>style:ГиперссылкаЦвет</TextColor>
+									<ContextMenu name="СписокДублиНСИОшибкиЗаменыКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="СписокДублиНСИОшибкиЗаменыРасширеннаяПодсказка" id="158"/>
+								</LabelField>
+								<LabelField name="СписокДублиНСИКоличествоПопытокЗамены" id="111">
+									<DataPath>СписокДублиНСИ.КоличествоПопытокЗамены</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокДублиНСИКоличествоПопытокЗаменыКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="СписокДублиНСИКоличествоПопытокЗаменыРасширеннаяПодсказка" id="113"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ДублиНСИ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТипСправочника" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоКПодтверждению" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево к подтверждению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаДублей" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дублей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дубль" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дубль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="МестИспользования" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мест использования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПравилоОтветственный" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правило/Ответственный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаПоискаДублейНСИ</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаДобавления" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата добавления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторГруппы" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор группы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокДублиНСИ" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список дубли НСИ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокДублиНСИ.ДатаПоискаМестИспользования</Field>
+				<Field>СписокДублиНСИ.ИндексКартинки</Field>
+				<Field>СписокДублиНСИ.КоличествоМестИспользования</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДублиНСИ.ТипСсылки КАК ТипСсылки,
+	ДублиНСИ.Дубль КАК Дубль,
+	ДублиНСИ.Оригинал КАК Оригинал,
+	ДублиНСИ.Ответственный КАК Ответственный,
+	ДублиНСИ.ДатаДобавления КАК ДатаДобавления,
+	ДублиНСИ.КоличествоМестИспользования КАК КоличествоМестИспользования,
+	ДублиНСИ.ДатаПоискаМестИспользования КАК ДатаПоискаМестИспользования,
+	ДублиНСИ.СостояниеУдаленияДубля КАК СостояниеУдаленияДубля,
+	ДублиНСИ.КоличествоПопытокЗамены КАК КоличествоПопытокЗамены,
+	ВЫРАЗИТЬ("" КАК СТРОКА(50)) КАК МестИспользования,
+	0 КАК ИндексКартинки,
+	ВЫБОР
+		КОГДА ДублиНСИ.КоличествоПопытокЗамены &gt; 0
+			ТОГДА "Подробнее"
+		ИНАЧЕ ""
+	КОНЕЦ КАК ОшибкиЗамены
+ИЗ
+	РегистрСведений.ДублиНСИ КАК ДублиНСИ</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дубль</dcssch:dataPath>
+					<dcssch:field>Дубль</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Оригинал</dcssch:dataPath>
+					<dcssch:field>Оригинал</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ответственный</dcssch:dataPath>
+					<dcssch:field>Ответственный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаДобавления</dcssch:dataPath>
+					<dcssch:field>ДатаДобавления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоМестИспользования</dcssch:dataPath>
+					<dcssch:field>КоличествоМестИспользования</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПоискаМестИспользования</dcssch:dataPath>
+					<dcssch:field>ДатаПоискаМестИспользования</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУдаленияДубля</dcssch:dataPath>
+					<dcssch:field>СостояниеУдаленияДубля</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоПопытокЗамены</dcssch:dataPath>
+					<dcssch:field>КоличествоПопытокЗамены</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИндексКартинки</dcssch:dataPath>
+					<dcssch:field>ИндексКартинки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МестИспользования</dcssch:dataPath>
+					<dcssch:field>МестИспользования</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мест использования</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОшибкиЗамены</dcssch:dataPath>
+					<dcssch:field>ОшибкиЗамены</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибки замены</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:availableValue>
+						<dcssch:value xsi:type="xs:string">Побробнее</dcssch:value>
+						<dcssch:presentation xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подробнее</v8:content>
+							</v8:item>
+						</dcssch:presentation>
+					</dcssch:availableValue>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТипСсылки</dcssch:dataPath>
+					<dcssch:field>ТипСсылки</dcssch:field>
+				</Field>
+				<MainTable>InformationRegister.ДублиНСИ</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборПоСостоянию" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияУдаленияДублейНСИ</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СравнитьИПодтвердить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить и подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СравнитьИПодтвердить</Action>
+		</Command>
+		<Command name="ПересчитатьМестаИспользования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать места использования</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПересчитатьМестаИспользования</Action>
+		</Command>
+		<Command name="ЗапланироватьЗаменуСсылокИУдаление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запланировать замену ссылок и удаление</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗапланироватьЗаменуСсылокИУдаление</Action>
+		</Command>
+		<Command name="ИсключитьИзСпискаДублей" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить из списка дублей</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИсключитьИзСпискаДублей</Action>
+		</Command>
+		<Command name="НеУдалять" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не удалять</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НеУдалять</Action>
+		</Command>
+		<Command name="ПоказатьМестаИспользования" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать места использования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет о местах использования для выделенных строк</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьМестаИспользования</Action>
+		</Command>
+		<Command name="РасписаниеЗаменыДублей" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание замены дублей</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РасписаниеЗаменыДублей</Action>
+		</Command>
+	</Commands>
+</Form>

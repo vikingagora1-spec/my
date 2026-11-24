@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<DataProcessor uuid="e0b1bddf-a094-4da9-a518-7aeab46cf617">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.СервисSellmonitor" category="Object">
+				<xr:TypeId>8be7521a-33ea-4aad-bdf2-ba7836201a8f</xr:TypeId>
+				<xr:ValueId>298a03e8-b898-4f75-93ec-51f17103be71</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.СервисSellmonitor" category="Manager">
+				<xr:TypeId>12b93501-3fc3-4c5a-9361-f839067124c9</xr:TypeId>
+				<xr:ValueId>522720a3-33a3-42fb-afe5-e12c7661394c</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СервисSellmonitor</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис sellmonitor</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.СервисSellmonitor.Form.ПодборКарточекТоваров</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>НастройкиИнтеграции</Form>
+			<Form>ИзменениеОписанияКарточкиТовара</Form>
+			<Form>ПодборКарточекТоваров</Form>
+			<Template>ПодборКарточекТоваров_OZON</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

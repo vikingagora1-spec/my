@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="НайтиОшибки" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НайтиОшибки</CommandName>
+				<ExtendedTooltip name="НайтиОшибкиРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ИсправитьОшибки" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ИсправитьОшибки</CommandName>
+				<ExtendedTooltip name="ИсправитьОшибкиРасширеннаяПодсказка" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="ТаблицаОшибок" id="3">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаОшибок</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаОшибокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="ТаблицаОшибокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаОшибокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="ТаблицаОшибокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>ТаблицаОшибок</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаОшибокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="ТаблицаОшибокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаОшибокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>ТаблицаОшибок</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаОшибокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="ТаблицаОшибокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаОшибокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>ТаблицаОшибок</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаОшибокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ТаблицаОшибокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблицаОшибокНоменклатура" id="16">
+					<DataPath>ТаблицаОшибок.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаОшибокНоменклатураКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ТаблицаОшибокНоменклатураРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="ТаблицаОшибокХарактеристика" id="19">
+					<DataPath>ТаблицаОшибок.Характеристика</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаОшибокХарактеристикаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ТаблицаОшибокХарактеристикаРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="ТаблицаОшибокСклад" id="22">
+					<DataPath>ТаблицаОшибок.Склад</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаОшибокСкладКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТаблицаОшибокСкладРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="ТаблицаОшибокНазначение" id="25">
+					<DataPath>ТаблицаОшибок.Назначение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаОшибокНазначениеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ТаблицаОшибокНазначениеРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="Список" id="30">
+			<TitleLocation>Top</TitleLocation>
+			<Height>5</Height>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить вручную "Распределение запасов"</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="31"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="32"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="33"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="34">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="37">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="40">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокНоменклатура" id="43">
+					<DataPath>Список.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатураКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="СписокНоменклатураРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="СписокХарактеристика" id="46">
+					<DataPath>Список.Характеристика</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокХарактеристикаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СписокХарактеристикаРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="СписокСклад" id="49">
+					<DataPath>Список.Склад</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокСкладКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="СписокСкладРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="СписокНазначение" id="52">
+					<DataPath>Список.Назначение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНазначениеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СписокНазначениеРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="СписокСостояниеЗапаса" id="55">
+					<DataPath>Список.СостояниеЗапаса</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокСостояниеЗапасаКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="СписокСостояниеЗапасаРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="СписокХарактеристикаПотребности" id="67">
+					<DataPath>Список.ХарактеристикаПотребности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокХарактеристикаПотребностиКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="СписокХарактеристикаПотребностиРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="СписокЗаказНаОтгрузку" id="61">
+					<DataPath>Список.ЗаказНаОтгрузку</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокЗаказНаОтгрузкуКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="СписокЗаказНаОтгрузкуРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="СписокЖелаемаяДатаОтгрузки" id="64">
+					<DataPath>Список.ЖелаемаяДатаОтгрузки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокЖелаемаяДатаОтгрузкиКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СписокЖелаемаяДатаОтгрузкиРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="СписокЗаказНаПоступление" id="70">
+					<DataPath>Список.ЗаказНаПоступление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокЗаказНаПоступлениеКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="СписокЗаказНаПоступлениеРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+				<LabelField name="СписокДатаПоступления" id="73">
+					<DataPath>Список.ДатаПоступления</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДатаПоступленияКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="СписокДатаПоступленияРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="СписокДатаДоступности" id="76">
+					<DataPath>Список.ДатаДоступности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДатаДоступностиКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="СписокДатаДоступностиРасширеннаяПодсказка" id="78"/>
+				</LabelField>
+				<LabelField name="СписокКоличество" id="79">
+					<DataPath>Список.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокКоличествоКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="СписокКоличествоРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<Table name="СписокДоступныеОстаткиТоваров" id="82">
+			<TitleLocation>Top</TitleLocation>
+			<Height>5</Height>
+			<DataPath>СписокДоступныеОстаткиТоваров</DataPath>
+			<RowPictureDataPath>СписокДоступныеОстаткиТоваров.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокДоступныеОстаткиТоваровКонтекстноеМеню" id="84"/>
+			<AutoCommandBar name="СписокДоступныеОстаткиТоваровКоманднаяПанель" id="83"/>
+			<ExtendedTooltip name="СписокДоступныеОстаткиТоваровРасширеннаяПодсказка" id="85"/>
+			<SearchStringAddition name="СписокДоступныеОстаткиТоваровСтрокаПоиска" id="86">
+				<AdditionSource>
+					<Item>СписокДоступныеОстаткиТоваров</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДоступныеОстаткиТоваровСтрокаПоискаКонтекстноеМеню" id="87"/>
+				<ExtendedTooltip name="СписокДоступныеОстаткиТоваровСтрокаПоискаРасширеннаяПодсказка" id="88"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокДоступныеОстаткиТоваровСостояниеПросмотра" id="92">
+				<AdditionSource>
+					<Item>СписокДоступныеОстаткиТоваров</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДоступныеОстаткиТоваровСостояниеПросмотраКонтекстноеМеню" id="93"/>
+				<ExtendedTooltip name="СписокДоступныеОстаткиТоваровСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокДоступныеОстаткиТоваровУправлениеПоиском" id="89">
+				<AdditionSource>
+					<Item>СписокДоступныеОстаткиТоваров</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДоступныеОстаткиТоваровУправлениеПоискомКонтекстноеМеню" id="90"/>
+				<ExtendedTooltip name="СписокДоступныеОстаткиТоваровУправлениеПоискомРасширеннаяПодсказка" id="91"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокДоступныеОстаткиТоваровНоменклатура" id="95">
+					<DataPath>СписокДоступныеОстаткиТоваров.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДоступныеОстаткиТоваровНоменклатураКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="СписокДоступныеОстаткиТоваровНоменклатураРасширеннаяПодсказка" id="97"/>
+				</LabelField>
+				<LabelField name="СписокДоступныеОстаткиТоваровХарактеристика" id="98">
+					<DataPath>СписокДоступныеОстаткиТоваров.Характеристика</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДоступныеОстаткиТоваровХарактеристикаКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="СписокДоступныеОстаткиТоваровХарактеристикаРасширеннаяПодсказка" id="100"/>
+				</LabelField>
+				<LabelField name="СписокДоступныеОстаткиТоваровСклад" id="101">
+					<DataPath>СписокДоступныеОстаткиТоваров.Склад</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДоступныеОстаткиТоваровСкладКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="СписокДоступныеОстаткиТоваровСкладРасширеннаяПодсказка" id="103"/>
+				</LabelField>
+				<LabelField name="СписокДоступныеОстаткиТоваровНазначение" id="104">
+					<DataPath>СписокДоступныеОстаткиТоваров.Назначение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДоступныеОстаткиТоваровНазначениеКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="СписокДоступныеОстаткиТоваровНазначениеРасширеннаяПодсказка" id="106"/>
+				</LabelField>
+				<LabelField name="СписокДоступныеОстаткиТоваровКонтролируемаяПартия" id="107">
+					<DataPath>СписокДоступныеОстаткиТоваров.КонтролируемаяПартия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДоступныеОстаткиТоваровКонтролируемаяПартияКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="СписокДоступныеОстаткиТоваровКонтролируемаяПартияРасширеннаяПодсказка" id="109"/>
+				</LabelField>
+				<LabelField name="СписокДоступныеОстаткиТоваровВНаличии" id="110">
+					<DataPath>СписокДоступныеОстаткиТоваров.ВНаличии</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДоступныеОстаткиТоваровВНаличииКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="СписокДоступныеОстаткиТоваровВНаличииРасширеннаяПодсказка" id="112"/>
+				</LabelField>
+				<LabelField name="СписокДоступныеОстаткиТоваровДоступно" id="113">
+					<DataPath>СписокДоступныеОстаткиТоваров.Доступно</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДоступныеОстаткиТоваровДоступноКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="СписокДоступныеОстаткиТоваровДоступноРасширеннаяПодсказка" id="115"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ИсправлениеОшибокВРегистреСведенийРаспределениеЗапасов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаОшибок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ошибок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Характеристика" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.ИспользоватьХарактеристикиНоменклатуры</Item>
+					</FunctionalOptions>
+				</Column>
+				<Column name="Склад" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.ИспользоватьНесколькоСкладов</Item>
+						<Item>FunctionalOption.ИспользоватьПодразделения</Item>
+					</FunctionalOptions>
+				</Column>
+				<Column name="Назначение" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.ИспользоватьОбособленноеОбеспечениеЗаказов</Item>
+					</FunctionalOptions>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Список" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.РаспределениеЗапасов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокДоступныеОстаткиТоваров" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить вручную "Доступные остатки товаров"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ДоступныеОстаткиТоваров</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НайтиОшибки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти ошибки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиОшибки</Action>
+		</Command>
+		<Command name="ИсправитьОшибки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить ошибки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсправитьОшибки</Action>
+		</Command>
+	</Commands>
+</Form>

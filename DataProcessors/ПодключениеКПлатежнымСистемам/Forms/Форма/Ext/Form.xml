@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Подключение к Платежным системам</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ГруппаОписаниеСервиса" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа описание сервиса</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаОписаниеСервисаРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияЛоготип" id="20">
+							<Width>11</Width>
+							<Height>3</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация логотип</v8:content>
+								</v8:item>
+							</Title>
+							<PictureSize>AutoSize</PictureSize>
+							<NonselectedPictureText>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Логотип сервиса платежной системы</v8:content>
+								</v8:item>
+							</NonselectedPictureText>
+							<ContextMenu name="ДекорацияЛоготипКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ДекорацияЛоготипРасширеннаяПодсказка" id="22"/>
+						</PictureDecoration>
+						<LabelDecoration name="ДекорацияОписание" id="17">
+							<Width>36</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>15</Height>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текст подсказки сервиса платежной системы
+
+&lt;link https://pay.yandex.ru/business&gt;Подробнее о сервисе&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОписаниеКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ДекорацияОписаниеРасширеннаяПодсказка" id="19"/>
+							<Events>
+								<Event name="URLProcessing">ДекорацияОписаниеОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПодключениеИПП" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подключение ИПП</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПодключениеИППРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьПоясненияПодключенияИПП" id="27">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Введите логин и пароль, которые вы используете на &lt;link action:openPortal&gt;Портале 1С:ИТС&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПоясненияПодключенияИППКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="НадписьПоясненияПодключенияИППРасширеннаяПодсказка" id="29"/>
+							<Events>
+								<Event name="URLProcessing">НадписьПоясненияПодключенияИППОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<InputField name="ЛогинИПП" id="30">
+							<DataPath>ЛогинИПП</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Логин</v8:content>
+								</v8:item>
+							</Title>
+							<Width>25</Width>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ЛогинИППКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ЛогинИППРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="ПарольИПП" id="33">
+							<DataPath>ПарольИПП</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пароль</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Введенные логин и пароль будут сохранены в программе для подключения ко всем сервисам Интернет-поддержки.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>25</Width>
+							<PasswordMode>true</PasswordMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ПарольИППКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ПарольИППРасширеннаяПодсказка" id="35"/>
+							<Events>
+								<Event name="OnChange">ПарольИПППриИзменении</Event>
+								<Event name="StartChoice">ПарольИППНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНастройкиПлатежнойСистемы" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки платежной системы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНастройкиПлатежнойСистемыРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПредупреждение" id="65">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа предупреждение</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветФонаВнимание</BackColor>
+							<ExtendedTooltip name="ГруппаПредупреждениеРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПредупреждение" id="67">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<ContextMenu name="ДекорацияПредупреждениеКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ДекорацияПредупреждениеРасширеннаяПодсказка" id="69"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияПодсказка" id="116">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Описание подключения платежной системы&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодсказкаКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="ДекорацияПодсказкаРасширеннаяПодсказка" id="118"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаНастройкиПодключения" id="70">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки подключения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиПодключенияРасширеннаяПодсказка" id="71"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФиксированныеНастройки" id="75">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа фиксированные настройки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФиксированныеНастройкиРасширеннаяПодсказка" id="76"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПользовательскоеСоглашение" id="85">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа пользовательское соглашение</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПользовательскоеСоглашениеРасширеннаяПодсказка" id="86"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияПользовательскоеСоглашение" id="90">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Нажимая кнопку &lt;b&gt;Далее&lt;/&gt;, вы принимаете &lt;link open:userAgreement&gt;условия пользовательского соглашения&lt;/&gt;.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПользовательскоеСоглашениеКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="ДекорацияПользовательскоеСоглашениеРасширеннаяПодсказка" id="92"/>
+											<Events>
+												<Event name="URLProcessing">ДекорацияПользовательскоеСоглашениеОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПрикладныеНастройки" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прикладные настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПрикладныеНастройкиРасширеннаяПодсказка" id="110"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодсказкаНастройки" id="119">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполните настройки оплаты для автоматического подбора параметров подключения в момент проведения платежа.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодсказкаНастройкиКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="ДекорацияПодсказкаНастройкиРасширеннаяПодсказка" id="121"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаНастройкиОплаты" id="167">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиОплатыРасширеннаяПодсказка" id="168"/>
+							<ChildItems>
+								<InputField name="Наименование" id="111">
+									<DataPath>Наименование</DataPath>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="113"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОнлайнЗаказы" id="216">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Онлайн-заказы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОнлайнЗаказыРасширеннаяПодсказка" id="217"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОнлайнЗаказыОписание" id="224">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка подключения успешно создана.
+
+Для формирования и отправки платежной ссылки покупателю требуется настройка подсистемы Онлайн-заказы.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОнлайнЗаказыОписаниеКонтекстноеМеню" id="225"/>
+							<ExtendedTooltip name="ДекорацияОнлайнЗаказыОписаниеРасширеннаяПодсказка" id="226"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОнлайнЗаказыПометка" id="230">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа онлайн заказы пометка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОнлайнЗаказыПометкаРасширеннаяПодсказка" id="231"/>
+							<ChildItems>
+								<CheckBoxField name="ОнлайнЗаказыПодключить" id="241">
+									<DataPath>ОнлайнЗаказыПодключить</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОнлайнЗаказыПодключитьКонтекстноеМеню" id="242"/>
+									<ExtendedTooltip name="ОнлайнЗаказыПодключитьРасширеннаяПодсказка" id="243"/>
+								</CheckBoxField>
+								<LabelDecoration name="ДекорацияОнлайнЗаказыЗаголовок" id="238">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка Онлайн-Заказов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОнлайнЗаказыЗаголовокКонтекстноеМеню" id="239"/>
+									<ExtendedTooltip name="ДекорацияОнлайнЗаказыЗаголовокРасширеннаяПодсказка" id="240"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДлительнаяОперация" id="93">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа длительная операция</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаДлительнаяОперацияРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияДлительнаяОперация" id="95">
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация длительная операция</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДекорацияДлительнаяОперацияКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ДекорацияДлительнаяОперацияРасширеннаяПодсказка" id="97"/>
+						</PictureDecoration>
+						<LabelDecoration name="ДекорацияСостояние" id="98">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Текст сообщения&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="ДекорацияСостояниеКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ДекорацияСостояниеРасширеннаяПодсказка" id="100"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРезультат" id="101">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа результат</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="102"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРезультатНастройки" id="162">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа результат настройки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРезультатНастройкиРасширеннаяПодсказка" id="163"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаРезультат" id="103">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка результат</v8:content>
+										</v8:item>
+									</Title>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаРезультатКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="ДекорацияКартинкаРезультатРасширеннаяПодсказка" id="105"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияОписаниеРезультата" id="106">
+									<Height>10</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;&lt;Описание результат загрузки&gt;&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<ContextMenu name="ДекорацияОписаниеРезультатаКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="ДекорацияОписаниеРезультатаРасширеннаяПодсказка" id="108"/>
+									<Events>
+										<Event name="URLProcessing">ДекорацияОписаниеРезультатаОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДополнительныеНастройки" id="256">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительные настройки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополнительныеНастройкиРасширеннаяПодсказка" id="257"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаШаблоныНазначений" id="258">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шаблоны назначений</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШаблоныНазначенийРасширеннаяПодсказка" id="259"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияНастройкиШаблонов" id="260">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Шаблоны назначения: &lt;link open:paymentPurpose&gt;Настроить&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowLeft</ToolTipRepresentation>
+											<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+											<ContextMenu name="ДекорацияНастройкиШаблоновКонтекстноеМеню" id="261"/>
+											<ExtendedTooltip name="ДекорацияНастройкиШаблоновРасширеннаяПодсказка" id="262"/>
+											<Events>
+												<Event name="URLProcessing">ДекорацияНастройкиШаблоновОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСозданиеКассовыхСсылок" id="263">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа создание кассовых ссылок после закрытия мастера</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСозданиеКассовыхСсылокРасширеннаяПодсказка" id="264"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияКассовыеСсылки" id="265">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кассовые QR-коды: &lt;link open:cashQrc&gt;Настроить&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+											<ContextMenu name="ДекорацияКассовыеСсылкиКонтекстноеМеню" id="266"/>
+											<ExtendedTooltip name="ДекорацияКассовыеСсылкиРасширеннаяПодсказка" id="267"/>
+											<Events>
+												<Event name="URLProcessing">ДекорацияКассовыеСсылкиОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<CommandBar name="КоманднаяПанельСлева" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель слева</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КоманднаяПанельСлеваРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Button name="Назад" id="5">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Назад</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt; Назад</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="6"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="КоманднаяПанельСправа" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель справа</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="КоманднаяПанельСправаРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Button name="Далее" id="9">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.Далее</CommandName>
+							<ExtendedTooltip name="ДалееРасширеннаяПодсказка" id="10"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПарольИПП" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛогинИПП" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Наименование" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ОтображатьОписаниеСервиса" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать описание сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаполненыДанныеАутентификации" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнены данные аутентификации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Настройки" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДополнительныеПараметры" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НастройкаПодключения" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка подключения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НастройкиПодключенияКПлатежнымСистемам</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежная система</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПлатежныеСервисы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсторияСтраниц" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История страниц</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЗаполненыНастройкиОплаты" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнены настройки оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПодключениеЗавершено" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключение завершено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеКопированияЗагружены" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные копирования загружены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОнлайнЗаказыВариант" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Онлайн заказы вариант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОнлайнЗаказыНастройка" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Онлайн заказы настройка</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОнлайнЗаказыОрганизация" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ОнлайнЗаказыПодключить" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Онлайн заказы подключить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПодключениеКПлатежнымСистемам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьДополнительныеПараметры" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть дополнительные параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Далее" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Далее</Action>
+		</Command>
+		<Command name="Назад" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ОтображатьОписаниеСервиса">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="НастройкаДляКопирования">
+			<Type>
+				<v8:Type>cfg:CatalogRef.НастройкиПодключенияКПлатежнымСистемам</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ПлатежнаяСистема">
+			<Type>
+				<v8:Type>cfg:EnumRef.ПлатежныеСервисы</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДополнительныеПараметры">
+			<Type/>
+		</Parameter>
+		<Parameter name="НеПредлагатьПодключениеКОнлайнЗаказам">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="РежимРаботы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

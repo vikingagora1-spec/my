@@ -1,0 +1,992 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПояснениеКФорме" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пояснение к форме</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПояснениеКФормеРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаИнформация" id="74">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка информация</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Информация32</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="КартинкаИнформацияКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="КартинкаИнформацияРасширеннаяПодсказка" id="76"/>
+				</PictureDecoration>
+				<LabelDecoration name="ПояснениеКФорме" id="77">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>40</MaxWidth>
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товар по штрихкоду не найден. Укажите товар, соответствующий штрихкоду.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеКФормеКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ПояснениеКФормеРасширеннаяПодсказка" id="79"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="73"/>
+			<ChildItems>
+				<Page name="ГруппаУточнениеШтрихкодаНоменклатуры" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа уточнение штрихкода номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУточнениеШтрихкодаНоменклатурыРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаШтрихкодНоменклатуры" id="85">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа штрихкод номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШтрихкодНоменклатурыРасширеннаяПодсказка" id="86"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаТовар" id="83">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа товар</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТоварРасширеннаяПодсказка" id="84"/>
+									<ChildItems>
+										<LabelField name="Состояния" id="124">
+											<DataPath>Зарегистрирован</DataPath>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="СостоянияКонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="СостоянияРасширеннаяПодсказка" id="126"/>
+										</LabelField>
+										<InputField name="Штрихкод" id="7">
+											<DataPath>Штрихкод</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>32</MaxWidth>
+											<ContextMenu name="ШтрихкодКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="ШтрихкодРасширеннаяПодсказка" id="9"/>
+										</InputField>
+										<InputField name="Номенклатура" id="10">
+											<DataPath>Номенклатура</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>33</MaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="НоменклатураКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="12"/>
+											<Events>
+												<Event name="OnChange">НоменклатураПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Характеристика" id="13">
+											<DataPath>Характеристика</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>33</MaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Номенклатура</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Номенклатура</xr:DataPath>
+													<xr:ValueChange>DontChange</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ХарактеристикаРасширеннаяПодсказка" id="15"/>
+											<Events>
+												<Event name="OnChange">ХарактеристикаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Серия" id="16">
+											<DataPath>Серия</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>33</MaxWidth>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Номенклатура</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Номенклатура</xr:DataPath>
+													<xr:ValueChange>DontChange</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Характеристика</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Характеристика</xr:DataPath>
+													<xr:ValueChange>DontChange</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="СерияКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="СерияРасширеннаяПодсказка" id="18"/>
+											<Events>
+												<Event name="OnChange">СерияПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКоличествоУпаковка" id="30">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа количество и упаковка</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКоличествоУпаковкаРасширеннаяПодсказка" id="31"/>
+									<ChildItems>
+										<InputField name="Количество" id="22">
+											<DataPath>Количество</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>10</MaxWidth>
+											<ContextMenu name="КоличествоКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="24"/>
+										</InputField>
+										<InputField name="Упаковка" id="19">
+											<DataPath>Упаковка</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>14</MaxWidth>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Номенклатура</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Номенклатура</xr:DataPath>
+													<xr:ValueChange>DontChange</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ChoiceParameters>
+												<app:item name="ПоказыватьМерныеЕдиницыИзмерения">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:boolean">false</Value>
+													</app:value>
+												</app:item>
+												<app:item name="ПоказыватьТоварныеМеста">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:boolean">true</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<ContextMenu name="УпаковкаКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="УпаковкаРасширеннаяПодсказка" id="21"/>
+											<Events>
+												<Event name="OnChange">УпаковкаПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаУточнениеШтрихкодаНоменклатурыПодвал" id="99">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа уточнение штрихкода номенклатуры подвал</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУточнениеШтрихкодаНоменклатурыПодвалРасширеннаяПодсказка" id="100"/>
+									<ChildItems>
+										<CheckBoxField name="ЗарегистрироватьШтрихкод" id="96">
+											<DataPath>Зарегистрировать</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Зарегистрировать</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗарегистрироватьШтрихкодКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="ЗарегистрироватьШтрихкодРасширеннаяПодсказка" id="98"/>
+										</CheckBoxField>
+										<CommandBar name="ГруппаШтрихкодНоменклатурыКоманднаяПанель" id="101">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа штрихкод номенклатуры командная панель</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalLocation>Right</HorizontalLocation>
+											<ExtendedTooltip name="ГруппаШтрихкодНоменклатурыКоманднаяПанельРасширеннаяПодсказка" id="102"/>
+											<ChildItems>
+												<Button name="ПеренестиВДокумент" id="92">
+													<Type>CommandBarButton</Type>
+													<DefaultButton>true</DefaultButton>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandName>Form.Command.ПеренестиВДокумент</CommandName>
+													<ExtendedTooltip name="ПеренестиВДокументРасширеннаяПодсказка" id="93"/>
+												</Button>
+												<Button name="Отмена" id="94">
+													<Type>CommandBarButton</Type>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandName>Form.Command.Отмена</CommandName>
+													<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="95"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаШтрихкодыНоменклатуры" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа штрихкоды номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШтрихкодыНоменклатурыРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Table name="ШтрихкодыНоменклатуры" id="32">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ШтрихкодыНоменклатуры</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ШтрихкодыНоменклатурыКонтекстноеМеню" id="34">
+								<ChildItems>
+									<Button name="ШтрихкодыНоменклатурыКонтекстноеМенюВывестиСписок" id="127">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ШтрихкодыНоменклатуры.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ШтрихкодыНоменклатурыКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="128"/>
+									</Button>
+									<Button name="ШтрихкодыНоменклатурыКонтекстноеМенюСортироватьСписокПоВозрастанию" id="129">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ШтрихкодыНоменклатуры.StandardCommand.SortListAsc</CommandName>
+										<ExtendedTooltip name="ШтрихкодыНоменклатурыКонтекстноеМенюСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="130"/>
+									</Button>
+									<Button name="ШтрихкодыНоменклатурыКонтекстноеМенюСортироватьСписокПоУбыванию" id="131">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ШтрихкодыНоменклатуры.StandardCommand.SortListDesc</CommandName>
+										<ExtendedTooltip name="ШтрихкодыНоменклатурыКонтекстноеМенюСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="132"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ШтрихкодыНоменклатурыКоманднаяПанель" id="33"/>
+							<ExtendedTooltip name="ШтрихкодыНоменклатурыРасширеннаяПодсказка" id="35"/>
+							<SearchStringAddition name="ШтрихкодыНоменклатурыСтрокаПоиска" id="36">
+								<AdditionSource>
+									<Item>ШтрихкодыНоменклатуры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ШтрихкодыНоменклатурыСтрокаПоискаКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ШтрихкодыНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ШтрихкодыНоменклатурыСостояниеПросмотра" id="42">
+								<AdditionSource>
+									<Item>ШтрихкодыНоменклатуры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ШтрихкодыНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="ШтрихкодыНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ШтрихкодыНоменклатурыУправлениеПоиском" id="39">
+								<AdditionSource>
+									<Item>ШтрихкодыНоменклатуры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ШтрихкодыНоменклатурыУправлениеПоискомКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="ШтрихкодыНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateCell">ШтрихкодыНоменклатурыПриАктивизацииЯчейки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ШтрихкодыНоменклатурыЗарегистрирован" id="45">
+									<DataPath>ШтрихкодыНоменклатуры.Зарегистрирован</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<SkipOnInput>true</SkipOnInput>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ШтрихкодыНоменклатурыЗарегистрированКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ШтрихкодыНоменклатурыЗарегистрированРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<InputField name="ШтрихкодыНоменклатурыШтрихкод" id="48">
+									<DataPath>ШтрихкодыНоменклатуры.Штрихкод</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<SkipOnInput>true</SkipOnInput>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>20</MaxWidth>
+									<ContextMenu name="ШтрихкодыНоменклатурыШтрихкодКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ШтрихкодыНоменклатурыШтрихкодРасширеннаяПодсказка" id="50"/>
+								</InputField>
+								<InputField name="ШтрихкодыНоменклатурыНоменклатура" id="51">
+									<DataPath>ШтрихкодыНоменклатуры.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ШтрихкодыНоменклатурыНоменклатураКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ШтрихкодыНоменклатурыНоменклатураРасширеннаяПодсказка" id="53"/>
+									<Events>
+										<Event name="OnChange">ШтрихкодыНоменклатурыНоменклатураПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ШтрихкодыНоменклатурыХарактеристика" id="54">
+									<DataPath>ШтрихкодыНоменклатуры.Характеристика</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Номенклатура</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.ШтрихкодыНоменклатуры.CurrentData.Номенклатура</xr:DataPath>
+											<xr:ValueChange>DontChange</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ШтрихкодыНоменклатурыХарактеристикаКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ШтрихкодыНоменклатурыХарактеристикаРасширеннаяПодсказка" id="56"/>
+									<Events>
+										<Event name="OnChange">ШтрихкодыНоменклатурыХарактеристикаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ШтрихкодыНоменклатурыСерия" id="57">
+									<DataPath>ШтрихкодыНоменклатуры.Серия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Номенклатура</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.ШтрихкодыНоменклатуры.CurrentData.Номенклатура</xr:DataPath>
+											<xr:ValueChange>DontChange</xr:ValueChange>
+										</xr:Link>
+										<xr:Link>
+											<xr:Name>Характеристика</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.ШтрихкодыНоменклатуры.CurrentData.Характеристика</xr:DataPath>
+											<xr:ValueChange>DontChange</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ШтрихкодыНоменклатурыСерияКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ШтрихкодыНоменклатурыСерияРасширеннаяПодсказка" id="59"/>
+									<Events>
+										<Event name="OnChange">ШтрихкодыНоменклатурыСерияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<ColumnGroup name="ШтрихкодыНоменклатурыУпаковкаЕдиницаИзмерения" id="87">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Упаковка, ед. изм.</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ШтрихкодыНоменклатурыУпаковкаЕдиницаИзмеренияРасширеннаяПодсказка" id="88"/>
+									<ChildItems>
+										<InputField name="ШтрихкодыНоменклатурыУпаковка" id="60">
+											<DataPath>ШтрихкодыНоменклатуры.Упаковка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>10</MaxWidth>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Номенклатура</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Items.ШтрихкодыНоменклатуры.CurrentData.Номенклатура</xr:DataPath>
+													<xr:ValueChange>DontChange</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ChoiceParameters>
+												<app:item name="ПоказыватьМерныеЕдиницыИзмерения">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:boolean">false</Value>
+													</app:value>
+												</app:item>
+												<app:item name="ПоказыватьТоварныеМеста">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:boolean">true</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<ContextMenu name="ШтрихкодыНоменклатурыУпаковкаКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="ШтрихкодыНоменклатурыУпаковкаРасширеннаяПодсказка" id="62"/>
+											<Events>
+												<Event name="OnChange">ШтрихкодыНоменклатурыУпаковкаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ШтрихкодыНоменклатурыЕдиницаИзмерения" id="89">
+											<DataPath>ШтрихкодыНоменклатуры.Номенклатура.ЕдиницаИзмерения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ед. изм.</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<ContextMenu name="ШтрихкодыНоменклатурыЕдиницаИзмеренияКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="ШтрихкодыНоменклатурыЕдиницаИзмеренияРасширеннаяПодсказка" id="91"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ШтрихкодыНоменклатурыКоличество" id="63">
+									<DataPath>ШтрихкодыНоменклатуры.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<ContextMenu name="ШтрихкодыНоменклатурыКоличествоКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ШтрихкодыНоменклатурыКоличествоРасширеннаяПодсказка" id="65"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаШтрихкодыНоменклатурыПодвал" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа штрихкод номенклатуры подвал</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШтрихкодыНоменклатурыПодвалРасширеннаяПодсказка" id="114"/>
+							<ChildItems>
+								<CheckBoxField name="ЗарегистрироватьШтрихкоды" id="115">
+									<DataPath>Зарегистрировать</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарегистрировать</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗарегистрироватьШтрихкодыКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ЗарегистрироватьШтрихкодыРасширеннаяПодсказка" id="117"/>
+								</CheckBoxField>
+								<CommandBar name="ГруппаШтрихкодыНоменклатурыКоманднаяПанель" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа штрихкод номенклатуры командная панель</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="ГруппаШтрихкодыНоменклатурыКоманднаяПанельРасширеннаяПодсказка" id="119"/>
+									<ChildItems>
+										<Button name="ПеренестиВДокументШтрихкоды" id="120">
+											<Type>CommandBarButton</Type>
+											<DefaultButton>true</DefaultButton>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.ПеренестиВДокумент</CommandName>
+											<ExtendedTooltip name="ПеренестиВДокументШтрихкодыРасширеннаяПодсказка" id="121"/>
+										</Button>
+										<Button name="ОтменаШтрихкоды" id="122">
+											<Type>CommandBarButton</Type>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.Отмена</CommandName>
+											<ExtendedTooltip name="ОтменаШтрихкодыРасширеннаяПодсказка" id="123"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Номенклатура" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Характеристика" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьХарактеристикиНоменклатуры</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Серия" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСерииНоменклатуры</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Упаковка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ед. изм.</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Штрихкод" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШтрихкодыНоменклатуры" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкоды номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Зарегистрирован" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Штрихкод" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Характеристика" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.ИспользоватьХарактеристикиНоменклатуры</Item>
+					</FunctionalOptions>
+				</Column>
+				<Column name="Серия" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.ИспользоватьСерииНоменклатуры</Item>
+					</FunctionalOptions>
+				</Column>
+				<Column name="Упаковка" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ХарактеристикиИспользуются" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристики используются</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СерииИспользуются" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серии используются</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗарегистрированОбработкой" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зарегистрирован обработкой</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РеквизитыНоменклатуры" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Количество" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Зарегистрировать" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Зарегистрирован" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НеуникальныеШтрихкодыНоменклатуры" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неуникальные штрихкоды номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Штрихкод" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Характеристика" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.ИспользоватьХарактеристикиНоменклатуры</Item>
+					</FunctionalOptions>
+				</Column>
+				<Column name="Серия" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.ИспользоватьСерииНоменклатуры</Item>
+					</FunctionalOptions>
+				</Column>
+				<Column name="Упаковка" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИспользоватьПодключаемоеОборудование" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать подключаемое оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоддерживаемыеТипыПодключаемогоОборудования" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поддерживаемые типы подключаемого оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяТЧ" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя табличной части документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьХарактеристикиНоменклатуры" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать характеристики номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПеренестиВДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПеренестиВДокумент</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отмена</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НеизвестныеШтрихкоды">
+			<Type/>
+		</Parameter>
+		<Parameter name="ДействияСНеизвестнымиШтрихкодами">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ИмяТЧ">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

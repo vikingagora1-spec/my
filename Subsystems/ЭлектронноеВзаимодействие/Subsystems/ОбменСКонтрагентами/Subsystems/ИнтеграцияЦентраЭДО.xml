@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Subsystem uuid="0418f0e5-642e-4824-841c-022948f97792">
+		<Properties>
+			<Name>ИнтеграцияЦентраЭДО</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интеграция центра ЭДО</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьИнтеграциюЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЦентраЭДОВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиИнтеграцииЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ВизуализацииДокументовЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияПравилВизуализацииЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСинхронизацииСЦентромЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЦентраЭДОКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьИнтеграциюЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИнтеграцияЦентраЭДОПодключение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УчетныеЗаписиЦентровЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПользователиЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УчетныеЗаписиЭДОИнтеграцияЦентраЭДОВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УчетныеЗаписиЭДОИнтеграцияЦентраЭДОКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УчетныеЗаписиЭДОИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПриглашенияЭДОИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПакетыДокументовЭДОИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПриглашенияЭДОИнтеграцияЦентраЭДОКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПриглашенияЭДОИнтеграцияЦентраЭДОВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектронныеДокументыЭДОИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияСинхронизацииСЦентромЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектронныеДокументыЭДОИнтеграцияЦентраЭДОКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектронныеДокументыЭДОИнтеграцияЦентраЭДОВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтерфейсДокументовЭДОИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектронныеДокументыЭДОИнтеграцияЦентраЭДОКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЦентраЭДОПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтоматическоеПолучениеЭДОИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияСинхронизацииОбъектовСЦентромЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВизуализацияЭДОИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МашиночитаемыеДоверенностиИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИдентификаторыСинхронизируемыхОбъектовЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСобытийДокументаЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МашиночитаемыеДоверенностиИнтеграцияЦентраЭДОКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МашиночитаемыеДоверенностиИнтеграцияЦентраЭДОВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОбновлениеДанныхЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УчетныеЗаписиЭДОИнтеграцияЦентраЭДОКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТранспортныеКонтейнерыЭДОИнтеграцияЦентраЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияВыгрузкиВЦентрЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ВыгружаемыеДокументыВЦентрЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МашиночитаемыеДоверенностиИнтеграцияЦентраЭДОКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ВыгрузкаВЦентрЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектронныеДокументыЭДОИнтеграцияЦентраЭДОКлиентПовтИсп</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ИнформационнаяПанель" id="40">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ExtendedTooltip name="ИнформационнаяПанельРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<Pages name="ИнформационнаяПанельСтраницы" id="42">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информационная панель страницы</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ИнформационнаяПанельСтраницыРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Page name="ИнформационнаяПанельСтраницаОтобразить" id="44">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информационная панель страница отобразить</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ИнформационнаяПанельСтраницаОтобразитьРасширеннаяПодсказка" id="45"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияИнформационнаяСтрока" id="46">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация информационная строка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Информация16</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияИнформационнаяСтрокаКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ДекорацияИнформационнаяСтрокаРасширеннаяПодсказка" id="48"/>
+								</PictureDecoration>
+								<LabelField name="ИнформационнаяСтрока" id="49">
+									<DataPath>ИнформационнаяСтрока</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>90</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>75</MaxWidth>
+									<Height>3</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>3</MaxHeight>
+									<ContextMenu name="ИнформационнаяСтрокаКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ИнформационнаяСтрокаРасширеннаяПодсказка" id="51"/>
+								</LabelField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<UsualGroup name="ГруппаПереходЗавершен" id="90">
+					<Visible>false</Visible>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПереходЗавершенРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияИнформационнаяСтрокаГотово" id="92">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация информационная строка</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДекорацияИнформационнаяСтрокаГотовоКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ДекорацияИнформационнаяСтрокаГотовоРасширеннаяПодсказка" id="94"/>
+						</PictureDecoration>
+						<LabelField name="ИнформационнаяСтрокаГотово" id="95">
+							<DataPath>ИнформационнаяСтрокаГотово</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>75</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>75</MaxWidth>
+							<ContextMenu name="ИнформационнаяСтрокаГотовоКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ИнформационнаяСтрокаГотовоРасширеннаяПодсказка" id="97"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="76">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="77"/>
+			<ChildItems>
+				<Button name="ФормаКомандаОбновить" id="35">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОбновить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаКомандаОбновитьРасширеннаяПодсказка" id="36"/>
+				</Button>
+				<LabelDecoration name="ДекорацияСостояния" id="87">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояния:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияСостоянияКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ДекорацияСостоянияРасширеннаяПодсказка" id="89"/>
+				</LabelDecoration>
+				<LabelDecoration name="ГиперссылкаВсе" id="78">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ГиперссылкаВсеКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ГиперссылкаВсеРасширеннаяПодсказка" id="80"/>
+					<Events>
+						<Event name="Click">ГиперссылкаВсеНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="ГиперссылкаСостояниеИспользуется" id="81">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требует внимания</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ГиперссылкаСостояниеИспользуетсяКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ГиперссылкаСостояниеИспользуетсяРасширеннаяПодсказка" id="83"/>
+					<Events>
+						<Event name="Click">ГиперссылкаСостояниеИспользуетсяНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаФункциональности" id="106">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Height>13</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MaxHeight>13</MaxHeight>
+			<HeightInTableRows>13</HeightInTableRows>
+			<HeightControlVariant>UseHeightInTableRows</HeightControlVariant>
+			<AutoMaxRowsCount>false</AutoMaxRowsCount>
+			<MaxRowsCount>13</MaxRowsCount>
+			<SelectionMode>SingleRow</SelectionMode>
+			<DataPath>ТаблицаФункциональности</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаФункциональностиКонтекстноеМеню" id="107"/>
+			<AutoCommandBar name="ТаблицаФункциональностиКоманднаяПанель" id="108"/>
+			<ExtendedTooltip name="ТаблицаФункциональностиРасширеннаяПодсказка" id="109"/>
+			<SearchStringAddition name="ТаблицаФункциональностиСтрокаПоиска" id="110">
+				<AdditionSource>
+					<Item>ТаблицаФункциональности</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаФункциональностиСтрокаПоискаКонтекстноеМеню" id="111"/>
+				<ExtendedTooltip name="ТаблицаФункциональностиСтрокаПоискаРасширеннаяПодсказка" id="112"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаФункциональностиСостояниеПросмотра" id="113">
+				<AdditionSource>
+					<Item>ТаблицаФункциональности</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаФункциональностиСостояниеПросмотраКонтекстноеМеню" id="114"/>
+				<ExtendedTooltip name="ТаблицаФункциональностиСостояниеПросмотраРасширеннаяПодсказка" id="115"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаФункциональностиУправлениеПоиском" id="116">
+				<AdditionSource>
+					<Item>ТаблицаФункциональности</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаФункциональностиУправлениеПоискомКонтекстноеМеню" id="117"/>
+				<ExtendedTooltip name="ТаблицаФункциональностиУправлениеПоискомРасширеннаяПодсказка" id="118"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаФункциональностиВыбор</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="ГруппаУстаревшаяФункциональность" id="119">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Устаревшая функциональность</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>InCell</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаУстаревшаяФункциональностьРасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<PictureField name="ТаблицаФункциональностиРассчитаноСостояние" id="150">
+							<DataPath>ТаблицаФункциональности.ТребуетсяРассчитатьСостояние</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ТаблицаФункциональностиРассчитаноСостояниеКонтекстноеМеню" id="151"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиРассчитаноСостояниеРасширеннаяПодсказка" id="152"/>
+						</PictureField>
+						<PictureField name="ТаблицаФункциональностиСтатус" id="121">
+							<DataPath>ТаблицаФункциональности.Статус</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.СтатусыИспользованияУстаревшейФункциональности</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ТаблицаФункциональностиСтатусКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиСтатусРасширеннаяПодсказка" id="123"/>
+						</PictureField>
+						<LabelField name="ТаблицаФункциональностиУстаревшаяФункциональность" id="124">
+							<DataPath>ТаблицаФункциональности.УстаревшаяФункциональность</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>24</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
+							<ContextMenu name="ТаблицаФункциональностиУстаревшаяФункциональностьКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиУстаревшаяФункциональностьРасширеннаяПодсказка" id="126"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТаблицаФункциональностиГруппаСостояние" id="153">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ТаблицаФункциональностиГруппаСостояниеРасширеннаяПодсказка" id="154"/>
+					<ChildItems>
+						<PictureField name="ТаблицаФункциональностиРассчитаноСостояние1" id="155">
+							<DataPath>ТаблицаФункциональности.ТребуетсяРассчитатьСостояние</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ТаблицаФункциональностиРассчитаноСостояние1КонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиРассчитаноСостояние1РасширеннаяПодсказка" id="157"/>
+						</PictureField>
+						<LabelField name="ТаблицаФункциональностиСостояние" id="127">
+							<DataPath>ТаблицаФункциональности.Состояние</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>18</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>18</MaxWidth>
+							<ContextMenu name="ТаблицаФункциональностиСостояниеКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиСостояниеРасширеннаяПодсказка" id="129"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ТаблицаФункциональностиНоваяФункциональность" id="130">
+					<DataPath>ТаблицаФункциональности.НоваяФункциональность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>24</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>24</MaxWidth>
+					<ContextMenu name="ТаблицаФункциональностиНоваяФункциональностьКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="ТаблицаФункциональностиНоваяФункциональностьРасширеннаяПодсказка" id="132"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаПодробнее" id="133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рекомендация (порядок перехода)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаПодробнееРасширеннаяПодсказка" id="134"/>
+					<ChildItems>
+						<LabelField name="ТаблицаФункциональностиРекомендация" id="135">
+							<DataPath>ТаблицаФункциональности.Рекомендация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>30</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>30</MaxWidth>
+							<Height>2</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>2</MaxHeight>
+							<ContextMenu name="ТаблицаФункциональностиРекомендацияКонтекстноеМеню" id="136"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиРекомендацияРасширеннаяПодсказка" id="137"/>
+						</LabelField>
+						<PictureField name="ТаблицаФункциональностиОткрытьРекомендацию" id="138">
+							<DataPath>ТаблицаФункциональности.РекомендацияТребующаяДействий</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<ValuesPicture>
+								<xr:Ref>StdPicture.ShowData</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ТаблицаФункциональностиОткрытьРекомендациюКонтекстноеМеню" id="139"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиОткрытьРекомендациюРасширеннаяПодсказка" id="140"/>
+						</PictureField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТаблицаФункциональностиГруппаДатаДокумента" id="158">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата документа</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ТаблицаФункциональностиГруппаДатаДокументаРасширеннаяПодсказка" id="159"/>
+					<ChildItems>
+						<PictureField name="ТаблицаФункциональностиРассчитаноСостояние2" id="160">
+							<DataPath>ТаблицаФункциональности.ТребуетсяРассчитатьСостояние</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ТаблицаФункциональностиРассчитаноСостояние2КонтекстноеМеню" id="161"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиРассчитаноСостояние2РасширеннаяПодсказка" id="162"/>
+						</PictureField>
+						<LabelField name="ТаблицаФункциональностиДатаДокумента" id="141">
+							<DataPath>ТаблицаФункциональности.ДатаДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата последнего документа</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаФункциональностиДатаДокументаКонтекстноеМеню" id="142"/>
+							<ExtendedTooltip name="ТаблицаФункциональностиДатаДокументаРасширеннаяПодсказка" id="143"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ТаблицаФункциональностиДействие" id="144">
+					<DataPath>ТаблицаФункциональности.Действие</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<Width>18</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>18</MaxWidth>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ТаблицаФункциональностиДействиеКонтекстноеМеню" id="145"/>
+					<ExtendedTooltip name="ТаблицаФункциональностиДействиеРасширеннаяПодсказка" id="146"/>
+				</LabelField>
+				<InputField name="ТаблицаФункциональностиОтступ" id="147">
+					<DataPath>ТаблицаФункциональности.Отступ</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаФункциональностиОтступКонтекстноеМеню" id="148"/>
+					<ExtendedTooltip name="ТаблицаФункциональностиОтступРасширеннаяПодсказка" id="149"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ГотовностьКПереходу26</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаФункциональности" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица функциональности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Идентификатор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="УстаревшаяФункциональность" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Устаревшая функциональность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НоваяФункциональность" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новая функциональность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Состояние" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Рекомендация" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рекомендация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Действие" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РежимДействия" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим действия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИспользуетсяУстаревшаяФункциональность" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Используется устаревшая функциональность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользуетсяНоваяФункциональность" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Используется новая функциональность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РекомендацияТребующаяДействий" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рекомендация требующая действий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИнформацияНеПрипятствующаяОбновлению" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация не припятствующая обновлению</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаДокумента" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Отступ" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отступ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТребуетсяРассчитатьСостояние" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требуется рассчитать состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьДанныеПоУстаревшейФункциональности" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть данные по устаревшей функциональности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИнформационнаяСтрока" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Состояния" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояния</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Переключатель" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветВыбранногоРежима" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет выбранного режима</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветНеВыбранногоРежима" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет не выбранного режима</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформационнаяСтрокаГотово" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформационнаяБазаФайловая" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная база файловая</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОбновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОбновить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

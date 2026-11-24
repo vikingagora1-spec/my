@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСохранитьИзменения" id="31">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьИзменения</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьИзмененияРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<Button name="ФормаОтмена" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="34"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ГруппировкиОтчета" id="1">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<DataPath>ГруппировкиОтчета</DataPath>
+			<ContextMenu name="ГруппировкиОтчетаКонтекстноеМеню" id="3"/>
+			<AutoCommandBar name="ГруппировкиОтчетаКоманднаяПанель" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ГруппировкиОтчетаУстановитьФлажки" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ГруппировкиОтчета.StandardCommand.CheckAll</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ГруппировкиОтчетаУстановитьФлажкиРасширеннаяПодсказка" id="24"/>
+					</Button>
+					<Button name="ГруппировкиОтчетаСнятьФлажки" id="25">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ГруппировкиОтчета.StandardCommand.UncheckAll</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ГруппировкиОтчетаСнятьФлажкиРасширеннаяПодсказка" id="26"/>
+					</Button>
+					<Button name="ГруппировкиОтчетаПереместитьВверх" id="27">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ГруппировкиОтчета.StandardCommand.MoveUp</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ГруппировкиОтчетаПереместитьВверхРасширеннаяПодсказка" id="28"/>
+					</Button>
+					<Button name="ГруппировкиОтчетаПереместитьВниз" id="29">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ГруппировкиОтчета.StandardCommand.MoveDown</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ГруппировкиОтчетаПереместитьВнизРасширеннаяПодсказка" id="30"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ГруппировкиОтчетаРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ГруппировкиОтчетаСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ГруппировкиОтчета</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппировкиОтчетаСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ГруппировкиОтчетаСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ГруппировкиОтчетаСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ГруппировкиОтчета</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппировкиОтчетаСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ГруппировкиОтчетаСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ГруппировкиОтчетаУправлениеПоиском" id="8">
+				<AdditionSource>
+					<Item>ГруппировкиОтчета</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппировкиОтчетаУправлениеПоискомКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ГруппировкиОтчетаУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ГруппировкиОтчетаПометка" id="17">
+					<DataPath>ГруппировкиОтчета.Check</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ГруппировкиОтчетаПометкаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ГруппировкиОтчетаПометкаРасширеннаяПодсказка" id="19"/>
+				</CheckBoxField>
+				<InputField name="ГруппировкиОтчетаПредставление" id="20">
+					<DataPath>ГруппировкиОтчета.Presentation</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ГруппировкиОтчетаПредставлениеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ГруппировкиОтчетаПредставлениеРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ГруппировкиОтчета" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировки отчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьИзменения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СохранитьИзменения</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ГруппировкиОтчета">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

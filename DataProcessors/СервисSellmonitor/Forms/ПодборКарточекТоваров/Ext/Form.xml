@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Подбор карточек товаров</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаМаркетплейсы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа маркетплейсы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа маркетплейсы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаМаркетплейсыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаМаркетплейсOzon" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ozon</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа маркетплейс ozon</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаМаркетплейсOzonРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаМаркетплейсOzonЛевая" id="175">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа маркетплейс ozon левая</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа маркетплейс ozon левая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМаркетплейсOzonЛеваяРасширеннаяПодсказка" id="176"/>
+							<ChildItems>
+								<Table name="СписокМаркетплейсOzon" id="5">
+									<Representation>List</Representation>
+									<ChoiceMode>true</ChoiceMode>
+									<MultipleChoice>true</MultipleChoice>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокМаркетплейсOzon</DataPath>
+									<RowPictureDataPath>СписокМаркетплейсOzon.DefaultPicture</RowPictureDataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список маркетплейс Ozon</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSet>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>ChangeHistory</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Create</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+										<ExcludedCommand>GetURL</ExcludedCommand>
+										<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+										<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+										<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+										<ExcludedCommand>SearchHistory</ExcludedCommand>
+									</CommandSet>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="СписокМаркетплейсOzonКонтекстноеМеню" id="6"/>
+									<AutoCommandBar name="СписокМаркетплейсOzonКоманднаяПанель" id="7"/>
+									<ExtendedTooltip name="СписокМаркетплейсOzonРасширеннаяПодсказка" id="8"/>
+									<SearchStringAddition name="СписокМаркетплейсOzonСтрокаПоиска" id="9">
+										<AdditionSource>
+											<Item>СписокМаркетплейсOzon</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокМаркетплейсOzonСтрокаПоискаКонтекстноеМеню" id="10"/>
+										<ExtendedTooltip name="СписокМаркетплейсOzonСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокМаркетплейсOzonСостояниеПросмотра" id="12">
+										<AdditionSource>
+											<Item>СписокМаркетплейсOzon</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокМаркетплейсOzonСостояниеПросмотраКонтекстноеМеню" id="13"/>
+										<ExtendedTooltip name="СписокМаркетплейсOzonСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокМаркетплейсOzonУправлениеПоиском" id="15">
+										<AdditionSource>
+											<Item>СписокМаркетплейсOzon</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокМаркетплейсOzonУправлениеПоискомКонтекстноеМеню" id="16"/>
+										<ExtendedTooltip name="СписокМаркетплейсOzonУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="ValueChoice">СписокМаркетплейсOzonВыборЗначения</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокМаркетплейсOzonНаименование" id="192">
+											<DataPath>СписокМаркетплейсOzon.Наименование</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование ТП</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокМаркетплейсOzonНаименованиеКонтекстноеМеню" id="193"/>
+											<ExtendedTooltip name="СписокМаркетплейсOzonНаименованиеРасширеннаяПодсказка" id="194"/>
+										</LabelField>
+										<LabelField name="СписокМаркетплейсOzonНоменклатура" id="24">
+											<DataPath>СписокМаркетплейсOzon.Номенклатура</DataPath>
+											<ContextMenu name="СписокМаркетплейсOzonНоменклатураКонтекстноеМеню" id="25"/>
+											<ExtendedTooltip name="СписокМаркетплейсOzonНоменклатураРасширеннаяПодсказка" id="26"/>
+										</LabelField>
+										<LabelField name="СписокМаркетплейсOzonХарактеристика" id="27">
+											<DataPath>СписокМаркетплейсOzon.Характеристика</DataPath>
+											<ContextMenu name="СписокМаркетплейсOzonХарактеристикаКонтекстноеМеню" id="28"/>
+											<ExtendedTooltip name="СписокМаркетплейсOzonХарактеристикаРасширеннаяПодсказка" id="29"/>
+										</LabelField>
+										<LabelField name="СписокМаркетплейсOzonУпаковка" id="30">
+											<DataPath>СписокМаркетплейсOzon.Упаковка</DataPath>
+											<ContextMenu name="СписокМаркетплейсOzonУпаковкаКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="СписокМаркетплейсOzonУпаковкаРасширеннаяПодсказка" id="32"/>
+										</LabelField>
+										<LabelField name="СписокМаркетплейсOzonСтатус" id="45">
+											<DataPath>СписокМаркетплейсOzon.Статус</DataPath>
+											<ContextMenu name="СписокМаркетплейсOzonСтатусКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="СписокМаркетплейсOzonСтатусРасширеннаяПодсказка" id="47"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаМаркетплейсOzonПравая" id="177">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа маркетплейс ozon правая</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа маркетплейс ozon левая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>25</Width>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМаркетплейсOzonПраваяРасширеннаяПодсказка" id="178"/>
+							<ChildItems>
+								<Table name="СписокМаркетплейсOzonОтбор" id="179">
+									<Representation>Tree</Representation>
+									<Autofill>true</Autofill>
+									<Width>60</Width>
+									<InitialTreeView>ExpandAllLevels</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>СписокМаркетплейсOzon.Filter</DataPath>
+									<ViewMode>All</ViewMode>
+									<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+									<ContextMenu name="СписокМаркетплейсOzonОтборКонтекстноеМеню" id="180"/>
+									<AutoCommandBar name="СписокМаркетплейсOzonОтборКоманднаяПанель" id="181"/>
+									<ExtendedTooltip name="СписокМаркетплейсOzonОтборРасширеннаяПодсказка" id="182"/>
+									<SearchStringAddition name="СписокМаркетплейсOzonОтборСтрокаПоиска" id="183">
+										<AdditionSource>
+											<Item>СписокМаркетплейсOzonОтбор</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокМаркетплейсOzonОтборСтрокаПоискаКонтекстноеМеню" id="184"/>
+										<ExtendedTooltip name="СписокМаркетплейсOzonОтборСтрокаПоискаРасширеннаяПодсказка" id="185"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокМаркетплейсOzonОтборСостояниеПросмотра" id="186">
+										<AdditionSource>
+											<Item>СписокМаркетплейсOzonОтбор</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокМаркетплейсOzonОтборСостояниеПросмотраКонтекстноеМеню" id="187"/>
+										<ExtendedTooltip name="СписокМаркетплейсOzonОтборСостояниеПросмотраРасширеннаяПодсказка" id="188"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокМаркетплейсOzonОтборУправлениеПоиском" id="189">
+										<AdditionSource>
+											<Item>СписокМаркетплейсOzonОтбор</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокМаркетплейсOzonОтборУправлениеПоискомКонтекстноеМеню" id="190"/>
+										<ExtendedTooltip name="СписокМаркетплейсOzonОтборУправлениеПоискомРасширеннаяПодсказка" id="191"/>
+									</SearchControlAddition>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.СервисSellmonitor</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокМаркетплейсOzon" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список маркетплейс ozon</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокМаркетплейсOzon.ВидОбъектаМаркетплейса</Field>
+				<Field>СписокМаркетплейсOzon.Номенклатура</Field>
+				<Field>СписокМаркетплейсOzon.НоменклатураПартнера</Field>
+				<Field>СписокМаркетплейсOzon.Статус</Field>
+				<Field>СписокМаркетплейсOzon.УчетнаяЗаписьМаркетплейса</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый.Номенклатура КАК Номенклатура,
+	РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый.Характеристика КАК Характеристика,
+	РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый.Упаковка КАК Упаковка,
+	РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый.Статус КАК Статус,
+	РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый.НаименованиеОбъектаМаркетплейса КАК Наименование
+ИЗ
+	РегистрСведений.СтатусыПубликацииОбъектовМаркетплейсаOzon КАК РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый
+ГДЕ
+	РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый.УчетнаяЗаписьМаркетплейса = &amp;УчетнаяЗапись
+	И РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый.ВидОбъектаМаркетплейса = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовМаркетплейсов.Товар)
+	И РегистрСведенийСтатусыПубликацииОбъектовМаркетплейсаOzonПереопределяемый.Номенклатура &lt;&gt; Значение(Справочник.Номенклатура.ПустаяСсылка)</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОбновления</dcssch:dataPath>
+					<dcssch:field>ДатаОбновления</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторКатегорииМаркетплейса</dcssch:dataPath>
+					<dcssch:field>ИдентификаторКатегорииМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидОбъектаМаркетплейса</dcssch:dataPath>
+					<dcssch:field>ВидОбъектаМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:field>true</dcssch:field>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчетнаяЗаписьМаркетплейса</dcssch:dataPath>
+					<dcssch:field>УчетнаяЗаписьМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:field>true</dcssch:field>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номенклатура</dcssch:dataPath>
+					<dcssch:field>Номенклатура</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:field>true</dcssch:field>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбъединяетсяВОднуКарточку</dcssch:dataPath>
+					<dcssch:field>ОбъединяетсяВОднуКарточку</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Характеристика</dcssch:dataPath>
+					<dcssch:field>Характеристика</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристика</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:field>true</dcssch:field>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторОбъектаМаркетплейса</dcssch:dataPath>
+					<dcssch:field>ИдентификаторОбъектаМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Упаковка</dcssch:dataPath>
+					<dcssch:field>Упаковка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковка</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:field>true</dcssch:field>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НоменклатураПартнера</dcssch:dataPath>
+					<dcssch:field>НоменклатураПартнера</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:field>true</dcssch:field>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИсточникиСхожихПредложений</dcssch:dataPath>
+					<dcssch:field>ИсточникиСхожихПредложений</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДанныеОбъекта</dcssch:dataPath>
+					<dcssch:field>ДанныеОбъекта</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторПубликации</dcssch:dataPath>
+					<dcssch:field>ИдентификаторПубликации</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбъектПубликации</dcssch:dataPath>
+					<dcssch:field>ОбъектПубликации</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:field>true</dcssch:field>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Статус</dcssch:dataPath>
+					<dcssch:field>Статус</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:field>true</dcssch:field>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КодОшибки</dcssch:dataPath>
+					<dcssch:field>КодОшибки</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Состояние</dcssch:dataPath>
+					<dcssch:field>Состояние</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПродаетсяПоСхемеРаботыFBO</dcssch:dataPath>
+					<dcssch:field>ПродаетсяПоСхемеРаботыFBO</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КрупногабаритныйТовар</dcssch:dataPath>
+					<dcssch:field>КрупногабаритныйТовар</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МинимальнаяЦена</dcssch:dataPath>
+					<dcssch:field>МинимальнаяЦена</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПродаетсяПоСхемеРаботыFBS</dcssch:dataPath>
+					<dcssch:field>ПродаетсяПоСхемеРаботыFBS</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПродаетсяПоСхемеРаботыDBS</dcssch:dataPath>
+					<dcssch:field>ПродаетсяПоСхемеРаботыDBS</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПредставлениеОбъектаМаркетплейса</dcssch:dataPath>
+					<dcssch:field>ПредставлениеОбъектаМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОписаниеСостояния</dcssch:dataPath>
+					<dcssch:field>ОписаниеСостояния</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЦенаСоСкидкой</dcssch:dataPath>
+					<dcssch:field>ЦенаСоСкидкой</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаданиеПубликации</dcssch:dataPath>
+					<dcssch:field>ЗаданиеПубликации</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОписаниеОшибки</dcssch:dataPath>
+					<dcssch:field>ОписаниеОшибки</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеОбъектаМаркетплейса</dcssch:dataPath>
+					<dcssch:field>НаименованиеОбъектаМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОписаниеОбъектаМаркетплейса</dcssch:dataPath>
+					<dcssch:field>ОписаниеОбъектаМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Штрихкод</dcssch:dataPath>
+					<dcssch:field>Штрихкод</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Категория</dcssch:dataPath>
+					<dcssch:field>Категория</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИсточникКатегорииМаркетплейса</dcssch:dataPath>
+					<dcssch:field>ИсточникКатегорииМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+					<dcssch:attributeUseRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:attributeUseRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаВыгрузкиЦенПродажи</dcssch:dataPath>
+					<dcssch:field>ДатаВыгрузкиЦенПродажи</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеКатегорииМаркетплейса</dcssch:dataPath>
+					<dcssch:field>НаименованиеКатегорииМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗначениеОбъединенияВОднуКарточку</dcssch:dataPath>
+					<dcssch:field>ЗначениеОбъединенияВОднуКарточку</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторFBOSKU</dcssch:dataPath>
+					<dcssch:field>ИдентификаторFBOSKU</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСоздания</dcssch:dataPath>
+					<dcssch:field>ДатаСоздания</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСозданияНаМаркетплейсе</dcssch:dataPath>
+					<dcssch:field>ДатаСозданияНаМаркетплейсе</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОстатокFBO</dcssch:dataPath>
+					<dcssch:field>ОстатокFBO</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОбновленияНаМаркетплейсе</dcssch:dataPath>
+					<dcssch:field>ДатаОбновленияНаМаркетплейсе</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторFBSSKU</dcssch:dataPath>
+					<dcssch:field>ИдентификаторFBSSKU</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЦеновойИндекс</dcssch:dataPath>
+					<dcssch:field>ЦеновойИндекс</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаАктуальностиОстатковМаркетплейса</dcssch:dataPath>
+					<dcssch:field>ДатаАктуальностиОстатковМаркетплейса</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезервFBO</dcssch:dataPath>
+					<dcssch:field>РезервFBO</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОстатокFBS</dcssch:dataPath>
+					<dcssch:field>ОстатокFBS</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезервFBS</dcssch:dataPath>
+					<dcssch:field>РезервFBS</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЦенаДоСкидки</dcssch:dataPath>
+					<dcssch:field>ЦенаДоСкидки</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИзмененыРеквизиты</dcssch:dataPath>
+					<dcssch:field>ИзмененыРеквизиты</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УцененныйТовар</dcssch:dataPath>
+					<dcssch:field>УцененныйТовар</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьУцененныеАналоги</dcssch:dataPath>
+					<dcssch:field>ЕстьУцененныеАналоги</dcssch:field>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+					</dcssch:useRestriction>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>
+						<dcssch:group>true</dcssch:group>
+					</dcssch:useRestriction>
+				</Field>
+				<Parameter>
+					<dcssch:name>УчетнаяЗапись</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учетная запись</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиМаркетплейсов</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:availableAsField>false</dcssch:availableAsField>
+				</Parameter>
+				<MainTable>InformationRegister.СтатусыПубликацииОбъектовМаркетплейсаOzon</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВидМаркетплейса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид маркетплейса на котором публикуется описание товара</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыМаркетплейсов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчетнаяЗапись" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная запись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиМаркетплейсов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ВидМаркетплейса">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыМаркетплейсов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="УчетнаяЗапись">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиМаркетплейсов</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

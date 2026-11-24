@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Состояние документов о предстоящей поставке</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<ScalingMode>Normal</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="Организация" id="1">
+					<DataPath>Организация</DataPath>
+					<ClearButton>true</ClearButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаДанныеИЗДОПП" id="237">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа данные ИЗДОПП</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДанныеИЗДОППРасширеннаяПодсказка" id="238"/>
+					<ChildItems>
+						<InputField name="СуммаДокумента" id="234">
+							<DataPath>СуммаДокумента</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="235"/>
+							<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="236"/>
+						</InputField>
+						<InputField name="СуммаПринятаяКУчету" id="239">
+							<DataPath>СуммаПринятаяКУчету</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Принято к учету / отменено</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СуммаПринятаяКУчетуКонтекстноеМеню" id="240"/>
+							<ExtendedTooltip name="СуммаПринятаяКУчетуРасширеннаяПодсказка" id="241"/>
+						</InputField>
+						<InputField name="СуммаОсталосьПринять" id="242">
+							<DataPath>СуммаОсталосьПринять</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Осталось принять / отменить</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СуммаОсталосьПринятьКонтекстноеМеню" id="243"/>
+							<ExtendedTooltip name="СуммаОсталосьПринятьРасширеннаяПодсказка" id="244"/>
+						</InputField>
+						<Button name="УстановитьСостояниеИзДОПП" id="232">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.УстановитьСостояние</CommandName>
+							<ExtendedTooltip name="УстановитьСостояниеИзДОППРасширеннаяПодсказка" id="233"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ДанныеДОПП" id="230">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДанныеДОПП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные ДОПП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДанныеДОППРасширеннаяПодсказка" id="231"/>
+			<ChildItems>
+				<Table name="СписокДОПП" id="167">
+					<MultipleChoice>true</MultipleChoice>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>СписокДОПП</DataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокДОППКонтекстноеМеню" id="168"/>
+					<AutoCommandBar name="СписокДОППКоманднаяПанель" id="169">
+						<ChildItems>
+							<Button name="ПоказатьДОППКОбработке" id="204">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПоказатьДОППКОбработке</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ожидается поставка</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПоказатьДОППКОбработкеРасширеннаяПодсказка" id="205"/>
+							</Button>
+							<Button name="УстановитьСостояние" id="208">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьСостояние</CommandName>
+								<ExtendedTooltip name="УстановитьСостояниеРасширеннаяПодсказка" id="209"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокДОППРасширеннаяПодсказка" id="170"/>
+					<SearchStringAddition name="СписокДОППСтрокаПоиска" id="171">
+						<AdditionSource>
+							<Item>СписокДОПП</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОППСтрокаПоискаКонтекстноеМеню" id="172"/>
+						<ExtendedTooltip name="СписокДОППСтрокаПоискаРасширеннаяПодсказка" id="173"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокДОППСостояниеПросмотра" id="174">
+						<AdditionSource>
+							<Item>СписокДОПП</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОППСостояниеПросмотраКонтекстноеМеню" id="175"/>
+						<ExtendedTooltip name="СписокДОППСостояниеПросмотраРасширеннаяПодсказка" id="176"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокДОППУправлениеПоиском" id="177">
+						<AdditionSource>
+							<Item>СписокДОПП</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОППУправлениеПоискомКонтекстноеМеню" id="178"/>
+						<ExtendedTooltip name="СписокДОППУправлениеПоискомРасширеннаяПодсказка" id="179"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">СписокДОПППередНачаломДобавления</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="СписокДОППНомерДОПП" id="192">
+							<DataPath>СписокДОПП.НомерДОПП</DataPath>
+							<ContextMenu name="СписокДОППНомерДОППКонтекстноеМеню" id="193"/>
+							<ExtendedTooltip name="СписокДОППНомерДОППРасширеннаяПодсказка" id="194"/>
+						</LabelField>
+						<LabelField name="СписокДОППКБК" id="189">
+							<DataPath>СписокДОПП.КБК</DataPath>
+							<ContextMenu name="СписокДОППКБККонтекстноеМеню" id="190"/>
+							<ExtendedTooltip name="СписокДОППКБКРасширеннаяПодсказка" id="191"/>
+						</LabelField>
+						<LabelField name="СписокДОППСуммаНалога" id="195">
+							<DataPath>СписокДОПП.СуммаНалога</DataPath>
+							<ContextMenu name="СписокДОППСуммаНалогаКонтекстноеМеню" id="196"/>
+							<ExtendedTooltip name="СписокДОППСуммаНалогаРасширеннаяПодсказка" id="197"/>
+						</LabelField>
+						<LabelField name="СписокДОППСостояние" id="218">
+							<DataPath>СписокДОПП.Состояние</DataPath>
+							<ContextMenu name="СписокДОППСостояниеКонтекстноеМеню" id="219"/>
+							<ExtendedTooltip name="СписокДОППСостояниеРасширеннаяПодсказка" id="220"/>
+						</LabelField>
+						<LabelField name="СписокДОППДатаСобытия" id="186">
+							<DataPath>СписокДОПП.ДатаСобытия</DataPath>
+							<ContextMenu name="СписокДОППДатаСобытияКонтекстноеМеню" id="187"/>
+							<ExtendedTooltip name="СписокДОППДатаСобытияРасширеннаяПодсказка" id="188"/>
+						</LabelField>
+						<LabelField name="СписокДОППКонтрагент" id="215">
+							<DataPath>СписокДОПП.Контрагент</DataPath>
+							<ContextMenu name="СписокДОППКонтрагентКонтекстноеМеню" id="216"/>
+							<ExtendedTooltip name="СписокДОППКонтрагентРасширеннаяПодсказка" id="217"/>
+						</LabelField>
+						<LabelField name="СписокДОПППланируемаяДатаВвоза" id="221">
+							<DataPath>СписокДОПП.ПланируемаяДатаВвоза</DataPath>
+							<ContextMenu name="СписокДОПППланируемаяДатаВвозаКонтекстноеМеню" id="222"/>
+							<ExtendedTooltip name="СписокДОПППланируемаяДатаВвозаРасширеннаяПодсказка" id="223"/>
+						</LabelField>
+						<LabelField name="СписокДОППКатегорияПодакцизногоТовара" id="224">
+							<DataPath>СписокДОПП.КатегорияПодакцизногоТовара</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Категории подакцизного товара</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СписокДОППКатегорияПодакцизногоТовараКонтекстноеМеню" id="225"/>
+							<ExtendedTooltip name="СписокДОППКатегорияПодакцизногоТовараРасширеннаяПодсказка" id="226"/>
+						</LabelField>
+						<LabelField name="СписокДОППКомментарий" id="227">
+							<DataPath>СписокДОПП.Комментарий</DataPath>
+							<ContextMenu name="СписокДОППКомментарийКонтекстноеМеню" id="228"/>
+							<ExtendedTooltip name="СписокДОППКомментарийРасширеннаяПодсказка" id="229"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНесколькоОрганизаций</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДОППКОбработке" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДОПП к обработке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КодыБК" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды БК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Код" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Название" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>256</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КБКПоКатегориям" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КБК по категориям</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Код" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодПодакцизногоТовара" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код подакцизного товара</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>3</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокДОПП" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ДОПП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>СписокДОПП.Контрагент</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВключениеДОППВДекларации.Организация КАК Организация,
+	ВключениеДОППВДекларации.ДатаСобытия КАК ДатаСобытия,
+	ВключениеДОППВДекларации.КБК КАК КБК,
+	ВключениеДОППВДекларации.НомерДОПП КАК НомерДОПП,
+	ВключениеДОППВДекларации.СуммаНалога КАК СуммаНалога,
+	ВключениеДОППВДекларации.Контрагент КАК Контрагент,
+	ВключениеДОППВДекларации.Состояние КАК Состояние,
+	ВключениеДОППВДекларации.ПланируемаяДатаВвоза КАК ПланируемаяДатаВвоза,
+	ВключениеДОППВДекларации.КатегорияПодакцизногоТовара КАК КатегорияПодакцизногоТовара,
+	ВключениеДОППВДекларации.Комментарий КАК Комментарий
+ИЗ
+	РегистрСведений.ДокументыОПредстоящейПоставке КАК ВключениеДОППВДекларации
+</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Контрагент</dcssch:dataPath>
+					<dcssch:field>Контрагент</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСобытия</dcssch:dataPath>
+					<dcssch:field>ДатаСобытия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПланируемаяДатаВвоза</dcssch:dataPath>
+					<dcssch:field>ПланируемаяДатаВвоза</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КБК</dcssch:dataPath>
+					<dcssch:field>КБК</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерДОПП</dcssch:dataPath>
+					<dcssch:field>НомерДОПП</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Состояние</dcssch:dataPath>
+					<dcssch:field>Состояние</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаНалога</dcssch:dataPath>
+					<dcssch:field>СуммаНалога</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КатегорияПодакцизногоТовара</dcssch:dataPath>
+					<dcssch:field>КатегорияПодакцизногоТовара</dcssch:field>
+				</Field>
+				<MainTable>InformationRegister.ДокументыОПредстоящейПоставке</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>НомерДОПП</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаСобытия</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Период" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодБКНДС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код БК НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаДокумента" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>16</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаПринятаяКУчету" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма принятая к учету</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>16</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаОсталосьПринять" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма осталось принять</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>16</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерДОПП" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ДОПП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>13</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказатьДОППКОбработке" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать ДОПП к обработке</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоказатьДОППКОбработке</Action>
+		</Command>
+		<Command name="УстановитьСостояние" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить состояние</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить состояние</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСостояние</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="НеВыводитьЗаголовок">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="НомерДОПП">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>13</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="СуммаДокумента">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>32</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

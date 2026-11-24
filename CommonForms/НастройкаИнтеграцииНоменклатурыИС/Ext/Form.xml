@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="НастройкиОтбор" id="181">
+			<DataPath>НастройкиОтбора.Settings.Filter</DataPath>
+			<ContextMenu name="НастройкиОтборКонтекстноеМеню" id="182"/>
+			<ExtendedTooltip name="НастройкиОтборРасширеннаяПодсказка" id="183"/>
+			<Events>
+				<Event name="OnChange">НастройкиОтборПриИзменении</Event>
+			</Events>
+		</InputField>
+		<CommandBar name="КоманднаяПанельТаблицыДанных" id="163">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель таблицы данных</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КоманднаяПанельТаблицыДанныхРасширеннаяПодсказка" id="164"/>
+			<ChildItems>
+				<Button name="Записать" id="60">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Записать</CommandName>
+					<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="61"/>
+				</Button>
+				<Popup name="ГруппаЗаполнить" id="165">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установить</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установить значение для выделенных строк</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗаполнитьРасширеннаяПодсказка" id="166"/>
+					<ChildItems>
+						<Button name="ЗапроситьДанныеИзГИСМТ" id="167">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ЗапроситьДанныеИзГИСМТ</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>по данным ГИС МТ</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗапроситьДанныеИзГИСМТРасширеннаяПодсказка" id="168"/>
+						</Button>
+						<Button name="НастроитьИнтеграциюСФГИС" id="132">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.НастроитьИнтеграциюСФГИС</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>вручную</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="НастроитьИнтеграциюСФГИСРасширеннаяПодсказка" id="133"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<Popup name="ГруппаИсключения" id="171">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исключения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаИсключенияРасширеннаяПодсказка" id="172"/>
+					<ChildItems>
+						<Button name="ДобавитьНоменклатуруВИсключения" id="90">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ДобавитьНоменклатуруВИсключения</CommandName>
+							<ExtendedTooltip name="ДобавитьНоменклатуруВИсключенияРасширеннаяПодсказка" id="91"/>
+						</Button>
+						<Button name="ПоказатьИсключения" id="92">
+							<Type>CommandBarButton</Type>
+							<Height>1</Height>
+							<CommandName>Form.Command.ПоказатьИсключения</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показать имеющиеся</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПоказатьИсключенияРасширеннаяПодсказка" id="93"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<ButtonGroup name="ГруппаИзменитьПометку" id="173">
+					<ExtendedTooltip name="ГруппаИзменитьПометкуРасширеннаяПодсказка" id="174"/>
+					<ChildItems>
+						<Button name="УстановитьПометку" id="175">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.УстановитьПометку</CommandName>
+							<ExtendedTooltip name="УстановитьПометкуРасширеннаяПодсказка" id="176"/>
+						</Button>
+						<Button name="СнятьПометку" id="177">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СнятьПометку</CommandName>
+							<ExtendedTooltip name="СнятьПометкуРасширеннаяПодсказка" id="178"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+				<ButtonGroup name="КоманднаяПанельТаблицыДанныхСтандартная" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель таблицы данных стандартная</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Item.ТаблицаДанных</CommandSource>
+					<ExtendedTooltip name="КоманднаяПанельТаблицыДанныхСтандартнаяРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<Button name="ПереместитьВверх" id="184">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.ТаблицаДанных.StandardCommand.MoveUp</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ПереместитьВверхРасширеннаяПодсказка" id="185"/>
+						</Button>
+						<Button name="ПереместитьВниз" id="186">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.ТаблицаДанных.StandardCommand.MoveDown</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ПереместитьВнизРасширеннаяПодсказка" id="187"/>
+						</Button>
+						<ButtonGroup name="КоманднаяПанельФормыСтандартная" id="115">
+							<CommandSource>Form</CommandSource>
+							<ExtendedTooltip name="КоманднаяПанельФормыСтандартнаяРасширеннаяПодсказка" id="116"/>
+						</ButtonGroup>
+					</ChildItems>
+				</ButtonGroup>
+			</ChildItems>
+		</CommandBar>
+		<Table name="ТаблицаДанных" id="1">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаДанных</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаДанныхКонтекстноеМеню" id="3">
+				<ChildItems>
+					<Button name="ТаблицаДанныхКонтекстноеМенюЗапроситьДанныеИзГИСМТ" id="169">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗапроситьДанныеИзГИСМТ</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Установить по данным ГИС МТ</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТаблицаДанныхКонтекстноеМенюЗапроситьДанныеИзГИСМТРасширеннаяПодсказка" id="170"/>
+					</Button>
+					<Button name="ТаблицаДанныхКонтекстноеМенюНастроитьИнтеграциюСФГИС" id="134">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.НастроитьИнтеграциюСФГИС</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Установить вручную</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТаблицаДанныхКонтекстноеМенюНастроитьИнтеграциюСФГИСРасширеннаяПодсказка" id="135"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ТаблицаДанныхКоманднаяПанель" id="2">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаДанныхРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ТаблицаДанныхСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ТаблицаДанных</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДанныхСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ТаблицаДанныхСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаДанныхСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ТаблицаДанных</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДанныхСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаДанныхСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаДанныхУправлениеПоиском" id="8">
+				<AdditionSource>
+					<Item>ТаблицаДанных</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДанныхУправлениеПоискомКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТаблицаДанныхУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаДанныхВыбор</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ТаблицаДанныхПометка" id="112">
+					<DataPath>ТаблицаДанных.Пометка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.Write</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаДанныхПометкаКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ТаблицаДанныхПометкаРасширеннаяПодсказка" id="114"/>
+				</CheckBoxField>
+				<InputField name="ТаблицаДанныхНоменклатура" id="103">
+					<DataPath>ТаблицаДанных.Номенклатура</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>50</MaxWidth>
+					<ContextMenu name="ТаблицаДанныхНоменклатураКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ТаблицаДанныхНоменклатураРасширеннаяПодсказка" id="105"/>
+				</InputField>
+				<InputField name="ТаблицаДанныхПредставлениеGTIN" id="158">
+					<DataPath>ТаблицаДанных.ПредставлениеGTIN</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Width>15</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТаблицаДанныхПредставлениеGTINКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="ТаблицаДанныхПредставлениеGTINРасширеннаяПодсказка" id="160"/>
+				</InputField>
+				<InputField name="ТаблицаДанныхТНВЭД" id="106">
+					<DataPath>ТаблицаДанных.ТНВЭД</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТаблицаДанныхТНВЭДКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ТаблицаДанныхТНВЭДРасширеннаяПодсказка" id="108"/>
+				</InputField>
+				<InputField name="ТаблицаДанныхОКПД2" id="109">
+					<DataPath>ТаблицаДанных.ОКПД2</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТаблицаДанныхОКПД2КонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ТаблицаДанныхОКПД2РасширеннаяПодсказка" id="111"/>
+				</InputField>
+				<ColumnGroup name="ГруппаИтеграцияГосИС" id="141">
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаИтеграцияГосИСРасширеннаяПодсказка" id="142"/>
+					<ChildItems>
+						<LabelField name="ТаблицаДанныхПредставлениеКлючаТекущее" id="149">
+							<DataPath>ТаблицаДанных.ПредставлениеКлючаТекущее</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ТаблицаДанныхПредставлениеКлючаТекущееКонтекстноеМеню" id="150"/>
+							<ExtendedTooltip name="ТаблицаДанныхПредставлениеКлючаТекущееРасширеннаяПодсказка" id="151"/>
+						</LabelField>
+						<LabelField name="ТаблицаДанныхПредставлениеКлюча" id="152">
+							<DataPath>ТаблицаДанных.ПредставлениеКлюча</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ТаблицаДанныхПредставлениеКлючаКонтекстноеМеню" id="153"/>
+							<ExtendedTooltip name="ТаблицаДанныхПредставлениеКлючаРасширеннаяПодсказка" id="154"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТаблицаДанных" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.Номенклатура</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ТНВЭД" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ТН ВЭД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТНВЭДПоВидамПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОКПД2" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ОКПД2</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ОКПД2ПоВидамПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекущийКлючВидовПродукции" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий ключ видов продукции</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлючиВидовПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидПродукцииВЕТИС" id="11">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидПродукцииГИСМТ" id="12">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидПродукцииЕГАИС" id="13">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидПродукцииЗЕРНО" id="14">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидПродукцииСАТУРН" id="15">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоступныеВидыПродукцииГИСМТ" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные виды продукции ГИСМТ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекущийВидПродукцииВЕТИС" id="40">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекущийВидПродукцииГИСМТ" id="41">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекущийВидПродукцииЕГАИС" id="42">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекущийВидПродукцииЗЕРНО" id="43">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекущийВидПродукцииСАТУРН" id="44">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеКлючаТекущее" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сейчас</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеКлюча" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗапроситьИзГИСМТ" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запросить из ГИСМТ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="GTIN" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>GTIN</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеGTIN" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>GTIN</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПодсистемыФГИС" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистемы ФГИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ИспользуетсяПодсистемаГИСМТ" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется подсистема ГИСМТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяПодсистемаВЕТИС" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется подсистема ВЕТИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяПодсистемаЕГАИС" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется подсистема ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяПодсистемаЗЕРНО" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется подсистема ЗЕРНО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяПодсистемаСАТУРН" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется подсистема САТУРН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборПоТНВЭДиОКПД2" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по ТНВЭДи ОКПД2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОтбора" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборПоНоменклатуре" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по номенклатуре</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Записать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Записать</Action>
+		</Command>
+		<Command name="ДобавитьНоменклатуруВИсключения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в исключения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить номенклатуру выделенных строк в исключения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьНоменклатуруВИсключения</Action>
+		</Command>
+		<Command name="ПоказатьИсключения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать исключения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать исключенную номенклатуру</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьИсключения</Action>
+		</Command>
+		<Command name="НастроитьИнтеграциюСФГИС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить интеграцию с ФГИС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастроитьИнтеграциюСФГИС</Action>
+		</Command>
+		<Command name="ЗапроситьДанныеИзГИСМТ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить данные из ГИСМТ</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗапроситьДанныеИзГИСМТ</Action>
+		</Command>
+		<Command name="УстановитьПометку" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометку</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПометку</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СнятьПометку" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометку</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьПометку</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ОтборПоНоменклатуре">
+			<Type/>
+		</Parameter>
+		<Parameter name="ОтборПоТНВЭДиОКПД2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

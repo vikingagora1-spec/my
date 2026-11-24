@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:FieldSelectedTextColor</BackColor>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияОтступВерх" id="12">
+					<ContextMenu name="ДекорацияОтступВерхКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ДекорацияОтступВерхРасширеннаяПодсказка" id="14"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияНадписьПроверка" id="1">
+					<Visible>false</Visible>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не все из отобранных товаров найдены или проверены.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияНадписьПроверкаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДекорацияНадписьПроверкаРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияНадписьОтбор" id="27">
+					<Visible>false</Visible>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отобраны не все товары, отгружаемые ордером. Отменить отгрузку не отобранных товаров в ордере и перевести ордер к проверке или оставить ордер к отбору?</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияНадписьОтборКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ДекорацияНадписьОтборРасширеннаяПодсказка" id="29"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияОтступНиз" id="15">
+					<ContextMenu name="ДекорацияОтступНизКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ДекорацияОтступНизРасширеннаяПодсказка" id="17"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаКнопкиПроверка" id="10">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки проверка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки проверка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиПроверкаРасширеннаяПодсказка" id="11"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКнопкаДобрать" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопка добрать</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопка добрать</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Half</HorizontalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкаДобратьРасширеннаяПодсказка" id="23"/>
+							<ChildItems>
+								<Button name="Добрать" id="6">
+									<Type>UsualButton</Type>
+									<Representation>Text</Representation>
+									<Height>1</Height>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<CommandName>Form.Command.Добрать</CommandName>
+									<TextColor>style:ЦветКомандЗеленыйСборкаИДоставка</TextColor>
+									<Font ref="style:ШрифтТекстаУвеличенныйВыделенныйСборкаИДоставка" kind="StyleItem"/>
+									<Picture>
+										<xr:Ref>CommonPicture.Штрихкод</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Добрать</v8:content>
+										</v8:item>
+									</Title>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ДобратьРасширеннаяПодсказка" id="7"/>
+								</Button>
+								<PictureDecoration name="ДекорацияКартинкаШтрихкод" id="24">
+									<Width>2</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка штрихкод</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>CommonPicture.Штрихкод</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияКартинкаШтрихкодКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ДекорацияКартинкаШтрихкодРасширеннаяПодсказка" id="26"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="УменьшитьКоличество" id="18">
+							<Type>UsualButton</Type>
+							<Height>1</Height>
+							<CommandName>Form.Command.УменьшитьКоличество</CommandName>
+							<TextColor>style:ЦветКомандЗеленыйСборкаИДоставка</TextColor>
+							<Font ref="style:ШрифтТекстаУвеличенныйСборкаИДоставка" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уменьшить количество </v8:content>
+								</v8:item>
+							</Title>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="УменьшитьКоличествоРасширеннаяПодсказка" id="19"/>
+						</Button>
+						<Button name="ЗавершитьБезПроверки" id="20">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗавершитьБезПроверки</CommandName>
+							<TextColor>style:ЦветКомандЗеленыйСборкаИДоставка</TextColor>
+							<Font ref="style:ШрифтТекстаУвеличенныйСборкаИДоставка" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Завершить без проверки</v8:content>
+								</v8:item>
+							</Title>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЗавершитьБезПроверкиРасширеннаяПодсказка" id="21"/>
+						</Button>
+						<Button name="Продолжить" id="8">
+							<Type>UsualButton</Type>
+							<Height>1</Height>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<CommandName>Form.Command.ПродолжитьПроверку</CommandName>
+							<TextColor>style:ЦветКомандЗеленыйСборкаИДоставка</TextColor>
+							<Font ref="style:ШрифтТекстаУвеличенныйСборкаИДоставка" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Продолжить проверку</v8:content>
+								</v8:item>
+							</Title>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПродолжитьРасширеннаяПодсказка" id="9"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКнопкиОтбор" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки проверка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки проверка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиОтборРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКнопкаОтменитьОтгрузку" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопка добрать</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопка добрать</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Half</HorizontalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкаОтменитьОтгрузкуРасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<Button name="ОтменитьОтгрузку" id="34">
+									<Type>UsualButton</Type>
+									<Representation>Text</Representation>
+									<Height>1</Height>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<CommandName>Form.Command.ОтменитьОтгрузку</CommandName>
+									<TextColor>style:ЦветКомандЗеленыйСборкаИДоставка</TextColor>
+									<Font ref="style:ШрифтТекстаУвеличенныйВыделенныйСборкаИДоставка" kind="StyleItem"/>
+									<Picture>
+										<xr:Ref>CommonPicture.Штрихкод</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отменить отгрузку товаров</v8:content>
+										</v8:item>
+									</Title>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ОтменитьОтгрузкуРасширеннаяПодсказка" id="35"/>
+								</Button>
+								<PictureDecoration name="ДекорацияКартинкаШтрихкод1" id="36">
+									<Width>2</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка штрихкод</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>CommonPicture.Штрихкод</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияКартинкаШтрихкод1КонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ДекорацияКартинкаШтрихкод1РасширеннаяПодсказка" id="38"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ОрдерКОтбору" id="39">
+							<Type>UsualButton</Type>
+							<Height>1</Height>
+							<CommandName>Form.Command.ОрдерКОтбору</CommandName>
+							<TextColor>style:ЦветКомандЗеленыйСборкаИДоставка</TextColor>
+							<Font ref="style:ШрифтТекстаУвеличенныйСборкаИДоставка" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оставить ордер к отбору</v8:content>
+								</v8:item>
+							</Title>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ОрдерКОтборуРасширеннаяПодсказка" id="40"/>
+						</Button>
+						<Button name="ПродолжитьОтбор" id="43">
+							<Type>UsualButton</Type>
+							<Height>1</Height>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<CommandName>Form.Command.ПродолжитьОтбор</CommandName>
+							<TextColor>style:ЦветКомандЗеленыйСборкаИДоставка</TextColor>
+							<Font ref="style:ШрифтТекстаУвеличенныйСборкаИДоставка" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Продолжить отбор</v8:content>
+								</v8:item>
+							</Title>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПродолжитьОтборРасширеннаяПодсказка" id="44"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.МобильноеРабочееМестоКладовщика</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Режим" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Добрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Добрать</Action>
+		</Command>
+		<Command name="ПродолжитьПроверку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить проверку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить проверку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПродолжитьПроверку</Action>
+		</Command>
+		<Command name="ЗавершитьБезПроверки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить без проверки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить без проверки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершитьБезПроверки</Action>
+		</Command>
+		<Command name="УменьшитьКоличество" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшить количество</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшить количество</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УменьшитьКоличество</Action>
+		</Command>
+		<Command name="ОтменитьОтгрузку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить отгрузку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить отгрузку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьОтгрузку</Action>
+		</Command>
+		<Command name="ОрдерКОтбору" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ордер к отбору</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ордер к отбору</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОрдерКОтбору</Action>
+		</Command>
+		<Command name="ПродолжитьОтбор" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПродолжитьОтбор</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Режим">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

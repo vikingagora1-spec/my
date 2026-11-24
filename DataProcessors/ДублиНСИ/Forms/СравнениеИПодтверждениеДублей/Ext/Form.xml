@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВертикальная" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вертикальная</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВертикальнаяРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГоризонтальная" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа горизонтальная</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГоризонтальнаяРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДубли" id="7">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дубли</v8:content>
+								</v8:item>
+							</Title>
+							<Width>30</Width>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаДублиРасширеннаяПодсказка" id="8"/>
+							<ChildItems>
+								<CommandBar name="ГруппаДублиПанельКнопки" id="47">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа дубли панель кнопки</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаДублиПанельКнопкиРасширеннаяПодсказка" id="48"/>
+									<ChildItems>
+										<ButtonGroup name="ГруппаФлажки" id="49">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа флажки</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ГруппаФлажкиРасширеннаяПодсказка" id="50"/>
+											<ChildItems>
+												<Button name="УстановитьВсе" id="53">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УстановитьВсе</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.CheckAll</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="УстановитьВсеРасширеннаяПодсказка" id="54"/>
+												</Button>
+												<Button name="СнятьВсе" id="51">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.СнятьВсе</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="СнятьВсеРасширеннаяПодсказка" id="52"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<Button name="Открыть" id="55">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.Открыть</CommandName>
+											<ExtendedTooltip name="ОткрытьРасширеннаяПодсказка" id="56"/>
+										</Button>
+										<Popup name="ПодменюУстановитьСтатус" id="57">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить статус</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПодменюУстановитьСтатусРасширеннаяПодсказка" id="58"/>
+											<ChildItems>
+												<Button name="УстановитьСтатусДубльЗаменить" id="61">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УстановитьСтатусДубльЗаменить</CommandName>
+													<ExtendedTooltip name="УстановитьСтатусДубльЗаменитьРасширеннаяПодсказка" id="62"/>
+												</Button>
+												<Button name="УстановитьСтатусДубльНеУдалять" id="63">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УстановитьСтатусДубльНеУдалять</CommandName>
+													<ExtendedTooltip name="УстановитьСтатусДубльНеУдалятьРасширеннаяПодсказка" id="64"/>
+												</Button>
+												<Button name="УстановитьСтатусОригинал" id="67">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УстановитьСтатусОригинал</CommandName>
+													<ExtendedTooltip name="УстановитьСтатусОригиналРасширеннаяПодсказка" id="68"/>
+												</Button>
+												<Button name="УстановитьСтатусНеЯвляетсяДублем" id="65">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УстановитьСтатусНеЯвляетсяДублем</CommandName>
+													<ExtendedTooltip name="УстановитьСтатусНеЯвляетсяДублемРасширеннаяПодсказка" id="66"/>
+												</Button>
+												<Button name="УстановитьСтатусТребуетсяПодтверждение" id="69">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УстановитьСтатусТребуетсяПодтверждение</CommandName>
+													<ExtendedTooltip name="УстановитьСтатусТребуетсяПодтверждениеРасширеннаяПодсказка" id="70"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+									</ChildItems>
+								</CommandBar>
+								<Table name="Дубли" id="11">
+									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Дубли</DataPath>
+									<RowPictureDataPath>Дубли.ИндексКартинки</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.КоллекцияЭлементовДублиНСИ</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</RowsPicture>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ДублиКонтекстноеМеню" id="13"/>
+									<AutoCommandBar name="ДублиКоманднаяПанель" id="12">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДублиРасширеннаяПодсказка" id="14"/>
+									<SearchStringAddition name="ДублиСтрокаПоиска" id="15">
+										<AdditionSource>
+											<Item>Дубли</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДублиСтрокаПоискаКонтекстноеМеню" id="16"/>
+										<ExtendedTooltip name="ДублиСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДублиСостояниеПросмотра" id="21">
+										<AdditionSource>
+											<Item>Дубли</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДублиСостояниеПросмотраКонтекстноеМеню" id="22"/>
+										<ExtendedTooltip name="ДублиСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДублиУправлениеПоиском" id="18">
+										<AdditionSource>
+											<Item>Дубли</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДублиУправлениеПоискомКонтекстноеМеню" id="19"/>
+										<ExtendedTooltip name="ДублиУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ДублиВыбор</Event>
+										<Event name="OnActivateRow">ДублиПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<CheckBoxField name="ДублиПометка" id="39">
+											<DataPath>Дубли.Пометка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для построения отчета о сравнении необходимо выбрать не меньше двух дублей</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДублиПометкаКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ДублиПометкаРасширеннаяПодсказка" id="41"/>
+										</CheckBoxField>
+										<ColumnGroup name="ДублиГруппаНаименованиеКод" id="45">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дубли группа наименование код</v8:content>
+												</v8:item>
+											</Title>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ДублиГруппаНаименованиеКодРасширеннаяПодсказка" id="46"/>
+											<ChildItems>
+												<InputField name="ДублиНаименование" id="27">
+													<DataPath>Дубли.Наименование</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДублиНаименованиеКонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="ДублиНаименованиеРасширеннаяПодсказка" id="29"/>
+												</InputField>
+												<InputField name="ДублиКод" id="36">
+													<DataPath>Дубли.Код</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДублиКодКонтекстноеМеню" id="37"/>
+													<ExtendedTooltip name="ДублиКодРасширеннаяПодсказка" id="38"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ДублиСтатус" id="30">
+											<DataPath>Дубли.Статус</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДублиСтатусКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ДублиСтатусРасширеннаяПодсказка" id="32"/>
+										</InputField>
+										<InputField name="ДублиМестИспользования" id="33">
+											<DataPath>Дубли.МестИспользования</DataPath>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<Width>8</Width>
+											<ContextMenu name="ДублиМестИспользованияКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="ДублиМестИспользованияРасширеннаяПодсказка" id="35"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<LabelField name="ДубльНайденПоПравилу" id="71">
+									<DataPath>ДубльНайденПоПравилу</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<ContextMenu name="ДубльНайденПоПравилуКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ДубльНайденПоПравилуРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<LabelDecoration name="КСравнениюДобавленыСвязанныеДубли" id="95">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>К сравнению и подтверждению добавлены связанные дубли из &lt;link ДублиИзДругихГрупп&gt;других групп&lt;/&gt;
+</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КСравнениюДобавленыСвязанныеДублиКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="КСравнениюДобавленыСвязанныеДублиРасширеннаяПодсказка" id="97"/>
+									<Events>
+										<Event name="URLProcessing">КСравнениюДобавленыСвязанныеДублиОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСравнениеДублей" id="9">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сравнение дублей</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаСравнениеДублейРасширеннаяПодсказка" id="10"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСформироватьОтчет" id="88">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сформировать отчет</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСформироватьОтчетРасширеннаяПодсказка" id="89"/>
+									<ChildItems>
+										<Button name="Сформировать" id="90">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Сформировать</CommandName>
+											<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="91"/>
+										</Button>
+										<InputField name="ВариантСравненияДублей" id="92">
+											<DataPath>ВариантСравненияДублей</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Только отличия</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ТолькоОтличия</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Все</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Все</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ВариантСравненияДублейКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ВариантСравненияДублейРасширеннаяПодсказка" id="94"/>
+											<Events>
+												<Event name="OnChange">ВариантСравненияДублейПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<SpreadSheetDocumentField name="ОтчетОСравнении" id="85">
+									<DataPath>ОтчетОСравнении</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ОтчетОСравненииКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ОтчетОСравненииРасширеннаяПодсказка" id="87"/>
+									<Events>
+										<Event name="DetailProcessing">ОтчетОСравненииОбработкаРасшифровки</Event>
+									</Events>
+								</SpreadSheetDocumentField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКнопкиПодвал" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки подвал</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиПодвалРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Button name="СвернутьПанель" id="79">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СвернутьПанель</CommandName>
+							<ExtendedTooltip name="СвернутьПанельРасширеннаяПодсказка" id="80"/>
+						</Button>
+						<Button name="РазвернутьПанель" id="77">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.РазвернутьПанель</CommandName>
+							<ExtendedTooltip name="РазвернутьПанельРасширеннаяПодсказка" id="78"/>
+						</Button>
+						<Button name="ПодтвердитьДубли" id="81">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<Width>16</Width>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.ПодтвердитьДубли</CommandName>
+							<ExtendedTooltip name="ПодтвердитьДублиРасширеннаяПодсказка" id="82"/>
+						</Button>
+						<Button name="Отмена" id="83">
+							<Type>UsualButton</Type>
+							<Width>8</Width>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.Отмена</CommandName>
+							<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="84"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Дубли" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дубли</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дубль" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дубль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="МестИспользования" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мест использования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Код" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Источник" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаПоискаДублейНСИ</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоМестИспользования" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество мест использования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПоискаМестИспользования" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата поиска мест использования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ГруппаДублей" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дублей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДубльНайденПоПравилу" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дубль найден по правилу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтчетОСравнении" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет о сравнении</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантСравненияДублей" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант сравнения дублей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДублиСПовторамиВГруппах" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дубли с повторами в группах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дубль" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дубль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Код" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Источник" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаПоискаДублейНСИ</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ГруппаДублей" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дублей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИдентификаторДублей" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор дублей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтчетСформирован" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет сформирован</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьДоступКПравилам" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть доступ к правилам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьДоступКПользователям" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть доступ к пользователям</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПолныеПрава" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть полные права</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СнятьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СнятьВсе</Action>
+		</Command>
+		<Command name="УстановитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьВсе</Action>
+		</Command>
+		<Command name="Открыть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоказатьСсылку</Action>
+		</Command>
+		<Command name="УстановитьСтатусДубльЗаменить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дубль, заменить ссылки и удалить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьСтатусДубльЗаменить</Action>
+		</Command>
+		<Command name="УстановитьСтатусДубльНеУдалять" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дубль, не удалять</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьСтатусДубльНеУдалять</Action>
+		</Command>
+		<Command name="УстановитьСтатусОригинал" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оригинал</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьСтатусОригинал</Action>
+		</Command>
+		<Command name="УстановитьСтатусНеЯвляетсяДублем" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не является дублем</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьСтатусНеЯвляетсяДублем</Action>
+		</Command>
+		<Command name="УстановитьСтатусТребуетсяПодтверждение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется подтверждение</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьСтатусТребуетсяПодтверждение</Action>
+		</Command>
+		<Command name="СвернутьПанель" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt; Свернуть панель</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СвернутьПанель</Action>
+		</Command>
+		<Command name="РазвернутьПанель" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть панель &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РазвернутьПанель</Action>
+		</Command>
+		<Command name="ПодтвердитьДубли" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить дубли</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодтвердитьДубли</Action>
+		</Command>
+		<Command name="Отмена" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отмена</Action>
+		</Command>
+		<Command name="Сформировать" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сформировать</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ИдентификаторОбъектаМетаданных">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ИдентификаторГруппы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Fixed</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ТипСсылки">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>
